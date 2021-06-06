@@ -1,7 +1,5 @@
 # Greenhouse Gas Sensor Cloud
 
-## The Plan
-
 The plan is to deploy a large network of open source, low cost, CO2 Gas Detection Sensors. These sensor units will be sold as a kit and will optionally upload their data to a centralized, but anonymous database. This will enable many to contribute to the work on climate by contributing to the world's largest greenhouse gas database.
 
 ## Background Information
