@@ -2,6 +2,9 @@
 
 The plan is to deploy a large network of open source, low cost, CO2 Gas Detection Sensors. These sensor units will be sold as a kit and will optionally upload their data to a centralized, but anonymous database. This will enable many to contribute to the work on climate by contributing to the world's largest greenhouse gas database.
 
+![image](https://user-images.githubusercontent.com/2559382/120937609-4f857200-c6c3-11eb-9e29-97487180cf89.png)
+
+
 ## Background Information
 The cost of "true" (measured P.P.M.) CO2 sensors is now low. This enables a large grassroots greenhouse gas monitoring network to inspire climate awareness and action while generating a large scientific data set.
 
@@ -24,6 +27,11 @@ My current software stack is comprised of the following:
 ## Sensors
 The current prototype uses the [Sensirion SCD30 CO2 Sensor](https://www.digikey.com/en/products/detail/sensirion-ag/SCD30/8445334?utm_adgroup=Gas%20Sensors&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_Sensors%2C%20Transducers&utm_term=&utm_content=Gas%20Sensors&gclid=Cj0KCQjw2NyFBhDoARIsAMtHtZ4YeCuIrZjKrrVm8ohZNMRxEB0_QjV2AzrOf9Rp4tfHgq8otFP3-v0aAjflEALw_wcB).  It's possible that the newer sensor, the [SCD4x](https://www.sensirion.com/en/environmental-sensors/carbon-dioxide-sensors/carbon-dioxide-sensor-scd4x/) is a better sensor, but this needs to be evaluated.
 ![image](https://user-images.githubusercontent.com/2559382/120937190-eb61ae80-c6c0-11eb-8ef7-9f8a7e22a168.png)
+
+## Additional Research
+- [https://alexjturner.github.io/ajt_site/papers/Turner_ACP_2016_CO2.pdf](https://alexjturner.github.io/ajt_site/papers/Turner_ACP_2016_CO2.pdf)
+- [https://alexjturner.github.io/ajt_site/papers/Turner_GRL_2020a.pdf](https://alexjturner.github.io/ajt_site/papers/Turner_GRL_2020a.pdf)
+- [https://github.com/alexjturner/UrbanInversion](https://github.com/alexjturner/UrbanInversion)
 
 ## To Do List
 See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section of this project for the work that I've currently scoped out to be done. Reach out to me if you are interested in helping out!
