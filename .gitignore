@@ -130,3 +130,6 @@ dmypy.json
 
 # OSX Files
 .DS_STORE
+
+# Influx DB Config
+influx_config.ini
