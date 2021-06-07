@@ -36,7 +36,8 @@ The current prototype uses the [Sensirion SCD30 CO2 Sensor](https://www.digikey.
 ## To Do List
 See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section of this project for the work that I've currently scoped out to be done. Reach out to me if you are interested in helping out!
 
-## Project Lead
-Hi I'm [Keenan](https://www.keenanjohnson.com/) and I work on this project! Reach out if you are interested or want to support me in some way :)
+## Developer
+Hi I'm [Keenan](https://www.keenanjohnson.com/) and I work on this project! Reach out if you are interested or just want to chat.
 
+Consider supporting me on Ko-fi to help offset the costs of research and development of this project.
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W14VTU8)
