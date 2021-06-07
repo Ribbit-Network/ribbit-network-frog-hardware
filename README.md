@@ -38,3 +38,5 @@ See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section 
 
 ## Project Lead
 Hi I'm [Keenan](https://www.keenanjohnson.com/) and I work on this project! Reach out if you are interested or want to support me in some way :)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W14VTU8)
