@@ -61,7 +61,5 @@ while True:
 
         point = Point("ghg_point").tag("host", "host1").field("co2", scd.CO2).time(datetime.utcnow(), WritePrecision.NS).field("temperature", scd.temperature).field("humidity", scd.relative_humidity)
         write_api.write(bucket, org, point)
-        
-        time.sleep(60)
 
     time.sleep(0.5)
