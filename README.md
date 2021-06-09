@@ -12,7 +12,29 @@ There is a precedent for GHG networks in academia: http://beacon.berkeley.edu/ov
 
 ## Hardware
 
-The current prototype status is shown below. It consists of a Raspberry Pi 4 and a SCD30 sensor.
+```mermaid
+graph TD;
+    pi(Raspberry Pi 4)
+    co2(SCD30 CO2 Sensor)
+    methane(Methane Sensor - TBD)
+    gg(Battery Gas Gauge)
+    scurrent(Solar Current Sensor)
+    bcurrent(Battery Current Sensor)
+    externalpower(External Power Supply)
+    pi -- I2C --- co2;
+    pi -- I2C --- methane;
+    pi -- UART --- GPS;
+    battery .-> bcurrent;
+    bcurrent .-> pi
+    gg -- I2C --- pi;
+    gg --- battery;
+    solar-panel .-> scurrent;
+    scurrent .-> charger;
+    scurrent -- I2C --- pi;
+    bcurrent -- I2C --- pi;
+    charger .-> battery;
+    externalpower --- charger;
+```
 
 ![image](https://user-images.githubusercontent.com/2559382/120937105-670f2b80-c6c0-11eb-8dce-8297ccd2693e.png)
 
