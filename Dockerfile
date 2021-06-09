@@ -22,11 +22,9 @@
 
 FROM balenalib/raspberrypi4-64-python
 
-# Update Packages
-RUN apt-get update
-RUN apt install vim build-essential
+RUN install_packages vim build-essential wget
 
-# Install Stuff
+# Install Python Packages
 RUN pip install RPi.GPIO smbus adafruit-circuitpython-scd30 influxdb-client
 
 # This will copy all files in our root to the working  directory in the container
@@ -34,5 +32,4 @@ RUN pip install RPi.GPIO smbus adafruit-circuitpython-scd30 influxdb-client
 WORKDIR /usr/src/
 COPY . ./
 
-#CMD sleep infinity
 CMD python co2.py
