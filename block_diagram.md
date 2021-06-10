@@ -1,6 +1,6 @@
 ```mermaid
 graph TD;
-    pi(Raspberry Pi 4)
+    pi(Raspberry Pi Zero)
     co2(SCD30 CO2 Sensor)
     methane(Methane Sensor - TBD)
     gg(Battery Gas Gauge)

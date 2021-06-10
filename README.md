@@ -11,8 +11,10 @@ The cost of "true" (measured P.P.M.) CO2 sensors is now low. This enables a larg
 There is a precedent for GHG networks in academia: http://beacon.berkeley.edu/overview/. The BEACO2N Project uses extremely expensive sensors, making cost a significant barrier to deployment at scale.
 
 ## Hardware
-![image](https://user-images.githubusercontent.com/2559382/121303743-49a0b400-c8b0-11eb-9407-db89af0ac1a7.png)
+![Block Diagram](images/block-diagram.png)
+
 A picture of the current prototype:
+
 ![image](https://user-images.githubusercontent.com/2559382/120937105-670f2b80-c6c0-11eb-8dce-8297ccd2693e.png)
 
 ## Software
