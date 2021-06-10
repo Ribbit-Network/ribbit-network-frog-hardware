@@ -22,7 +22,7 @@
 
 FROM balenalib/raspberry-pi-python
 
-RUN install_packages vim build-essential wget
+RUN install_packages vim build-essential wget gpsd gpsd-clients dbus
 
 # Install Python Packages
 RUN pip install RPi.GPIO smbus adafruit-circuitpython-scd30 influxdb-client
