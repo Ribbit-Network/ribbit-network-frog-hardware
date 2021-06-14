@@ -1,0 +1,22 @@
+version: '2'
+services: 
+  gpsd:
+    privileged: true
+    build: "./gpsd"
+    devices: 
+      - "/dev/ttyACM0:/dev/ttyACM0"
+    environment:
+      - "DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket"
+    ports:
+      - "2947"
+    labels:
+      io.resin.features.dbus: '1'
+      io.balena.features.kernel-modules: '1'
+  co2:
+    privileged: true
+    build: "./co2"
+    expose:
+      - "2947"
+    labels:
+      io.resin.features.dbus: '1'
+      io.balena.features.kernel-modules: '1'
