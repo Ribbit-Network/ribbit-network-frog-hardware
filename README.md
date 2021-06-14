@@ -13,9 +13,7 @@ There is a precedent for GHG networks in academia: http://beacon.berkeley.edu/ov
 ## Hardware
 ![Block Diagram](images/block-diagram.png)
 
-A picture of the current prototype:
-
-![image](https://user-images.githubusercontent.com/2559382/120937105-670f2b80-c6c0-11eb-8dce-8297ccd2693e.png)
+The parts list (Bill of Materials) can be found [here](https://docs.google.com/spreadsheets/d/1lsWCXFawsJNGc44bqFXWkpjHfIFZQEj5UceJV4AiuK0/edit#gid=0).
 
 ## Software
 My current software stack is comprised of the following:
