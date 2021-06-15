@@ -13,6 +13,10 @@ Rising to the climate crisis challenge is a once-in-a-generation opportunity. Th
 
 <img width="1662" alt="Screen Shot 2021-06-13 at 11 32 37 PM" src="https://user-images.githubusercontent.com/2559382/122121159-25793180-cde0-11eb-84c9-84f402b7a814.png">
 
+## Why Open Source?
+- I strongly believe that in order for this data to be trusted, the hardware and software that collects the data, must be fully transparent and accesible to all.
+- The community model allows anyone to contribue if they find the project particularly compelling. This is exciting because it means the project can also become an advocacy and teaching tool for anyone looking to learn about this planet and the state of it's climate.
+
 ## Current Status
 Keenan is currently developing the hardware and software for the first unit that could be could be sold as a kit. The plan is to have the first kits ready for shipment by the end of July.
 
