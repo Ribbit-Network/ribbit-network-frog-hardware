@@ -1,43 +1,37 @@
 # Greenhouse Gas Sensor Cloud
 
-The plan is to deploy a large network of open source, low cost, CO2 Gas Detection Sensors. These sensor units will be sold as a kit and will optionally upload their data to a centralized, but anonymous database. This will enable many to contribute to the work on climate by contributing to the world's largest greenhouse gas database.
+The plan is to deploy a large network of open source, low cost, Greenhouse Gas Detection Sensors. These sensor units will be sold as a kit and will optionally upload their data to a centralized, but anonymous database. This will enable many to contribute to the work on climate by contributing to the world's largest greenhouse gas database.
 
-![image](https://user-images.githubusercontent.com/2559382/120937609-4f857200-c6c3-11eb-9e29-97487180cf89.png)
+Imagine [PurpleAir](https://www.purpleair.com/map?q=purpleair.com#11/47.6356/-122.3605) and [Folding@Home](https://foldingathome.org/) combined as an open-source solution for climate.
 
+<img width="554" alt="Screen Shot 2021-06-08 at 9 13 10 AM" src="https://user-images.githubusercontent.com/2559382/122119420-037eaf80-cdde-11eb-8ed7-de7aa96c0001.png">
+
+## Why do this?
+Rising to the climate crisis challenge is a once-in-a-generation opportunity. There are two significant reasons to build and deploy this sensor network at a global scale:
+- Greenhouse gas emissions have been identified as one of the largest contributing factor in climate change. However, there is an alarming lack of direct measurements of these greenhouse gasses. [As Prof. Dr.-Ing. Jia Chen states](https://www.eurekalert.org/pub_releases/2021-03/tuom-usn030821.php): "Instead, the emissions numbers we hear in the news are based on calculations."
+- Most people feel powerless to do much to change the course of society in regards to climate change. A citizen science solution like this will give agency to the citizens of our planet by enabling them to make a meaningful contribution to the work on climate, bringing much needed hope into the dialog for the majority of people.
+
+<img width="1662" alt="Screen Shot 2021-06-13 at 11 32 37 PM" src="https://user-images.githubusercontent.com/2559382/122121159-25793180-cde0-11eb-84c9-84f402b7a814.png">
+
+## Current Status
+Keenan is currently developing the hardware and software for the first unit that could be could be sold as a kit. The plan is to have the first kits ready for shipment by the end of July.
 
 ## Background Information
 The cost of "true" (measured P.P.M.) CO2 sensors is now low. This enables a large grassroots greenhouse gas monitoring network to inspire climate awareness and action while generating a large scientific data set.
 
-There is a precedent for GHG networks in academia: http://beacon.berkeley.edu/overview/. The BEACO2N Project uses extremely expensive sensors, making cost a significant barrier to deployment at scale.
+There is a precedent for GHG networks in academia: 
+- http://beacon.berkeley.edu/overview/. The BEACO2N Project uses extremely expensive sensors, making cost a significant barrier to deployment at scale.
+- [MUCCnet](https://www.eurekalert.org/pub_releases/2021-03/tuom-usn030821.php) - Research done in Munich showed that incredible insights can be gained from sensor networks like this one in identifying the source of emissions: "Chen explains the principle in simple terms: "We set up one sensor upwind from the city and the second downwind. So any increase in gases between the first sensor and the second must have been generated from inside the city." To cover as many wind directions as possible, there is a sensor in each cardinal direction. With the input of the sensor data and meteorological parameters, high-performance computers can create a spatially resolved emission map of the city."
 
-## Hardware
-![Block Diagram](images/block-diagram.png)
+## Technical Documentation
+[Check out the Wiki for the technical documentation of how this project works!](https://github.com/keenanjohnson/ghg-gas-cloud/wiki)
 
-The parts list (Bill of Materials) can be found [here](https://docs.google.com/spreadsheets/d/1lsWCXFawsJNGc44bqFXWkpjHfIFZQEj5UceJV4AiuK0/edit#gid=0).
-
-## Software
-My current software stack is comprised of the following:
-
-- The raspberry pi runs a docker container inside of [Balena OS + Balena Cloud](https://www.balena.io/cloud/). This makes it easy to deploy software remotely to the PI and will be useful once there is a large fleet of sensors for managing software updates.
-- Inside of the Docker container is a simple Python script that periodically reads data from the sensor and publishes the data to Influx DB.
-![image](https://user-images.githubusercontent.com/2559382/120937240-4bf0eb80-c6c1-11eb-8fc8-f3e94653d5b4.png)
-
-
-## Sensors
-The current prototype uses the [Sensirion SCD30 CO2 Sensor](https://www.digikey.com/en/products/detail/sensirion-ag/SCD30/8445334?utm_adgroup=Gas%20Sensors&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_Sensors%2C%20Transducers&utm_term=&utm_content=Gas%20Sensors&gclid=Cj0KCQjw2NyFBhDoARIsAMtHtZ4YeCuIrZjKrrVm8ohZNMRxEB0_QjV2AzrOf9Rp4tfHgq8otFP3-v0aAjflEALw_wcB).  It's possible that the newer sensor, the [SCD4x](https://www.sensirion.com/en/environmental-sensors/carbon-dioxide-sensors/carbon-dioxide-sensor-scd4x/) is a better sensor, but this needs to be evaluated.
-![image](https://user-images.githubusercontent.com/2559382/120937190-eb61ae80-c6c0-11eb-8ef7-9f8a7e22a168.png)
-
-## Additional Research
-- [https://alexjturner.github.io/ajt_site/papers/Turner_ACP_2016_CO2.pdf](https://alexjturner.github.io/ajt_site/papers/Turner_ACP_2016_CO2.pdf)
-- [https://alexjturner.github.io/ajt_site/papers/Turner_GRL_2020a.pdf](https://alexjturner.github.io/ajt_site/papers/Turner_GRL_2020a.pdf)
-- [https://github.com/alexjturner/UrbanInversion](https://github.com/alexjturner/UrbanInversion)
-
-## To Do List
+## Contributing
 See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section of this project for the work that I've currently scoped out to be done. Reach out to me if you are interested in helping out!
 
 ## Developer
 Hi I'm [Keenan](https://www.keenanjohnson.com/) and I work on this project! Reach out if you are interested or just want to chat.
 
-Consider supporting me on Ko-fi to help cover the research and development costs.
+Consider sponsoring me on [Ko-fi](https://ko-fi.com/W7W14VTU8) or through [Github Sponsors](https://github.com/sponsors/keenanjohnson) to help cover the research and development costs.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W14VTU8)
