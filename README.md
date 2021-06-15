@@ -1,6 +1,6 @@
 # Greenhouse Gas Sensor Cloud
 
-The plan is to deploy a large network of open source, low cost, Greenhouse Gas Detection Sensors. These sensor units will be sold as a kit and will optionally upload their data to a centralized, but anonymous database. This will enable many to contribute to the work on climate by contributing to the world's largest greenhouse gas database.
+The plan is to deploy a large network of open source, low cost, Greenhouse Gas (CO2 and possibly methane) Detection Sensors. These sensor units will be sold as a kit and will optionally upload their data to a centralized, but anonymous database. This will enable many to contribute to the work on climate by contributing to the world's largest greenhouse gas database.
 
 Imagine [PurpleAir](https://www.purpleair.com/map?q=purpleair.com#11/47.6356/-122.3605) and [Folding@Home](https://foldingathome.org/) combined as an open-source solution for climate.
 
