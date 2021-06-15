@@ -11,14 +11,16 @@ Rising to the climate crisis challenge is a once-in-a-generation opportunity. Th
 - Greenhouse gas emissions have been identified as one of the largest contributing factor in climate change. However, there is an alarming lack of direct measurements of these greenhouse gasses. [As Prof. Dr.-Ing. Jia Chen states](https://www.eurekalert.org/pub_releases/2021-03/tuom-usn030821.php): "Instead, the emissions numbers we hear in the news are based on calculations."
 - Most people feel powerless to do much to change the course of society in regards to climate change. A citizen science solution like this will give agency to the citizens of our planet by enabling them to make a meaningful contribution to the work on climate, bringing much needed hope into the dialog for the majority of people.
 
-<img width="1662" alt="Screen Shot 2021-06-13 at 11 32 37 PM" src="https://user-images.githubusercontent.com/2559382/122121159-25793180-cde0-11eb-84c9-84f402b7a814.png">
-
 ## Why Open Source?
 - I strongly believe that in order for this data to be trusted, the hardware and software that collects the data, must be fully transparent and accesible to all.
 - The community model allows anyone to contribue if they find the project particularly compelling. This is exciting because it means the project can also become an advocacy and teaching tool for anyone looking to learn about this planet and the state of it's climate.
 
 ## Current Status
 Keenan is currently developing the hardware and software for the first unit that could be could be sold as a kit. The plan is to have the first kits ready for shipment by the end of July.
+
+Keenan currently has a prototype climate obervatory working at his house. Here is some real data from the climate dashboard he is developing.
+
+<img width="1662" alt="Screen Shot 2021-06-13 at 11 32 37 PM" src="https://user-images.githubusercontent.com/2559382/122121159-25793180-cde0-11eb-84c9-84f402b7a814.png">
 
 ## Background Information
 The cost of "true" (measured P.P.M.) CO2 sensors is now low. This enables a large grassroots greenhouse gas monitoring network to inspire climate awareness and action while generating a large scientific data set.
