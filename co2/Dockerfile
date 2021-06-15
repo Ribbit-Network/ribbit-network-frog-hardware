@@ -25,7 +25,7 @@ FROM balenalib/raspberrypi4-64-python
 RUN install_packages vim build-essential wget gpsd-clients dbus
 
 # Install Python Packages
-RUN pip install RPi.GPIO smbus adafruit-circuitpython-scd30 influxdb-client
+RUN pip install RPi.GPIO smbus adafruit-circuitpython-scd30 influxdb-client paho-mqtt requests
 
 # This will copy all files in our root to the working  directory in the container
 # Set our working directory

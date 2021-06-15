@@ -1,4 +1,9 @@
-version: '2'
+version: '2.1'
+
+volumes:
+  sense-data:
+  dashboard-data:
+
 services: 
   gpsd:
     privileged: true
@@ -12,11 +17,41 @@ services:
     labels:
       io.resin.features.dbus: '1'
       io.balena.features.kernel-modules: '1'
+  mqtt:
+    image: arm32v6/eclipse-mosquitto
+    ports:
+      - "1883:1883"
+    restart: always
+    network_mode: host  
   co2:
     privileged: true
     build: "./co2"
+    network_mode: host  
+    depends_on:
+      - mqtt
     expose:
       - "2947"
+      - "7575"
     labels:
       io.resin.features.dbus: '1'
       io.balena.features.kernel-modules: '1'
+      io.balena.features.supervisor-api: '1'
+      io.balena.features.balena-api: '1' 
+  influxdb:
+    restart: always
+    image: arm32v7/influxdb@sha256:2fed9b09a672cab330ac3ea1f03616e6821f2235bda64d549f605ef0d7081911
+    volumes:
+      - 'sense-data:/var/lib/influxdb'
+  dashboard:
+    image: balenablocks/dashboard
+    restart: always
+    volumes:
+        - 'dashboard-data:/data'
+    ports:
+        - '80'
+  connector:
+    image: balenablocks/connector
+    restart: always
+    labels:
+      io.balena.features.balena-api: '1'
+    privileged: true
