@@ -18,11 +18,11 @@ services:
       io.resin.features.dbus: '1'
       io.balena.features.kernel-modules: '1'
   mqtt:
-    image: arm32v6/eclipse-mosquitto
+    build: ./mqtt
     ports:
       - "1883:1883"
     restart: always
-    network_mode: host  
+    privileged: true
   co2:
     privileged: true
     build: "./co2"
@@ -52,6 +52,6 @@ services:
   connector:
     image: balenablocks/connector
     restart: always
+    privileged: true
     labels:
       io.balena.features.balena-api: '1'
-    privileged: true
