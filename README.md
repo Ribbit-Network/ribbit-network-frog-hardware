@@ -4,11 +4,13 @@ The Greenhouse Gas Sensor Cloud is a large network of open-source, low-cost, Gre
 
 Imagine [PurpleAir](https://www.purpleair.com/map?q=purpleair.com#11/47.6356/-122.3605) and [Folding@Home](https://foldingathome.org/) combined as an open-source solution for climate.
 
+The "Cloud" name is a bit of a pun in that we are measuring the atmospheric content (where clouds live) and then pushing that data into an interet database (The Cloud) 😊
+
 <img width="554" alt="Screen Shot 2021-06-08 at 9 13 10 AM" src="https://user-images.githubusercontent.com/2559382/122119420-037eaf80-cdde-11eb-8ed7-de7aa96c0001.png">
 
 ## Why do this?
 Rising to the climate crisis challenge is a once-in-a-generation opportunity. There are two significant reasons to build and deploy this sensor network at a global scale:
-- Greenhouse gas emissions have been identified as one of the largest contributing factors in climate change. However, there is an alarming lack of direct measurements of these greenhouse gasses. [As Prof. Dr.-Ing. Jia Chen states](https://www.eurekalert.org/pub_releases/2021-03/tuom-usn030821.php): "Instead, the emissions numbers we hear in the news are based on calculations." Research has shown (see background info below) that sensor networks can be used to quantify emission sources from specific geographic locations, allowing scientists, corporate leaders, regulators, and policy makers to take informed action. We just need to deploy the sensors!
+- Greenhouse gas emissions have been identified as one of the largest contributing factors in climate change. However, there is an alarming lack of direct measurements of these greenhouse gasses. [As Prof. Dr.-Ing. Jia Chen states](https://www.eurekalert.org/pub_releases/2021-03/tuom-usn030821.php): "Instead, the emissions numbers we hear in the news are based on calculations." NOAA does indeed track atmospheric Greenhouse Gas levels, but only at one observatory: Mauna Loa Observatory, Hawaii. That one location is useful, but it’s not localized enough to tie the emissions to specific sources. Research has shown (see background info below) that sensor networks can be used to quantify emission sources from specific geographic locations, allowing scientists, corporate leaders, regulators, and policy makers to take informed action. We just need to deploy the sensors!
 - Most people feel powerless to do much to change the course of society in regards to climate change. A citizen science solution like this will give agency to the citizens of our planet by enabling them to make a meaningful contribution to the work on climate, bringing much-needed hope into the dialog for the majority of people. The success of citizen science projects can't be ignored (Ex: [Folding@Home](https://test.foldingathome.org/2021/01/05/2020-in-review-and-happy-new-year-2021/?lng=en-US) and [zooniverse](https://www.zooniverse.org/)) and this project has recieved significant interest from individuals interseted in deploying a monitoring station of their own.
 
 ## Why Open Source?
@@ -18,7 +20,7 @@ Rising to the climate crisis challenge is a once-in-a-generation opportunity. Th
 ## Current Status
 I am currently developing the hardware and software for the first unit that could be could be sold as a kit. The plan is to have the first kits ready for shipment by the end of July.
 
-The first crude prototype climate observatory is up and running in Seattle. [Here is some real data from that sensor](https://d14c9570bc4c341a76d11599c4aef438.balena-devices.com/) (Note this dashboard is still experimental and may be down occasionally).
+The first prototype sensor is up and running in Seattle. [Here is some real data from that sensor](https://d14c9570bc4c341a76d11599c4aef438.balena-devices.com/) (Note this dashboard is still experimental and may be down occasionally).
 
 <img width="1662" alt="Screen Shot 2021-06-13 at 11 32 37 PM" src="https://user-images.githubusercontent.com/2559382/122121159-25793180-cde0-11eb-84c9-84f402b7a814.png">
 
