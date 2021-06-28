@@ -8,7 +8,8 @@ Imagine [PurpleAir](https://www.purpleair.com/map?q=purpleair.com#11/47.6356/-12
 
 The "Cloud" name is a bit of a pun in that we are measuring the atmospheric content (where clouds live) and then pushing that data into an interet database (The Cloud) 😊
 
-<img width="554" alt="Screen Shot 2021-06-08 at 9 13 10 AM" src="https://user-images.githubusercontent.com/2559382/122119420-037eaf80-cdde-11eb-8ed7-de7aa96c0001.png">
+![image](https://user-images.githubusercontent.com/2559382/123665617-4df42900-d7ed-11eb-8a35-a12d5e7968e9.png)
+
 
 ## Why do this?
 Rising to the climate crisis challenge is a once-in-a-generation opportunity. There are two significant reasons to build and deploy this sensor network at a global scale:
