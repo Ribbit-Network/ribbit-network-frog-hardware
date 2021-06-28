@@ -22,7 +22,7 @@ Rising to the climate crisis challenge is a once-in-a-generation opportunity. Th
 ## Current Status
 I am currently developing the hardware and software for the first unit that could be could be sold as a kit. The plan is to have the first kits ready for shipment by the end of July.
 
-The first prototype sensor is up and running in Seattle. [Here is some real data from that sensor](https://d14c9570bc4c341a76d11599c4aef438.balena-devices.com/) (Note this dashboard is still experimental and may be down occasionally).
+The first prototype sensor is up and running in Seattle. [Here is some real data from that sensor](https://ghg-cloud.herokuapp.com/) (Note this dashboard is still experimental and may be down occasionally).
 
 <img width="1662" alt="Screen Shot 2021-06-13 at 11 32 37 PM" src="https://user-images.githubusercontent.com/2559382/122121159-25793180-cde0-11eb-84c9-84f402b7a814.png">
 
