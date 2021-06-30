@@ -30,7 +30,7 @@ import requests
 import json
 import gpsd
 
-scd = adafruit_scd30.SCD30(board.I2C())
+from adafruit_ina219 import ADCResolution, BusVoltageRange, INA219
 
 from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
@@ -54,6 +54,11 @@ write_api = client.write_api(write_options=SYNCHRONOUS)
 
 mqtt_client = mqtt.Client("1")
 mqtt_client.connect("127.0.0.1", 1883, 60)
+
+i2c_bus = board.I2C()
+scd = adafruit_scd30.SCD30(i2c_bus)
+batt_ina219 = INA219(i2c_bus, addr=0x40)
+solar_ina219 = INA219(i2c_bus, addr=0x41)
 
 gpsd.connect()
 
@@ -86,6 +91,15 @@ while True:
         data['Latitude'] = latitude
         data['Longitude'] = longitude
         data['Altitude'] = altitude
+        data['batt_bus_v'] = batt_ina219.bus_voltage
+        data['batt_shunt_v'] = batt_ina219.shunt_voltage
+        data['batt_current_ma'] = batt_ina219.current
+        data['batt_power_watt'] = batt_ina219.power
+        data['solar_bus_v'] = solar_ina219.bus_voltage
+        data['solar_shunt_v'] = solar_ina219.shunt_voltage
+        data['solar_current_ma'] = solar_ina219.current
+        data['solar_power_watt'] = solar_ina219.power
+
 
         mqtt_client.publish("sensors",json.dumps(data))
         print(json.dumps(data))
