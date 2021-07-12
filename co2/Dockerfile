@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-FROM balenalib/raspberrypi4-64-python
+FROM balenalib/raspberry-pi-python
 
 RUN install_packages vim build-essential wget gpsd-clients dbus
 
