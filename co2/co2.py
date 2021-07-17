@@ -60,47 +60,64 @@ scd = adafruit_scd30.SCD30(i2c_bus)
 batt_ina219 = INA219(i2c_bus, addr=0x40)
 solar_ina219 = INA219(i2c_bus, addr=0x41)
 
-gpsd.connect()
+gps_valid = False
 
 while True:
-    # since the measurement interval is long (2+ seconds) we check for new data before reading
-    # the values, to ensure current readings.
-    if scd.data_available:
-        # Get gps position
-        packet = gpsd.get_current()
-        latitude = packet.position()[0]
-        longitude = packet.position()[1]
-        altitude = packet.altitude()
+    if !gps_valid:
+        try:
+            gpds.connect()
+        except Exception as e:
+            print("Error connecting to GPS: %s" % e)
+            # TODO: log GPS failures to database?
+        finally:
+            gps_valid = True
+    else:
+        # since the measurement interval is long (2+ seconds) we check for new data before reading
+        # the values, to ensure current readings.
+        if scd.data_available:
+            try:
+                # Get gps position
+                packet = gpsd.get_current()
+            except Exception as e:
+                # Unable to get current GPS position, log error and attempt to reconnect GPS
+                gps_valid = False
+                # TODO: log GPS failures to database?
+                print("Error getting current GPS position: %s" % e)
+                continue
 
-        # Publish to Influx DB Cloud
-        point = Point("ghg_point").tag("host", "host1") \
-            .field("co2", scd.CO2).time(datetime.utcnow(), WritePrecision.NS) \
-            .field("temperature", scd.temperature) \
-            .field("humidity", scd.relative_humidity) \
-            .field("lat", latitude) \
-            .field("lon", longitude) \
-            .field("alt", altitude)  
-        
-        write_api.write(bucket, org, point)
+            latitude = packet.position()[0]
+            longitude = packet.position()[1]
+            altitude = packet.altitude()
 
-        # Publish to Local MQTT Broker
-        data = {}
-        data['CO2'] = scd.CO2
-        data['Temperature'] = scd.temperature
-        data['Relative_Humidity'] = scd.relative_humidity
-        data['Latitude'] = latitude
-        data['Longitude'] = longitude
-        data['Altitude'] = altitude
-        data['batt_bus_v'] = batt_ina219.bus_voltage
-        data['batt_shunt_v'] = batt_ina219.shunt_voltage
-        data['batt_current_ma'] = batt_ina219.current
-        data['batt_power_watt'] = batt_ina219.power
-        data['solar_bus_v'] = solar_ina219.bus_voltage
-        data['solar_shunt_v'] = solar_ina219.shunt_voltage
-        data['solar_current_ma'] = solar_ina219.current
-        data['solar_power_watt'] = solar_ina219.power
+            # Publish to Influx DB Cloud
+            point = Point("ghg_point").tag("host", "host1") \
+                .field("co2", scd.CO2).time(datetime.utcnow(), WritePrecision.NS) \
+                .field("temperature", scd.temperature) \
+                .field("humidity", scd.relative_humidity) \
+                .field("lat", latitude) \
+                .field("lon", longitude) \
+                .field("alt", altitude)  
+            
+            write_api.write(bucket, org, point)
 
-        mqtt_client.publish("sensors",json.dumps(data))
-        print(json.dumps(data))
+            # Publish to Local MQTT Broker
+            data = {}
+            data['CO2'] = scd.CO2
+            data['Temperature'] = scd.temperature
+            data['Relative_Humidity'] = scd.relative_humidity
+            data['Latitude'] = latitude
+            data['Longitude'] = longitude
+            data['Altitude'] = altitude
+            data['batt_bus_v'] = batt_ina219.bus_voltage
+            data['batt_shunt_v'] = batt_ina219.shunt_voltage
+            data['batt_current_ma'] = batt_ina219.current
+            data['batt_power_watt'] = batt_ina219.power
+            data['solar_bus_v'] = solar_ina219.bus_voltage
+            data['solar_shunt_v'] = solar_ina219.shunt_voltage
+            data['solar_current_ma'] = solar_ina219.current
+            data['solar_power_watt'] = solar_ina219.power
+
+            mqtt_client.publish("sensors",json.dumps(data))
+            print(json.dumps(data))
 
     time.sleep(0.5)
