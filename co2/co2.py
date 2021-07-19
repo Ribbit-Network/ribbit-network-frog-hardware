@@ -63,7 +63,7 @@ solar_ina219 = INA219(i2c_bus, addr=0x41)
 gps_valid = False
 
 while True:
-    if !gps_valid:
+    if not gps_valid:
         try:
             gpds.connect()
         except Exception as e:
@@ -96,7 +96,10 @@ while True:
                 .field("humidity", scd.relative_humidity) \
                 .field("lat", latitude) \
                 .field("lon", longitude) \
-                .field("alt", altitude)  
+                .field("alt", altitude)  \
+                .field("batt_bus_v", batt_ina219.bus_voltage) \
+                .field("solar_power_watt", solar_ina219.power) \
+                .field("batt_power_watt", batt_ina219.power)
             
             write_api.write(bucket, org, point)
 
@@ -117,7 +120,6 @@ while True:
             data['solar_current_ma'] = solar_ina219.current
             data['solar_power_watt'] = solar_ina219.power
 
-            mqtt_client.publish("sensors",json.dumps(data))
             print(json.dumps(data))
 
     time.sleep(0.5)
