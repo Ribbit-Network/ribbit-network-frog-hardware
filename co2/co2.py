@@ -52,9 +52,6 @@ org = "keenan.johnson@gmail.com"
 
 write_api = client.write_api(write_options=SYNCHRONOUS)
 
-mqtt_client = mqtt.Client("1")
-mqtt_client.connect("127.0.0.1", 1883, 60)
-
 i2c_bus = board.I2C()
 scd = adafruit_scd30.SCD30(i2c_bus)
 batt_ina219 = INA219(i2c_bus, addr=0x40)
@@ -65,7 +62,7 @@ gps_valid = False
 while True:
     if not gps_valid:
         try:
-            gpds.connect()
+            gpsd.connect()
         except Exception as e:
             print("Error connecting to GPS: %s" % e)
             # TODO: log GPS failures to database?
