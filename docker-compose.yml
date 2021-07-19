@@ -17,18 +17,12 @@ services:
     labels:
       io.resin.features.dbus: '1'
       io.balena.features.kernel-modules: '1'
-  mqtt:
-    build: ./mqtt
-    ports:
-      - "1883:1883"
-    restart: always
-    privileged: true
   co2:
     privileged: true
     build: "./co2"
     network_mode: host  
     depends_on:
-      - mqtt
+      - gpsd
     expose:
       - "2947"
       - "7575"
@@ -37,21 +31,3 @@ services:
       io.balena.features.kernel-modules: '1'
       io.balena.features.supervisor-api: '1'
       io.balena.features.balena-api: '1' 
-  influxdb:
-    restart: always
-    image: mendhak/arm32v6-influxdb
-    volumes:
-      - 'sense-data:/var/lib/influxdb'
-  dashboard:
-    image: balenablocks/dashboard
-    restart: always
-    volumes:
-        - 'dashboard-data:/data'
-    ports:
-        - '80'
-  connector:
-    image: balenablocks/connector
-    restart: always
-    privileged: true
-    labels:
-      io.balena.features.balena-api: '1'
