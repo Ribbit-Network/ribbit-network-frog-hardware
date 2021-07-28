@@ -1,4 +1,4 @@
-# Greenhouse Gas Sensor Cloud
+# Ribbit Network Sensor
 
 This project will create the world's largest Greenhouse Gas Emissions dataset that will empower anyone to join in the work on climate and provide informed data for climate action.
 
