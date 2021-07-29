@@ -26,11 +26,8 @@ from datetime import datetime
 import adafruit_scd30
 import paho.mqtt.client as mqtt
 import os
-import requests
 import json
 import gpsd
-
-from adafruit_ina219 import ADCResolution, BusVoltageRange, INA219
 
 from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
@@ -54,9 +51,6 @@ write_api = client.write_api(write_options=SYNCHRONOUS)
 
 i2c_bus = board.I2C()
 scd = adafruit_scd30.SCD30(i2c_bus)
-batt_ina219 = INA219(i2c_bus, addr=0x40)
-solar_ina219 = INA219(i2c_bus, addr=0x41)
-
 gps_valid = False
 
 while True:
@@ -93,10 +87,7 @@ while True:
                 .field("humidity", scd.relative_humidity) \
                 .field("lat", latitude) \
                 .field("lon", longitude) \
-                .field("alt", altitude)  \
-                .field("batt_bus_v", batt_ina219.bus_voltage) \
-                .field("solar_power_watt", solar_ina219.power) \
-                .field("batt_power_watt", -batt_ina219.power)
+                .field("alt", altitude)
             
             write_api.write(bucket, org, point)
 
@@ -108,14 +99,6 @@ while True:
             data['Latitude'] = latitude
             data['Longitude'] = longitude
             data['Altitude'] = altitude
-            data['batt_bus_v'] = batt_ina219.bus_voltage
-            data['batt_shunt_v'] = batt_ina219.shunt_voltage
-            data['batt_current_ma'] = batt_ina219.current
-            data['batt_power_watt'] = batt_ina219.power
-            data['solar_bus_v'] = solar_ina219.bus_voltage
-            data['solar_shunt_v'] = solar_ina219.shunt_voltage
-            data['solar_current_ma'] = solar_ina219.current
-            data['solar_power_watt'] = -solar_ina219.power
 
             print(json.dumps(data))
 
