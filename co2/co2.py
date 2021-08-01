@@ -33,6 +33,7 @@ from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 
 bucket = "co2"
+device_uuid = os.getenv('BALENA_DEVICE_UUID')
 
 #
 # config ini file
@@ -81,7 +82,7 @@ while True:
             altitude = packet.altitude()
 
             # Publish to Influx DB Cloud
-            point = Point("ghg_point").tag("host", "host1") \
+            point = Point("ghg_point").tag("host", device_uuid) \
                 .field("co2", scd.CO2).time(datetime.utcnow(), WritePrecision.NS) \
                 .field("temperature", scd.temperature) \
                 .field("humidity", scd.relative_humidity) \
@@ -100,6 +101,7 @@ while True:
             data['Longitude'] = longitude
             data['Altitude'] = altitude
 
+            print(device_uuid)
             print(json.dumps(data))
 
     time.sleep(0.5)
