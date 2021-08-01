@@ -101,7 +101,6 @@ while True:
             data['Longitude'] = longitude
             data['Altitude'] = altitude
 
-            print(device_uuid)
             print(json.dumps(data))
 
     time.sleep(0.5)
