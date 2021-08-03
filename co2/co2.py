@@ -52,6 +52,10 @@ write_api = client.write_api(write_options=SYNCHRONOUS)
 
 i2c_bus = board.I2C()
 scd = adafruit_scd30.SCD30(i2c_bus)
+
+# Enable self calibration mode
+scd.self_calibration_enabled = True
+
 gps_valid = False
 
 while True:
@@ -77,9 +81,19 @@ while True:
                 print("Error getting current GPS position: %s" % e)
                 continue
 
+            # Read GPS Data
             latitude = packet.position()[0]
             longitude = packet.position()[1]
             altitude = packet.altitude()
+
+            # Set SCD Altitude from GPS Altitude
+            #
+            # See Section 1.4.8 in SCD30 Interface Guide
+            # https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf
+            #
+            # The Reference altitude must be greater than 0.
+            if altitude > 0:
+                scd.altitude = altitude
 
             # Publish to Influx DB Cloud
             point = Point("ghg_point").tag("host", device_uuid) \
@@ -100,6 +114,7 @@ while True:
             data['Latitude'] = latitude
             data['Longitude'] = longitude
             data['Altitude'] = altitude
+            data['scd_temp_offset'] = scd.temperature_offset
 
             print(json.dumps(data))
 
