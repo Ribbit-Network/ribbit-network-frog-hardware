@@ -6,7 +6,10 @@ The Greenhouse Gas Sensor Cloud is a large network of open-source, low-cost, Gre
 
 Imagine [PurpleAir](https://www.purpleair.com/map?q=purpleair.com#11/47.6356/-122.3605) and [Folding@Home](https://foldingathome.org/) combined as an open-source solution for climate.
 
-The "Cloud" name is a bit of a pun in that we are measuring the atmospheric content (where clouds live) and then pushing that data into an interet database (The Cloud) 😊
+## Frog Sensors
+Our “Frogs” are tiny sensors that you can buy and deploy at your own home! It’s a small, open-source box that measures the amount of CO2 in the air using a tiny laser.
+It's easy to set up and will constantly record valuable scientific data on our climate.
+Frogs are one of the species that are most affected by climate change! Just like our sensors, they ribbit to one another to create a powerful network of data about the environment.
 
 ![image](https://user-images.githubusercontent.com/2559382/123665617-4df42900-d7ed-11eb-8a35-a12d5e7968e9.png)
 
