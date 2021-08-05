@@ -92,8 +92,7 @@ while True:
             # https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf
             #
             # The Reference altitude must be greater than 0.
-            if altitude > 0:
-                scd.altitude = altitude
+            scd.ambient_pressure = 1015
 
             # Publish to Influx DB Cloud
             point = Point("ghg_point").tag("host", device_uuid) \
