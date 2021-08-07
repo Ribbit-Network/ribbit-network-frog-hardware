@@ -24,6 +24,7 @@ import time
 import board
 from datetime import datetime
 import adafruit_scd30
+import adafruit_dps310
 import paho.mqtt.client as mqtt
 import os
 import json
@@ -52,9 +53,13 @@ write_api = client.write_api(write_options=SYNCHRONOUS)
 
 i2c_bus = board.I2C()
 scd = adafruit_scd30.SCD30(i2c_bus)
+scd.reset()
+dps310 = adafruit_dps310.DPS310(i2c_bus)
 
 # Enable self calibration mode
+scd.temperature_offset = 6
 scd.self_calibration_enabled = True
+
 
 gps_valid = False
 
@@ -86,13 +91,14 @@ while True:
             longitude = packet.position()[1]
             altitude = packet.altitude()
 
-            # Set SCD Altitude from GPS Altitude
+            # Set SCD Pressure from Barometer
             #
-            # See Section 1.4.8 in SCD30 Interface Guide
+            # See Section 1.4.1 in SCD30 Interface Guide
             # https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf
             #
-            # The Reference altitude must be greater than 0.
-            scd.ambient_pressure = 1015
+            # The Reference pressure must be greater than 0.
+            if dps310.pressure > 0:
+                scd.ambient_pressure = dps310.pressure
 
             # Publish to Influx DB Cloud
             point = Point("ghg_point").tag("host", device_uuid) \
@@ -114,6 +120,8 @@ while True:
             data['Longitude'] = longitude
             data['Altitude'] = altitude
             data['scd_temp_offset'] = scd.temperature_offset
+            data['baro_temp'] = dps310.temperature
+            data['baro_pressure_hpa'] = dps310.pressure
 
             print(json.dumps(data))
 
