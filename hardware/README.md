@@ -3,6 +3,10 @@ The hardware [Bill of Materials is located here.](https://docs.google.com/spread
 
 Currently most components are off the shelf, though this will likely become less true as the Frog sensor matures.
 
+## Wiring Diagram
+
+![wiring_diagram](electrical/fritzing/frog_sensor_diagram.png)
+
 ## Custom Components
 
 The only custom component is a 3D printed bracket that connects the electronics to the enclosure.
