@@ -1,0 +1,20 @@
+Item,Quantity,Unit Price,Price,Unit Mass (grams),Mass (grams),Vendor,Link,Notes
+SCD-30 - NDIR CO2 Temperature and Humidity Sensor,1.00,$58.95,$58.95,10.00,10.00,Adafruit,https://www.adafruit.com/product/4867,
+Raspberry Pi Zero,1.00,$35.00,$35.00,9.00,9.00,Adafruit,https://www.adafruit.com/product/3400,
+8 GB SD Card,1.00,$9.95,$9.95,0.25,0.25,Adafruit,https://www.adafruit.com/product/1294,
+STEMMA QT / Qwiic JST SH 4-pin Cable - 100mm Long,1.00,$0.95,$0.95,0.25,0.25,Adafruit,https://www.adafruit.com/product/4210,
+SparkFun Qwiic or Stemma QT SHIM,1.00,$1.50,$1.50,1.00,1.00,Adafruit,https://www.adafruit.com/product/4463,
+Power Supply,1.00,$7.95,$7.95,94.00,94.00,Adafruit,https://www.adafruit.com/product/4298,
+Barometer,1.00,$6.95,$6.95,,0.00,Adafruit,https://www.adafruit.com/product/4494,
+GPS,1.00,$10.99,$10.99,10.00,10.00,Amazon,https://www.amazon.com/Microcontroller-Compatible-Sensitivity-Navigation-Positioning/dp/B07P8YMVNT/ref=sr_1_3?dchild=1&keywords=gps%2Bmodule&qid=1622787288&s=electronics&sr=1-3&th=1,
+GPS USB Cable,1.00,$6.99,$6.99,2.00,2.00,Amazon,https://www.amazon.com/gp/product/B01M5GZ3N0/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1,
+Enclosure,1.00,$18.56,$18.56,220.00,220.00,Amazon,https://www.amazon.com/gp/product/B01M64ISDE/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1,
+Brass Standoffs,,,,,,,,
+M2.5 Screws,,,,,,,,
+,,,,,0.00,,,
+Electronics Bracket,1.00,$5.00,$5.00,26.00,26.00,3D Printed,https://github.com/Ribbit-Network/ribbit-network-sensor/blob/main/hardware/frog_sensor_bracket.stl,Estimate of Filament Cost
+3D Printed Frog Eyes,2.00,$0.50,$1.00,,0.00,3D Printed,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/hardware/mechanical/frog_sensor_eye.stl,Estimate of Filament Cost
+,,,,,0.00,,,
+Two Part Epoxy,0.10,$3.59,$0.36,,0.00,Amazon,https://www.amazon.com/Loctite-Instant-0-47-Fluid-Syringe-1365868/dp/B0044F9KFI/ref=sr_1_4?dchild=1&keywords=two%2Bpart%2Bepoxy&qid=1628644111&sr=8-4&th=1,One tube of epoxy is useufl for multiple units :)
+,,,,,,,,
+Base Kit Total,,,$164.15,,372.50,,,
