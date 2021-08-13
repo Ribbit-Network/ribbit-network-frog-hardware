@@ -107,7 +107,8 @@ while True:
                 .field("humidity", scd.relative_humidity) \
                 .field("lat", latitude) \
                 .field("lon", longitude) \
-                .field("alt", altitude)
+                .field("alt", altitude) \
+                .field("baro_pressure", dps310.pressure)
             
             write_api.write(bucket, org, point)
 
