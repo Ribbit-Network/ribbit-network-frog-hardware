@@ -57,7 +57,7 @@ scd.reset()
 dps310 = adafruit_dps310.DPS310(i2c_bus)
 
 # Enable self calibration mode
-scd.temperature_offset = 0
+scd.temperature_offset = 3
 scd.self_calibration_enabled = True
 
 
