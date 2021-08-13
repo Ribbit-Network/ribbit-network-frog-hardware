@@ -15,7 +15,7 @@ Frogs are one of the species that are most affected by climate change! Just like
 ## Current Status
 The hardware and software are currently under development for the first sensor version to ship out to a growing waiting list!
 
-The first prototype sensors are up and running in Seattle. [Here is some real data from that sensor](https://ghg-cloud.herokuapp.com/) (Note this dashboard is still experimental and may be down occasionally).
+The first prototype sensors are up and running in Seattle. [Here is some real data from that sensor](https://ribbit-network.herokuapp.com/) (Note this dashboard is still experimental and may be down occasionally).
 
 [The Ship Sensor 1 Project contains the known list of most urgent work to ship out the first sensors](https://github.com/Ribbit-Network/ribbit-network-sensor/projects/1)
 
