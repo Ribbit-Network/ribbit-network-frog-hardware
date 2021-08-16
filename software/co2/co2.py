@@ -53,11 +53,12 @@ write_api = client.write_api(write_options=SYNCHRONOUS)
 
 i2c_bus = board.I2C()
 scd = adafruit_scd30.SCD30(i2c_bus)
-scd.reset()
+time.sleep(1)
+scd.ambient_pressure = 1007
 dps310 = adafruit_dps310.DPS310(i2c_bus)
 
 # Enable self calibration mode
-scd.temperature_offset = 3
+scd.temperature_offset = 0
 scd.self_calibration_enabled = True
 
 
@@ -108,7 +109,9 @@ while True:
                 .field("lat", latitude) \
                 .field("lon", longitude) \
                 .field("alt", altitude) \
-                .field("baro_pressure", dps310.pressure)
+                .field("baro_pressure", dps310.pressure) \
+                .field("scd30_pressure_mbar", scd.ambient_pressure) \
+                .field("scd30_altitude_m", scd.altitude)
             
             write_api.write(bucket, org, point)
 
@@ -123,6 +126,8 @@ while True:
             data['scd_temp_offset'] = scd.temperature_offset
             data['baro_temp'] = dps310.temperature
             data['baro_pressure_hpa'] = dps310.pressure
+            data['scd30_pressure_mbar'] = scd.ambient_pressure
+            data['scd30_alt_m'] = scd.altitude
 
             print(json.dumps(data))
 
