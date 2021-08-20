@@ -25,7 +25,7 @@ See the [hardware](hardware/) and [software](sofware/) README's and folders for 
 ## Contributing
 See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section of this project for the work that I've currently scoped out to be done. Reach out to me if you are interested in helping out!
 
-[You can also join our developer discord here.](https://discord.gg/bnjz95qr)
+[You can also join our developer discord here.](https://discord.gg/vq8PkDb2TC)
 
 ## Background Information
 [See the Wiki for background research.](https://github.com/Ribbit-Network/ribbit-network-sensor/wiki/Background-Research) This project is inspired by some awesome research by incedible scientists in academia.
