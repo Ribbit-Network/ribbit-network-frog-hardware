@@ -110,6 +110,7 @@ while True:
                 .field("lon", longitude) \
                 .field("alt", altitude) \
                 .field("baro_pressure", dps310.pressure) \
+                .field ("baro_temperature", dps310.temperature) \
                 .field("scd30_pressure_mbar", scd.ambient_pressure) \
                 .field("scd30_altitude_m", scd.altitude)
             
