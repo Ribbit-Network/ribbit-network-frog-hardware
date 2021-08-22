@@ -1,0 +1,5 @@
+## Sensors
+The current prototype uses the [Sensirion SCD30 CO2 Sensor](https://www.digikey.com/en/products/detail/sensirion-ag/SCD30/8445334?utm_adgroup=Gas%20Sensors&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_Sensors%2C%20Transducers&utm_term=&utm_content=Gas%20Sensors&gclid=Cj0KCQjw2NyFBhDoARIsAMtHtZ4YeCuIrZjKrrVm8ohZNMRxEB0_QjV2AzrOf9Rp4tfHgq8otFP3-v0aAjflEALw_wcB).  It's possible that the newer sensor, the [SCD4x](https://www.sensirion.com/en/environmental-sensors/carbon-dioxide-sensors/carbon-dioxide-sensor-scd4x/) is a better sensor, but this needs to be evaluated.
+![image](https://user-images.githubusercontent.com/2559382/120937190-eb61ae80-c6c0-11eb-8ef7-9f8a7e22a168.png)
+
+A list of other available sensors is being compiled on this [Google Sheet](https://docs.google.com/spreadsheets/d/1RpaTCX8PqUjehLUbW_36fwdgL5wZA7mf5JP_UX7CvC8/edit?usp=sharing)
