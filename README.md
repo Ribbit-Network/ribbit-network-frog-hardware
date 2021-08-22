@@ -10,7 +10,7 @@ Our “Frogs” are tiny sensors that you can buy and deploy at your own home! I
 It's easy to set up and will constantly record valuable scientific data on our climate.
 Frogs are one of the species that are most affected by climate change! Just like our sensors, they ribbit to one another to create a powerful network of data about the environment.
 
-![image](https://user-images.githubusercontent.com/2559382/128448306-4549d96b-1be1-4598-9777-389fbb12b93e.png)
+![image](https://user-images.githubusercontent.com/2559382/130338413-c348007f-1a54-47d8-92b0-151f330f476d.png)
 
 ## Current Status
 The hardware and software are currently under development for the first sensor version to ship out to a growing waiting list!
