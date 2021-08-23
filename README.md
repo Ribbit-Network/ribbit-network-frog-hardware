@@ -28,7 +28,7 @@ See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section 
 [You can also join our developer discord here.](https://discord.gg/vq8PkDb2TC)
 
 ## Background Information
-[See the Wiki for background research.](https://github.com/Ribbit-Network/ribbit-network-sensor/wiki/Background-Research) This project is inspired by some awesome research by incedible scientists in academia.
+[See the Wiki for background research.](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/wiki/Background-Research.md) This project is inspired by some awesome research by incedible scientists in academia.
 
 ## Developer
 Hi, I'm [Keenan](https://www.keenanjohnson.com/) and I work on this project! Reach out if you are interested or just want to chat.
