@@ -23,7 +23,7 @@ The first prototype sensors are up and running in Seattle. [Here is some real da
 See the [hardware](hardware/) and [software](sofware/) README's and folders for more technical details!
 
 ## Contributing
-See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section of this project for the work that I've currently scoped out to be done. Reach out to me if you are interested in helping out!
+See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section of this project for the work that I've currently scoped out to be done. Reach out to me if you are interested in helping out! The [projects section](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/projects) helps detail the major efforts going on right now.
 
 We have a [contributing guide](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/CONTRIBUTING.md) that details the process for making a contribution.
 
