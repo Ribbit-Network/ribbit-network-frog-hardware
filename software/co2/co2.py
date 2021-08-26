@@ -60,7 +60,7 @@ dps310 = adafruit_dps310.DPS310(i2c_bus)
 # Enable self calibration mode
 scd.temperature_offset = 0
 scd.altitude = 0
-scd.self_calibration_enabled = False
+scd.self_calibration_enabled = True
 
 
 gps_valid = False
