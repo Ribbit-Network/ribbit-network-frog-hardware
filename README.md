@@ -5,6 +5,8 @@ The Greenhouse Gas Sensor Cloud is a large network of open-source, low-cost, Gre
 
 [See more about the cloud database here.](https://github.com/Ribbit-Network/ribbit-network-dashboard)
 
+![OSHW](assembly-instructions/images/oshw-logo.svg)
+
 ## Frog Sensors
 Our “Frogs” are tiny sensors that you can buy and deploy at your own home! It’s a small, open-source box that measures the amount of CO2 in the air using a tiny laser.
 It's easy to set up and will constantly record valuable scientific data on our climate.
