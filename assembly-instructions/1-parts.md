@@ -6,6 +6,8 @@ The document linked above contains quanitities and links to purchase all of the 
 
 Note that there are several 3D printed parts that you'll need to 3d print yourself. The next section will cover that in more detail.
 
+![Parts](images/parts.jpeg)
+
 ## Next Step
 [3D Printing](2-3d-printing.md)
 
