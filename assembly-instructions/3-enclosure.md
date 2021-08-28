@@ -25,6 +25,8 @@ This is the time to paint the Frog Head. We do this before we attach the eyes an
 
 The [Krylon Outdoor Décor Spray Paint, Shamrock results in a nice color.](https://www.amazon.com/Krylon-Outdoor-Decor-Paint-Shamrock/dp/B072RPLT81)
 
+![paint](images/paint.jpg)
+
 ## Attach the Mouth & Eyes
 The eyes and mouth are attached using the two part epoxy from the Bill of Materials. Follow the instructions and apply just a little bit of epoxy into the cutouts for the mouth and eyes.
 
