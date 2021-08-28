@@ -1,5 +1,7 @@
 # Software
 
+Now it's time to install the software we need on the SD card for the Frog Sensor. You'll need an SD card reader for this step.
+
 ## Next Step
 [Sensor Placement](6-sensor-placement.md)
 
