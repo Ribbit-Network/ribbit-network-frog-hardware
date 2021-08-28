@@ -2,9 +2,9 @@
 
 Now to assemble the electronics. The first step is to attach all of the electronics to the 3D printed bracket.
 
-To do this, attach the brass standoffs to the bracket which we will attach the electronics to.
+To do this, attach the brass standoffs to the bracket which we will attach the electronics to. This is easiest to do with a 4.5 hex socket. Be careful not to over tighten the standoff in the bracket!
 
-![standoff install](images/brass_standoff_install.MOV)
+https://user-images.githubusercontent.com/2559382/131203360-0a97f4ac-2007-4650-8da2-7b24859d4129.MOV
 
 ## Next Step
 [Software Installation](5-software.md)
