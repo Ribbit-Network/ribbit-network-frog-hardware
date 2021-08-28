@@ -1,5 +1,43 @@
 # 3D Printing
 
+There are several 3D printed parts you'll need to print in order to build a Frog Sensor. All parts can be found [in this folder](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical).
+
+The parts are divided into two sections described below:
+
+## Required Parts
+These are the parts required for the Frog Sensor construction:
+* Bracket
+  * Quantity:1
+  * Suggested Color: Green
+* GPS Clip - 
+  * Quantity:1
+  * Suggested Color: Green
+
+The bracket is the biggest part and will generally take many hours to print. It's printed in this orientation to allow it to be printed as a single part:
+
+![Bracket](images/bracket_on_printer.jpeg)
+
+## Optional Parts
+These parts only serve a cosmetic function and are therefore optional. However, they are fun and cute, so we suggest including them if you can.
+
+![Frog Head](images/finished_frog_head.jpeg)
+
+* 1 - Frog Head
+  * Quantity:1
+  * Suggested Color: Green
+* 2 - Frog Eyes
+  * Quantity:2
+  * Suggested Color: Black
+* 1 - Frog Mouth
+  * Quantity:1
+  * Suggested Color: Pink
+
+## Print Materials
+Given that the sensors are designed to sit outside, a PETG 3D Printer Filament should be used for all the parts. This kind of filament is readily available and can be used on almost any 3D printer. It holds up well in moisture and is very UV resistant making it perfect for the sensor. The parts lists links to some suggestions for brands and colors.
+
+## GCode for the 3D Printer
+You can find [pre-sliced GCode files here.](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical/gcode) These were created using [Cura](https://ultimaker.com/software/ultimaker-cura) and are designed for an Ender 3 V2.
+
 ## Next Step
 [Enclosure](3-enclosure.md)
 

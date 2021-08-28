@@ -19,3 +19,6 @@ This is an open-source project for citizen scientists like yourself! We are alwa
 No problem! The Ribbit Netowrk team is here for you! We have lots of ways to connect. Jump in and ask your question or provide a suggestion!
 * [Start a dicussion here](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/discussions/new)
 * [Join the Developer Discord](https://discord.gg/vq8PkDb2TC)
+
+## Get started!
+[Let's build!](1-parts.md)
