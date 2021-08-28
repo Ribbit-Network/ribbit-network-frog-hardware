@@ -19,6 +19,9 @@ The first prototype sensors are up and running in Seattle. [Here is some real da
 
 [The Ship Sensor 1 Project contains the known list of most urgent work to ship out the first sensors](https://github.com/Ribbit-Network/ribbit-network-sensor/projects/1)
 
+## Build a Frog!
+[Check out the instructions](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/assembly-instructions/0-start-here.md) to build your own Frog Sensor
+
 ## Technical Details
 See the [hardware](hardware/) and [software](sofware/) README's and folders for more technical details!
 
