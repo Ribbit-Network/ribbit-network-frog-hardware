@@ -1,6 +1,6 @@
 # Done
 
-Congrats you're done! The Frog Sensor is complete and collecting data for our planet.
+Congrats, you're done! The Frog Sensor is complete and collecting data for our planet.
 
 [You can view the live data from your sensor here.](https://ribbit-network.herokuapp.com/)
 

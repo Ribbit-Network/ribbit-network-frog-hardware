@@ -4,7 +4,7 @@ The first step is building a Frog Sensor is to get all of the parts. You can fin
 
 The document linked above contains quanitities and links to purchase all of the parts you'll need to build a Frog.
 
-Note that there are several 3D printed parts that you'll need to 3d print yourself. The next section will cover that in more detail.
+Note that there are several 3D printed parts that you'll need to 3D print yourself. The next section will cover that in more detail.
 
 ![Parts](images/parts.jpeg)
 
