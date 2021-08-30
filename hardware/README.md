@@ -1,5 +1,5 @@
 ## Overview
-The hardware [Bill of Materials is located here.](Frog Sensor - Ribbit Network Bill of Materials - BOM.csv)
+The hardware [Bill of Materials is located here.](ribbit_network_frog_sensor_bom.csv)
 
 Currently most components are off the shelf, though this will likely become less true as the Frog sensor matures.
 
