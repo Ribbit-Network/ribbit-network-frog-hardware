@@ -1,5 +1,5 @@
 ## Overview
-The hardware [Bill of Materials is located here.](https://docs.google.com/spreadsheets/d/1lsWCXFawsJNGc44bqFXWkpjHfIFZQEj5UceJV4AiuK0/edit?usp=drive_web&ouid=114155504008663582325)
+The hardware [Bill of Materials is located here.](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/hardware/Frog%20Sensor%20-%20Ribbit%20Network%20Bill%20of%20Materials%20-%20BOM.csv)
 
 Currently most components are off the shelf, though this will likely become less true as the Frog sensor matures.
 
