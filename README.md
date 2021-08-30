@@ -5,6 +5,8 @@ The Greenhouse Gas Sensor Cloud is a large network of open-source, low-cost, Gre
 
 [See more about the cloud database here.](https://github.com/Ribbit-Network/ribbit-network-dashboard)
 
+![OSHW](assembly-instructions/images/oshw-logo.svg)
+
 ## Frog Sensors
 Our “Frogs” are tiny sensors that you can buy and deploy at your own home! It’s a small, open-source box that measures the amount of CO2 in the air using a tiny laser.
 It's easy to set up and will constantly record valuable scientific data on our climate.
@@ -19,16 +21,21 @@ The first prototype sensors are up and running in Seattle. [Here is some real da
 
 [The Ship Sensor 1 Project contains the known list of most urgent work to ship out the first sensors](https://github.com/Ribbit-Network/ribbit-network-sensor/projects/1)
 
+## Build a Frog!
+[Check out the instructions](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/assembly-instructions/0-start-here.md) to build your own Frog Sensor
+
 ## Technical Details
-See the [hardware](hardware/) and [software](sofware/) README's and folders for more technical details!
+See the [hardware](hardware/) and [software](software/) README's and folders for more technical details!
 
 ## Contributing
-See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section of this project for the work that I've currently scoped out to be done. Reach out to me if you are interested in helping out!
+See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section of this project for the work that I've currently scoped out to be done. Reach out to me if you are interested in helping out! The [projects section](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/projects) helps detail the major efforts going on right now.
 
-[You can also join our developer discord here.](https://discord.gg/vq8PkDb2TC)
+We have a [contributing guide](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/CONTRIBUTING.md) that details the process for making a contribution.
+
+[If you are not sure where to start or just want to chat join our developer discord here.](https://discord.gg/vq8PkDb2TC). You can also [start a discussion](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/discussions) right here in Github.
 
 ## Background Information
-[See the Wiki for background research.](https://github.com/Ribbit-Network/ribbit-network-sensor/wiki/Background-Research) This project is inspired by some awesome research by incedible scientists in academia.
+[See the Wiki for background research.](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/wiki/Background-Research.md) This project is inspired by some awesome research by incedible scientists in academia.
 
 ## Developer
 Hi, I'm [Keenan](https://www.keenanjohnson.com/) and I work on this project! Reach out if you are interested or just want to chat.
