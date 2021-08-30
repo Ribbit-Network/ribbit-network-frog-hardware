@@ -3,9 +3,8 @@ The hardware [Bill of Materials is located here.](Frog Sensor - Ribbit Network B
 
 Currently most components are off the shelf, though this will likely become less true as the Frog sensor matures.
 
-## Wiring Diagram
-
-![wiring_diagram](electrical/fritzing/frog_sensor_diagram.png)
+## Assembly Instructions
+Assembly instructions can all be found [here](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/assembly-instructions/0-start-here.md).
 
 ## Custom Components
 
