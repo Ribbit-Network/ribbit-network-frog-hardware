@@ -1,5 +1,5 @@
 ## Overview
-The hardware [Bill of Materials is located here.](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/hardware/Frog%20Sensor%20-%20Ribbit%20Network%20Bill%20of%20Materials%20-%20BOM.csv)
+The hardware [Bill of Materials is located here.](Frog Sensor - Ribbit Network Bill of Materials - BOM.csv)
 
 Currently most components are off the shelf, though this will likely become less true as the Frog sensor matures.
 
@@ -9,9 +9,7 @@ Currently most components are off the shelf, though this will likely become less
 
 ## Custom Components
 
-The only custom component is a 3D printed bracket that connects the electronics to the enclosure.
-
-![image](https://user-images.githubusercontent.com/2559382/128451142-c6fcb934-4056-4168-a42c-947805c50601.png)
+There are a few custom components desribed [here](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/assembly-instructions/2-3d-printing.md).
 
 ## Main Readme
 
