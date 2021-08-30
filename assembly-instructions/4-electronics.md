@@ -24,14 +24,14 @@ Now it's time to attach the electronics to the standoffs. Attach the Raspberry P
 
 ## Install Rasperry Pi Compute Module
 
-The raspberry pi compute module 4 should just click into the connectors on the carrier board you installed in the previous step.
+The Raspberry Pi Compute Module 4 should just click into the connectors on the carrier board you installed in the previous step.
 
 ## Soldering Raspberry Pi QWIIC Adapter
-The qwiic adapter to connect the CO2 sensor to the raspberry comes without headers soldered on.
+The qwiic adapter to connect the CO2 sensor to the Raspberry Pi comes without headers soldered on.
 
 ![qwiic no headers](images/qwiic_shim_no_headers.jpeg)
 
-You'll need to solder on headers like so:
+You'll need to solder on headers to the bottom, like so:
 ![qwiic headers](images/qwiic_shim_headers.png)
 
 ## GPS Antennae Clip
@@ -43,7 +43,7 @@ Now it's time to install the GPS Antennae clip into the main bracket:
 
 ## Cables
 There are three cables that need to be installed as shown in the pictures above:
-* The USB cable - This goes from the raspberry pi to the GPS module as shown in the pictures above. Notice the loop which keeps the cable managed nicely.
+* The USB cable - This goes from the Raspberry Pi to the GPS module as shown in the pictures above. Notice the loop which keeps the cable managed nicely.
 * STEMMA QT / Qwiic JST SH 4-pin Cable - 50mm Long - The Cable from the SCD30 CO2 sensor to the barometer
 * STEMMA QT / Qwiic JST SH 4-pin Cable - 100mm Long - The Cable from the SCD30 CO2 sensor to the Raspberry Pi
 * Wifi antennae - This gets screwed into the loop on the sensor side of the bracket and goes to the Raspberry Pi on the other side
@@ -55,13 +55,13 @@ Everything should look like this when you are done:
 
 ## Install Electronics Into Enclosure
 
-The final step is to slide the completed electronics bracket into the enclosure. The GPS Antennae side of the bracket should go into the enclosure first, so that the USB C power connect on the bottom of the Rapsberry Pi Carrier board is accessible at the bottom. See this image with the body of the enclosure cut away:
+The final step is to slide the completed electronics bracket into the enclosure. The GPS Antennae side of the bracket should go into the enclosure first, so that the USB C power connector on the bottom of the Rapsberry Pi Carrier board is accessible at the bottom. See this image with the body of the enclosure cut away:
 
 ![orientation](images/bracket_orientation.png)
 
 ## Assembly complete!
 
-The electronics assembly is now complete! The only piecdes you should have left are the SD card and power cord which we will install in the next steps.
+The electronics assembly is now complete! The only pieces you should have left are the SD card and power cord which we will install in the next steps.
 
 ## Next Step
 [Software Installation](5-software.md)
