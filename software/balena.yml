@@ -13,6 +13,11 @@ assets:
     type: blob.asset
     data:
       url: 'https://github.com/Ribbit-Network/ribbit-network-frog-sensor'
+  logo:
+    type: blob.asset
+    data:
+      url: >-
+        https://raw.githubusercontent.com/Ribbit-Network/ribbit-network-frog-sensor/main/software/balena_fleet_logo.png
 data:
   defaultDeviceType: raspberrypicm4-ioboard
   supportedDeviceTypes:
