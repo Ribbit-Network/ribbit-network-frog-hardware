@@ -15,11 +15,15 @@ Frogs are one of the species that are most affected by climate change! Just like
 ![image](https://user-images.githubusercontent.com/2559382/130338413-c348007f-1a54-47d8-92b0-151f330f476d.png)
 
 ## Current Status
-The hardware and software are currently under development for the first sensor version to ship out to a growing waiting list!
+[The design of sensor version 1](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/milestone/1) has just been completed and is ready for deployment. The first few units are being produced now and sent to a long list of waiting Alpha testers. The instructions are also complete for building a sensor (see below).
 
-The first prototype sensors are up and running in Seattle. [Here is some real data from that sensor](https://ribbit-network.herokuapp.com/) (Note this dashboard is still experimental and may be down occasionally).
+The first prototype sensors are up and running! [Here is some real data from our sensor network!](https://ribbit-network.herokuapp.com/) (Note this dashboard is still experimental and may be down occasionally).
 
-[The Ship Sensor 1 Project contains the known list of most urgent work to ship out the first sensors](https://github.com/Ribbit-Network/ribbit-network-sensor/projects/1)
+There is still a ton of interesting work to do however!
+
+Check out our issues for ongoing work! In the near future we have several major goals:
+* [Reduce the cost of the sensor](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/projects/6)
+* [Create a solar power version of the sensor](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/projects/2) (this requires reducing the power consumption and designing the solar circuitry)
 
 ## Build a Frog!
 [Check out the instructions](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/assembly-instructions/0-start-here.md) to build your own Frog Sensor
