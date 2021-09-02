@@ -1,7 +1,7 @@
 # Ribbit Network Frog Sensor
 [This project will create the world's largest Greenhouse Gas Emissions dataset that will empower anyone to join in the work on climate and provide informed data for climate action.](https://ribbitnetwork.org/)
 
-The Greenhouse Gas Sensor Cloud is a large network of open-source, low-cost, Greenhouse Gas (CO2 and possibly methane) Detection Sensors. These sensor units will be sold by the Ribbit Network and will upload their data to the cloud, creating the world's most complete Greenhouse Gas dataset.
+Ribbit Network is a large network of open-source, low-cost, Greenhouse Gas (CO2 and hopefully other gasses in the future) Detection Sensors. These sensor units will be sold by the Ribbit Network and will upload their data to the cloud, creating the world's most complete Greenhouse Gas dataset.
 
 [See more about the cloud database here.](https://github.com/Ribbit-Network/ribbit-network-dashboard)
 
