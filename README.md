@@ -32,6 +32,9 @@ Check out our issues for ongoing work! In the near future we have several major 
 ## Technical Details
 See the [hardware](hardware/) and [software](software/) README's and folders for more technical details!
 
+## Questions?
+[Check outhe Frequently Asked Questions section.](https://github.com/Ribbit-Network/ribbit-network-faq) If you don't see your question, let us know either in a Github Discussion or via Discord.
+
 ## Contributing
 See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section of this project for the work that I've currently scoped out to be done. Reach out to me if you are interested in helping out! The [projects section](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/projects) helps detail the major efforts going on right now.
 
