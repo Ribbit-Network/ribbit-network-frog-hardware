@@ -89,8 +89,11 @@ while True:
                 continue
 
             # Read GPS Data
-            latitude = packet.position()[0]
-            longitude = packet.position()[1]
+            # See https://github.com/Ribbit-Network/ribbit-network-frog-sensor/issues/41
+            # for more information about the rounding of the coordinates
+            gps_digits_precision = 2
+            latitude = round(packet.position()[0], gps_digits_precision)
+            longitude = round(packet.position()[1], gps_digits_precision)
             altitude = packet.altitude()
 
             # Set SCD Pressure from Barometer
