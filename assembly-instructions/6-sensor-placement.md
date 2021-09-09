@@ -8,7 +8,7 @@ The location will need to be near a power outlet to ensure there is power for th
 
 Try to ensure the space above the sensor is largely unobstructed so that the GPS unit can obtain an accurate position (don't place the sensor in a shed for instance).
 
-![placement](images/sensor_placement.jpg)
+<img src="images/sensor_placement.jpg" width="500">
 
 ## Power Cable
 Connect the USB C power supply to the USB C connector on the bottom of the Raspberry Pi carrier board and plug the sensor into a normal wall outlet.
@@ -19,11 +19,11 @@ If you didn't enter wifi information previously, or you purchased the Frog, you'
 
 After the Frog Sensor is connected to power, it will create a Hotspot called "WiFi Connect". Connect to that network to enter your home WiFi credentials.
 
-![IMG_9529](https://user-images.githubusercontent.com/2559382/132726575-3b223221-369a-4b77-a6eb-4cfcf5464836.PNG)
+<img src="https://user-images.githubusercontent.com/2559382/132726575-3b223221-369a-4b77-a6eb-4cfcf5464836.PNG" width="500">
 
 Now you'll see this screen below where you can select the WiFi SSID and enter the Passphrase.
 
-![IMG_9530](https://user-images.githubusercontent.com/2559382/132726695-275c0557-6907-45ca-b88f-dedde213ec59.PNG)
+<img src="https://user-images.githubusercontent.com/2559382/132726695-275c0557-6907-45ca-b88f-dedde213ec59.PNG" width="500">
 
 Once you have entered the information, the sensor will disconnect from your device, stop broadcasting the hotspot and connect to your home wifi. You should see the Frog sensor appear on the [web page here shortly](https://ribbit-network.herokuapp.com/). If there is any connection problem, the sensor will restart and broadcast the Wifi Connect hotspot again.
 
