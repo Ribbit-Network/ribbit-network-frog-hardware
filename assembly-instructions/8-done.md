@@ -9,7 +9,7 @@ Thank you so much for being a part of the Ribbit Network. Stay in touch on our d
 Also consider supporting the project on [Ko-fi](https://ko-fi.com/W7W14VTU8) or through [Github Sponsors](https://github.com/sponsors/keenanjohnson) to help cover the research and development costs.
 
 ## Previous Step
-[Go Back](6-sensor-placement.md)
+[Go Back](7-sensor-placement.md)
 
 ## Table of Contents
 [Return to the Beginning](0-start-here.md)

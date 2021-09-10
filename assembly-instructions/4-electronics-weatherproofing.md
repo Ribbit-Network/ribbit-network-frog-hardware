@@ -37,10 +37,10 @@ The below images display the parts on the electronics that we recommend covering
 
 
 ## Next Step
-[Software Installation](5-electronics-assembly.md)
+[Electronics Assembly](5-electronics-assembly.md)
 
 ## Previous Step
-[Go Back](3-enclosure.md)
+[Go Back](4-electronics-weatherproofing.md)
 
 ## Table of Contents
 [Return to the Beginning](0-start-here.md)
