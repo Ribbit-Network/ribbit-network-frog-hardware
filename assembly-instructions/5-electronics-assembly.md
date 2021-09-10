@@ -1,4 +1,4 @@
-# Electronics
+# Electronics Assembly
 
 Now to assemble the electronics. The first step is to attach all of the electronics to the 3D printed bracket.
 
@@ -64,10 +64,10 @@ The final step is to slide the completed electronics bracket into the enclosure.
 The electronics assembly is now complete! The only pieces you should have left are the SD card and power cord which we will install in the next steps.
 
 ## Next Step
-[Software Installation](5-software.md)
+[Software Installation](6-software.md)
 
 ## Previous Step
-[Go Back](3-enclosure.md)
+[Go Back](4-electronics-weatherproofing.md)
 
 ## Table of Contents
 [Return to the Beginning](0-start-here.md)

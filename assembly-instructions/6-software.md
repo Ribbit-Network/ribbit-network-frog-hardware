@@ -31,10 +31,10 @@ Once Etcher is installed and you have the image, do the following:
 Now that the SD card is ready to go, remove it from your computer and insert it into the Raspberry Pi SD card slot on the bottom of the sensor.
 
 ## Next Step
-[Sensor Placement](6-sensor-placement.md)
+[Sensor Placement](7-sensor-placement.md)
 
 ## Previous Step
-[Go Back](4-electronics.md)
+[Go Back](5-electronics-assembly.md)
 
 ## Table of Contents
 [Return to the Beginning](0-start-here.md)
