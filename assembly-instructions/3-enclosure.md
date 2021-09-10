@@ -36,7 +36,7 @@ The eyes and mouth are attached using the two part epoxy from the [Bill of Mater
 Now the cute enclosure is done!
 
 ## Next Step
-[Electronics Weatherproofing](4-electronics-weatherproofing.md)
+[Electronics Weatherproofing [OPTIONAL]](4-electronics-weatherproofing.md)
 
 ## Previous Step
 [Go Back](2-3d-printing.md)
