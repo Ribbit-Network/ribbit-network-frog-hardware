@@ -40,7 +40,7 @@ The below images display the parts on the electronics that we recommend covering
 [Electronics Assembly](5-electronics-assembly.md)
 
 ## Previous Step
-[Go Back](4-electronics-weatherproofing.md)
+[Go Back](3-enclosure.md)
 
 ## Table of Contents
 [Return to the Beginning](0-start-here.md)
