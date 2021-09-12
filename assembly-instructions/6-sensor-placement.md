@@ -1,6 +1,6 @@
 # Sensor Placement
 
-Now it's time to place the sensor in it's home outside your home.
+Now it's time to place the sensor in its home outside your home.
 
 You can use the loop on the top of the sensor to hang the sensor somewhere or use the slot on the backside to hang the sensor on a nail.
 
@@ -8,24 +8,34 @@ The location will need to be near a power outlet to ensure there is power for th
 
 Try to ensure the space above the sensor is largely unobstructed so that the GPS unit can obtain an accurate position (don't place the sensor in a shed for instance).
 
-<img src="images/sensor_placement.jpg" width="500">
+<img src="images/sensor_placement.jpg" width="400">
 
 ## Power Cable
 Connect the USB C power supply to the USB C connector on the bottom of the Raspberry Pi carrier board and plug the sensor into a normal wall outlet.
 
 ## WiFi Connection
 
-If you didn't enter wifi information previously, or you purchased the Frog, you'll need to connect it to your WiFi network.
+If you didn't enter your home network WiFi information previously, or you purchased the Frog pre-assembled, you'll need to connect it to your home WiFi network:
 
-After the Frog Sensor is connected to power, it will create a Hotspot called "WiFi Connect". Connect to that network to enter your home WiFi credentials.
+* After the Frog Sensor is connected to power, it will create a Hotspot called "WiFi Connect". Connect to that hotspot network from a computer or smartphone to continue the setup.
 
-<img src="https://user-images.githubusercontent.com/2559382/132726575-3b223221-369a-4b77-a6eb-4cfcf5464836.PNG" width="500">
+<img src="https://user-images.githubusercontent.com/2559382/132726575-3b223221-369a-4b77-a6eb-4cfcf5464836.PNG" width="400">
 
-Now you'll see this screen below where you can select the WiFi SSID and enter the Passphrase.
+* Upon connecting to the hotspot, or by opening a web browser, you may be redirected to the page pictured below. Otherwise, open a web browser and navigate to https://192.168.42.1 
+* On this page, select your home WiFi network (SSID) and enter the Passphrase. This will connect the frog sensor to your home WiFi network.
+  * If you do not see your home WiFi network (SSID) name listed in the drop-down menu, try refreshing the page.
+  * If refreshing the webpage does not work, unplug the power cable from the frog sensor, wait 30 seconds, then plug it back in to force it to restart. Then try the above steps again.
+  * If neither of these work, your sensor may be too far from your home WiFi network. Try placing the frog sensor in another location.
 
-<img src="https://user-images.githubusercontent.com/2559382/132726695-275c0557-6907-45ca-b88f-dedde213ec59.PNG" width="500">
+<img src="https://user-images.githubusercontent.com/2559382/132726695-275c0557-6907-45ca-b88f-dedde213ec59.PNG" width="400">
 
-Once you have entered the information, the sensor will disconnect from your device, stop broadcasting the hotspot and connect to your home wifi. You should see the Frog sensor appear on the [web page here shortly](https://ribbit-network.herokuapp.com/). If there is any connection problem, the sensor will restart and broadcast the Wifi Connect hotspot again.
+* Once you have entered your WiFi information, you should see the following message appear on the page: *"Note! Applying changes... Your device will soon be online. If connection is unsuccessful, the Access Point will be back up in a few minutes, and reloading this page will allow you to try again."*
+  * If you receive the error message: *"Danger! Fail to connect to the network. NetworkError when attempting to fetch resource.* Unplug the power cable from the frog sensor, wait 30 seconds, then plug it back in to force it to restart. Then try the above steps again.
+* The sensor will now disconnect from your device, stop broadcasting the "WiFi Connect" hotspot, and connect to your home WiFi network. 
+
+You should see the Frog sensor appear on the [web page here shortly](https://ribbit-network.herokuapp.com/). 
+
+If there are any connection problem, the sensor will restart and broadcast the Wifi Connect hotspot again.
 
 ## Next Step
 [View the data!](7-done.md)
