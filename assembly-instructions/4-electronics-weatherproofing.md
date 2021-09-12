@@ -16,7 +16,7 @@ You will also need a conformal coating. We recommend that you use a liquid bottl
 
 Please follow the appropriate directions for using your conformal coating of choice; different coats may require different cure times and different safety considerations. 
 
-The below images display the parts on the electronics that we recommend covering with the conformal coat. You can coat more of the board if you would like, but try to avoid coating any of the connectors.
+The below images display the parts on the electronics that we recommend covering with the conformal coat. You can coat more of the board if you would like, but try to avoid coating any of the connectors (highlighted in RED below).
 
 ### Bottom of the Raspberry Pi Compute Module 4
 
