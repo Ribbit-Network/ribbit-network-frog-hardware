@@ -58,6 +58,7 @@ Everything should look like this when you are done:
 The final step is to slide the completed electronics bracket into the enclosure. The GPS Antennae side of the bracket should go into the enclosure first, so that the USB C power connector on the bottom of the Rapsberry Pi Carrier board is accessible at the bottom. See this image with the body of the enclosure cut away:
 
 ![orientation](images/bracket_orientation.png)
+![bracket](images/inserted_bracket.JPG)
 
 ## Assembly complete!
 

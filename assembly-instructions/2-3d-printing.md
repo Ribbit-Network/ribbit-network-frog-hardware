@@ -35,9 +35,6 @@ These parts only serve a cosmetic function and are therefore optional. However, 
 ## Print Materials
 Given that the sensors are designed to sit outside, a PETG 3D Printer Filament should be used for all the parts. This kind of filament is readily available and can be used on almost any 3D printer. It holds up well in moisture and is very UV resistant making it perfect for the sensor. The [parts list](https://docs.google.com/spreadsheets/d/1lsWCXFawsJNGc44bqFXWkpjHfIFZQEj5UceJV4AiuK0/edit#gid=0) links to some suggestions for brands and colors.
 
-## GCode for the 3D Printer
-You can find [pre-sliced GCode files here.](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical/gcode) These were created using [Cura](https://ultimaker.com/software/ultimaker-cura) and are designed for an Ender 3 V2.
-
 ## Next Step
 [Enclosure](3-enclosure.md)
 
