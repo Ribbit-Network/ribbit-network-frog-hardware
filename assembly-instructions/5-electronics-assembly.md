@@ -17,7 +17,18 @@ There are 4 standoffs on the opposite side where the Raspberry Pi will attach:
 ![RPI Side](images/standoffs_rpi.png)
 
 ## Attach Electronics
-Now it's time to attach the electronics to the standoffs. Attach the Raspberry Pi Carrier Board on one side, the SCD30, Barometer, and GPS on the other side as shown in the photos below:
+Now it's time to attach the electronics to the standoffs.
+
+Loctite should be applied on the inside of each of the standoffs before inserting the screws. It's easiest to use a toothpick to just place a dab on the interior threads like this:
+
+![Loctite Toothpick](images/loctite_pick.JPG)
+![Pick in Nut](images/pick_in_nut.JPG)
+
+Don't put too much loctite in, as this can actually decrease it's effectiveness! For example, this is too much:
+
+![Too Much Loctite](images/too_much_loctite.JPG)
+
+Attach the Raspberry Pi Carrier Board on one side, the SCD30, Barometer, and GPS on the other side as shown in the photos below:
 
 ![Electronics RPI Side](images/electronics_rpi_side.jpg)
 ![Electronics Sensor Side](images/electronics_sensor_side.jpg)
