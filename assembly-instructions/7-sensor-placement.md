@@ -4,9 +4,7 @@ Now it's time to place the sensor in its home outside your home.
 
 You can use the loop on the top of the sensor to hang the sensor somewhere or use the slot on the backside to hang the sensor on a nail.
 
-The location will need to be near a power outlet to ensure there is power for the sensor. Ideally it should be as high as possible and as far away from structures like walls or corners to ensure maximum airflow. It also shouldn't be placed too close to a tree, if possible.
-
-Try to ensure the space above the sensor is largely unobstructed so that the GPS unit can obtain an accurate position (don't place the sensor in a shed for instance).
+The location will need to be near a power outlet to ensure there is power for the sensor. Ideally it should be as high as possible and out of direct sunlight as much as possible to prevent rapid temperature changes. Try to ensure the space above the sensor is largely unobstructed so that the GPS unit can obtain an accurate position (don't place the sensor in a shed for instance).
 
 <img src="images/sensor_placement.jpg" width="400">
 
