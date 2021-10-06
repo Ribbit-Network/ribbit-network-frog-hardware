@@ -23,5 +23,9 @@ assets:
 data:
   defaultDeviceType: raspberrypicm4-ioboard
   supportedDeviceTypes:
+    - raspberry-pi
+    - raspberrypi3
+    - raspberrypi3-64
+    - raspberrypi4-64
     - raspberrypicm4-ioboard
 version: 0.0.1
