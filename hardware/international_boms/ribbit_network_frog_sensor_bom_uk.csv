@@ -1,0 +1,40 @@
+Item,Quantity,Unit Price,Price,Unit Mass (g),Mass (g),Vendor,Link,Notes
+Sensors,,,,,,,,
+SCD-30 - NDIR CO2 Temperature and Humidity Sensor,1,£51.30 ,£51.30 ,10,10,ThePiHut,https://thepihut.com/products/adafruit-scd-30-ndir-co2-temperature-and-humidity-sensor,
+Barometer,1,£6 ,£6 ,2,2,ThePiHut,https://thepihut.com/products/adafruit-dps310-precision-barometric-pressure-altitude-sensor,
+GPS,1,£12.99 ,£12.99 ,10,10,Amazon,https://www.amazon.co.uk/Navigation-Positioning-Microcontroller-Compatible-Sensitivity/dp/B08XGN4YLY?psc=1,
+,,,,,,,,
+Compute / Connectivity,,,,,,,,
+Raspberry Pi Compute Module 4 - 1GB / No MMC / No WiFi (Lite),1,£24 ,£24 ,9,9,ThePiHut,https://thepihut.com/products/raspberry-pi-compute-module-4?variant=39486529568963,Out of stock - Alt: https://shop.pimoroni.com/products/raspberry-pi-compute-module-4?variant=32280531075155
+TP-Link USB WiFi Adapter,1,£4.99 ,£4.99 ,2,2,Amazon,https://www.amazon.co.uk/TP-LINK-TL-WN725N-Mbps-Wireless-N-Adapter/dp/B008IFXQFU,
+Base Board for Raspberry Pi Compute Module 4,1,£18.50 ,£18.50 ,38,38,ThePiHut,https://thepihut.com/products/mini-base-board-a-for-raspberry-pi-compute-module-4,
+8 GB SD Card,1,£8.70 ,£8.70 ,0.25,0.25,ThePiHut,https://thepihut.com/products/sd-microsd-memory-card-8-gb-sdhc,
+,,,,,,,,
+,,,,,,,,
+Cables,,,,,,,,
+SparkFun Qwiic or Stemma QT SHIM,1,£1.20 ,£1.20 ,1,1,Pimoroni,https://shop.pimoroni.com/products/sparkfun-qwiic-shim-for-raspberry-pi,
+2x3 Female Header,1,£0.60 ,£0.60 ,0.25,0.25,Pimoroni,https://shop.pimoroni.com/products/0-100-2-54-mm-female-header-straight?variant=31605644296275,
+Power Supply,1,£10.98 ,£10.98 ,94,94,Amazon,https://www.amazon.co.uk/CPC-Official-Raspberry-USB-C-Black/dp/B07VKF1CK8,3A instead of 3.5A? Is this ok?
+STEMMA QT / Qwiic JST SH 4-pin Cable - 50mm Long,1,£0.80 ,£0.80 ,0.25,0.25,ThePiHut,https://thepihut.com/products/stemma-qt-qwiic-jst-sh-4-pin-cable,
+STEMMA QT / Qwiic JST SH 4-pin Cable - 100mm Long,1,£0.80 ,£0.80 ,0.25,0.25,ThePiHut,https://thepihut.com/products/stemma-qt-qwiic-jst-sh-4-pin-cable-100mm-long,
+GPS USB Cable,1,£1.50 ,£1.50 ,2,2,ThePiHut,https://thepihut.com/products/usb-to-micro-usb-cable-0-5m,
+,,,,,,,,
+Mechanical,,,,,,,,
+Enclosure,1,£22.61 ,£22.61 ,220,220,Amazon,https://www.amazon.co.uk/AcuRite-06054M-Temperature-Humidity-Radiation/dp/B01M64ISDE,White
+Brass Standoffs,11,£0.37 ,£4.07 ,0.5,5.5,Ebay,https://www.ebay.co.uk/itm/183416641168?var=691060696834,"M2.5 12mm length rather than 11mm, male to female threaded. Have to buy 20"
+M2.5 x 5 Screws,11,£0.07 ,£0.77 ,0.25,2.75,Accu,https://www.accu.co.uk/en/phillips-pan-head-screws/65530-SIP-M2-5-5-A4,
+,,,,,,,,
+3D Printed Parts,,,,,,,,Quantity shows percentage of a filament roll used for each part
+Electronics Bracket,0.1,£21.99 ,£2.20 ,84,8.4,Amazon,https://www.amazon.co.uk/HATCHBOX-Printer-Filament-Dimensional-Accuracy/dp/B014VM991I,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Frog Eyes,0.02,£32.99 ,£0.66 ,2,0.04,Amazon,https://www.amazon.co.uk/HATCHBOX-Printer-Filament-Dimensional-Accuracy/dp/B014VM95IK,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Frog Mouth,0.01,£21.99 ,£0.22 ,1,0.01,Amazon,https://www.amazon.co.uk/HATCHBOX-Printer-Filament-Dimensional-Accuracy/dp/B08ZB2ZZ8K,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Frog Head,0.11,£21.99 ,£2.42 ,60,6.6,Amazon,https://www.amazon.co.uk/HATCHBOX-Printer-Filament-Dimensional-Accuracy/dp/B014VM991I,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+GPS Clip,0.05,£21.99 ,£1.10 ,4,0.2,Amazon,https://www.amazon.co.uk/HATCHBOX-Printer-Filament-Dimensional-Accuracy/dp/B014VM991I,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+,,,,,,,,
+Consumables,,,,,,,,
+Two Part Epoxy,0.1,£5.70 ,£0.57 ,0,0,Amazon,https://www.amazon.co.uk/Gorilla-Glue-25ml-Epoxy/dp/B009NQQJFC?qsid=261-7819376-8577965,
+Loctite,0.1,£5.87 ,£0.59 ,0,0,Amazon,https://www.amazon.co.uk/Henkel-Loctite-Health-Threadlocker-Strength/dp/B0198CEGC8,
+Green Paint,0.2,£8.99 ,£1.80 ,0,0,Amazon,https://www.amazon.co.uk/Selsil-Friendly-Brilliant-Interior-Furniture/dp/B092SDH4DP?qsid=261-7819376-8577965,
+Conformal coating,0.1,£10.74 ,£1.07 ,0,0,Amazon,https://www.amazon.co.uk/MG-Chemicals-419D-55ML-Premium-Conformal/dp/B07B8RY7M6?qsid=261-7819376-8577965,
+,,,,,,,,
+Parts Total,,£317.66 ,£180.44 ,,412.5,,,
