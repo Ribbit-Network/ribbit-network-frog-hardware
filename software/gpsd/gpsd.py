@@ -118,7 +118,6 @@ def control_uart(control):
             current_dt_overlays = set([val.strip('"') for val in variable["value"].split(",")])
 
     if current_dt_overlays:
-
         if control.lower() == "enable":
             if "disable-bt" in current_dt_overlays:
                 print("Overlay already set, nothing to be done")
