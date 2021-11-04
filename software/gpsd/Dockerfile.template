@@ -22,7 +22,11 @@
 
 FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3.9
 
-RUN install_packages gpsd gpsd-clients dbus
+RUN install_packages gpsd gpsd-clients dbus build-essential libffi-dev python-dev libssl-dev
+RUN pip install wheel
+
+ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
+RUN pip install cryptography==3.4.6
 RUN pip install balena-sdk
 
 WORKDIR /usr/src
