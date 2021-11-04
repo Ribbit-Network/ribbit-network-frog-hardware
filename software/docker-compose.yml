@@ -10,6 +10,10 @@ services:
     build: "./gpsd"
     devices: 
       - "/dev/ttyACM0:/dev/ttyACM0"
+      # Provide UART0 for gpsd to fall back to.
+      - "/dev/ttyAMA0:/dev/ttyAMA0"
+      # Allows gpsd.py to detect the current RPi version
+      - "/proc/device-tree/model:/proc/device-tree/model"
     environment:
       - "DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket"
     ports:
@@ -17,6 +21,7 @@ services:
     labels:
       io.resin.features.dbus: '1'
       io.balena.features.kernel-modules: '1'
+      io.balena.features.balena-api: '1'
   co2:
     privileged: true
     build: "./co2"
