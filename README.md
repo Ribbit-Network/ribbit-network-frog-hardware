@@ -12,7 +12,7 @@ Our “Frogs” are tiny sensors that you can buy and deploy at your own home! I
 It's easy to set up and will constantly record valuable scientific data on our climate.
 Frogs are one of the species that are most affected by climate change! Just like our sensors, they ribbit to one another to create a powerful network of data about the environment.
 
-![image](https://user-images.githubusercontent.com/2559382/130338413-c348007f-1a54-47d8-92b0-151f330f476d.png)
+<img src="https://user-images.githubusercontent.com/2559382/130338413-c348007f-1a54-47d8-92b0-151f330f476d.png" width="600">
 
 ## Current Status
 [The design of sensor version 1](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/milestone/1) has just been completed and is ready for deployment. The first few units are being produced now and sent to a long list of waiting Alpha testers. The instructions are also complete for building a sensor (see below).
