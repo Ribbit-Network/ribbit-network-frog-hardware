@@ -113,7 +113,7 @@ def control_uart(control):
     current_dt_overlays = None
     custom_baud = None
     for variable in all_variables:
-        if variable["name"] == "RESIN_HOST_CONFIG_dtoverlay":
+        if variable["name"] in ["BALENA_HOST_CONFIG_dtoverlay", "RESIN_HOST_CONFIG_dtoverlay"]:
             dt_overlay_var_id = str(variable["id"])
             current_dt_overlays = set([val.strip('"') for val in variable["value"].split(",")])
 
@@ -135,12 +135,12 @@ def control_uart(control):
         dt_overlay_string = ','.join([f'"{dt_overlay}"' for dt_overlay in current_dt_overlays if dt_overlay])
         res = device_config.update(dt_overlay_var_id, dt_overlay_string)
         if res != b'OK':
-            print("Error updating RESIN_HOST_CONFIG_dtoverlay")
+            print("Error updating dtoverlay!")
 
     else:
-        res = device_config.create(device_uuid, dt_overlay_var_id, uart_overlay)
+        res = device_config.create(device_uuid, "BALENA_HOST_CONFIG_dtoverlay", uart_overlay)
         if res != b'OK':
-            print("Error creating RESIN_HOST_CONFIG_dtoverlay")
+            print("Error creating dtoverlay")
 
     print(f"UART0 {control}d.")
 
