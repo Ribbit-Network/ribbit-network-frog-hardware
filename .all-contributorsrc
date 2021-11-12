@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "eaudiffred",
+      "name": "Eric Audiffred",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88562047?v=4",
+      "profile": "https://www.linkedin.com/in/ericaudiffred/",
+      "contributions": [
+        "design",
+        "ideas",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ribbit-network-frog-sensor",
+  "projectOwner": "Ribbit-Network",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
