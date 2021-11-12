@@ -15,6 +15,17 @@
         "ideas",
         "test"
       ]
+    },
+    {
+      "login": "djgood",
+      "name": "Desmond Good",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25231050?v=4",
+      "profile": "https://github.com/djgood",
+      "contributions": [
+        "ideas",
+        "code",
+        "projectManagement"
+      ]
     }
   ],
   "contributorsPerLine": 7,
