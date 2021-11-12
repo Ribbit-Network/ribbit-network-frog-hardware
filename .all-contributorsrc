@@ -39,6 +39,15 @@
         "test",
         "financial"
       ]
+    },
+    {
+      "login": "sanfk2",
+      "name": "sanfk2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40070155?v=4",
+      "profile": "https://github.com/sanfk2",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
