@@ -109,15 +109,20 @@ def control_uart(control):
     all_variables = device_config.get_all(device_uuid)
 
     uart_overlay = "disable-bt"
+    current_dt_overlays = set()
 
-    current_dt_overlays = None
-    custom_baud = None
+    dt_overlay_var_exists = False
     for variable in all_variables:
         if variable["name"] in ["BALENA_HOST_CONFIG_dtoverlay", "RESIN_HOST_CONFIG_dtoverlay"]:
+            dt_overlay_var_exists = True
             dt_overlay_var_id = str(variable["id"])
-            current_dt_overlays = set([val.strip('"') for val in variable["value"].split(",")])
+            # If contains quotes, parse as a JSON lists
+            if variable["value"].startswith('"') and variable["value"].endswith('"'):
+                current_dt_overlays = set(json.loads("[" + variable["value"] + "]"))
+            else:
+                current_dt_overlays = set([variable["value"]])
 
-    if current_dt_overlays:
+    if dt_overlay_var_exists:
         if control.lower() == "enable":
             if "disable-bt" in current_dt_overlays:
                 print("Overlay already set, nothing to be done")
@@ -133,6 +138,7 @@ def control_uart(control):
             current_dt_overlays -= {uart_overlay}
 
         dt_overlay_string = ','.join([f'"{dt_overlay}"' for dt_overlay in current_dt_overlays if dt_overlay])
+
         res = device_config.update(dt_overlay_var_id, dt_overlay_string)
         if res != b'OK':
             print("Error updating dtoverlay!")
