@@ -28,6 +28,18 @@
       ]
     },
     {
+      "login": "Rabscuttler",
+      "name": "Laurence Watson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1125376?v=4",
+      "profile": "http://laurencewatson.com",
+      "contributions": [
+        "test",
+        "doc",
+        "ideas",
+        "projectManagement"
+      ]
+    },
+    {
       "login": "spestana",
       "name": "Steven Pestana",
       "avatar_url": "https://avatars.githubusercontent.com/u/650301?v=4",
