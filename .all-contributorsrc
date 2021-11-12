@@ -26,6 +26,19 @@
         "code",
         "projectManagement"
       ]
+    },
+    {
+      "login": "spestana",
+      "name": "Steven Pestana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/650301?v=4",
+      "profile": "https://spestana.github.io/",
+      "contributions": [
+        "doc",
+        "ideas",
+        "data",
+        "test",
+        "financial"
+      ]
     }
   ],
   "contributorsPerLine": 7,
