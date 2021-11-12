@@ -1,6 +1,6 @@
 # Ribbit Network Frog Sensor
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [This project will create the world's largest Greenhouse Gas Emissions dataset that will empower anyone to join in the work on climate and provide informed data for climate action.](https://ribbitnetwork.org/)
 
@@ -65,6 +65,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://www.linkedin.com/in/ericaudiffred/"><img src="https://avatars.githubusercontent.com/u/88562047?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Eric Audiffred</b></sub></a><br /><a href="#design-eaudiffred" title="Design">🎨</a> <a href="#ideas-eaudiffred" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Ribbit-Network/ribbit-network-frog-sensor/commits?author=eaudiffred" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/djgood"><img src="https://avatars.githubusercontent.com/u/25231050?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Desmond Good</b></sub></a><br /><a href="#ideas-djgood" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Ribbit-Network/ribbit-network-frog-sensor/commits?author=djgood" title="Code">💻</a> <a href="#projectManagement-djgood" title="Project Management">📆</a></td>
   </tr>
 </table>
 
