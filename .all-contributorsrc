@@ -38,6 +38,28 @@
         "ideas",
         "projectManagement"
       ]
+    },
+    {
+      "login": "spestana",
+      "name": "Steven Pestana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/650301?v=4",
+      "profile": "https://spestana.github.io/",
+      "contributions": [
+        "doc",
+        "ideas",
+        "data",
+        "test",
+        "financial"
+      ]
+    },
+    {
+      "login": "sanfk2",
+      "name": "sanfk2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40070155?v=4",
+      "profile": "https://github.com/sanfk2",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
