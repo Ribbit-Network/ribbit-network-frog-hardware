@@ -1,6 +1,6 @@
 # Ribbit Network Frog Sensor
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [This project will create the world's largest Greenhouse Gas Emissions dataset that will empower anyone to join in the work on climate and provide informed data for climate action.](https://ribbitnetwork.org/)
 
@@ -70,6 +70,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://spestana.github.io/"><img src="https://avatars.githubusercontent.com/u/650301?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Steven Pestana</b></sub></a><br /><a href="https://github.com/Ribbit-Network/ribbit-network-frog-sensor/commits?author=spestana" title="Documentation">📖</a> <a href="#ideas-spestana" title="Ideas, Planning, & Feedback">🤔</a> <a href="#data-spestana" title="Data">🔣</a> <a href="https://github.com/Ribbit-Network/ribbit-network-frog-sensor/commits?author=spestana" title="Tests">⚠️</a> <a href="#financial-spestana" title="Financial">💵</a></td>
     <td align="center"><a href="https://github.com/sanfk2"><img src="https://avatars.githubusercontent.com/u/40070155?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sanfk2</b></sub></a><br /><a href="https://github.com/Ribbit-Network/ribbit-network-frog-sensor/commits?author=sanfk2" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/eren-rudy"><img src="https://avatars.githubusercontent.com/u/25554568?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Eren Rudy</b></sub></a><br /><a href="https://github.com/Ribbit-Network/ribbit-network-frog-sensor/commits?author=eren-rudy" title="Tests">⚠️</a> <a href="https://github.com/Ribbit-Network/ribbit-network-frog-sensor/commits?author=eren-rudy" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/daveb377"><img src="https://avatars.githubusercontent.com/u/9794268?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Bengtson</b></sub></a><br /><a href="#ideas-daveb377" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-daveb377" title="Project Management">📆</a></td>
   </tr>
 </table>
 

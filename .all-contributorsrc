@@ -70,6 +70,16 @@
         "test",
         "doc"
       ]
+    },
+    {
+      "login": "daveb377",
+      "name": "David Bengtson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9794268?v=4",
+      "profile": "https://github.com/daveb377",
+      "contributions": [
+        "ideas",
+        "projectManagement"
+      ]
     }
   ],
   "contributorsPerLine": 7,
