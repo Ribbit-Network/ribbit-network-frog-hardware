@@ -22,6 +22,8 @@ SUPPORTED_MODELS = [
 UART0_DEV = "/dev/ttyAMA0"
 ACM_CDC_DEV = "/dev/ttyACM0"
 
+UART_OVERLAY = "disable-bt"
+
 def detect_supported_hardware():
     """Determine if UART for this Raspbery Pi is supported"""
     with open("/proc/device-tree/model") as file:
@@ -87,6 +89,25 @@ def disable_dev_console():
     # Give a moment for changes to take effect
     time.sleep(1)
 
+def find_dtoverlay_config(variable_list):
+    """
+    Find value and id of BALENA_HOST_CONFIG_dtoverlay or RESIN_HOST_CONFIG_dtoverlay.
+    Return None if it doesn't exist.
+    """
+    current_dt_overlay = None
+    dt_overlay_var_id = None
+
+    for variable in variable_list:
+        if variable["name"] in ["BALENA_HOST_CONFIG_dtoverlay", "RESIN_HOST_CONFIG_dtoverlay"]:
+            dt_overlay_var_id = str(variable["id"])
+            # If contains quotes, parse as a JSON lists
+            if variable["value"].startswith('"') and variable["value"].endswith('"'):
+                current_dt_overlay = set(json.loads("[" + variable["value"] + "]"))
+            else:
+                current_dt_overlay = set([variable["value"]])
+
+    return current_dt_overlay, dt_overlay_var_id
+
 def control_uart(control):
     """
     Use the Balena SDK to programatically set the disable-bt overlay.
@@ -104,49 +125,45 @@ def control_uart(control):
     # Accessing API key from container requires io.balena.features.balena-api: '1'
     balena.auth.login_with_token(os.getenv("BALENA_API_KEY"))
     device_uuid = os.getenv("BALENA_DEVICE_UUID")
+    app_id = os.getenv("BALENA_APP_ID")
 
     device_config = balena.models.config_variable.device_config_variable
-    all_variables = device_config.get_all(device_uuid)
+    all_device_vars = device_config.get_all(device_uuid)
+    device_dt_overlays, dt_overlay_var_id = find_dtoverlay_config(all_device_vars)
+    print(f"Device dt overlay: {device_dt_overlays}")
 
-    uart_overlay = "disable-bt"
-    current_dt_overlays = set()
+    app_config = balena.models.config_variable.application_config_variable
+    all_app_vars = app_config.get_all(app_id)
+    app_dt_overlays = find_dtoverlay_config(all_app_vars)[0]
+    print(f"Fleet override dt overlay: {app_dt_overlays}")
 
-    dt_overlay_var_exists = False
-    for variable in all_variables:
-        if variable["name"] in ["BALENA_HOST_CONFIG_dtoverlay", "RESIN_HOST_CONFIG_dtoverlay"]:
-            dt_overlay_var_exists = True
-            dt_overlay_var_id = str(variable["id"])
-            # If contains quotes, parse as a JSON lists
-            if variable["value"].startswith('"') and variable["value"].endswith('"'):
-                current_dt_overlays = set(json.loads("[" + variable["value"] + "]"))
-            else:
-                current_dt_overlays = set([variable["value"]])
+    device_overlay_exists = False
+    if device_dt_overlays is not None:
+        device_overlay_exists = True
+        current_dt_overlays = device_dt_overlays
+    elif app_dt_overlays is not None:
+        current_dt_overlays = app_dt_overlays
+    else:
+        current_dt_overlays = None
 
-    if dt_overlay_var_exists:
-        if control.lower() == "enable":
-            if "disable-bt" in current_dt_overlays:
-                print("Overlay already set, nothing to be done")
-                return
+    if control.lower() == "enable":
+        new_dt_overlay = current_dt_overlays | {UART_OVERLAY}
+    else:
+        new_dt_overlay = current_dt_overlays - {UART_OVERLAY}
 
-            current_dt_overlays |= {uart_overlay}
+    if new_dt_overlay == current_dt_overlays:
+        print("DT overlay config doesn't need to be updated")
+        return
 
-        else:
-            if "disable-bt" not in current_dt_overlays:
-                print("Overlay not set, nothing to be done")
-                return
+    dt_overlay_string = ','.join([f'"{dt_overlay}"' for dt_overlay in new_dt_overlay if dt_overlay])
 
-            current_dt_overlays -= {uart_overlay}
-
-        dt_overlay_string = ','.join([f'"{dt_overlay}"' for dt_overlay in current_dt_overlays if dt_overlay])
-
-        res = device_config.update(dt_overlay_var_id, dt_overlay_string)
-        if res != b'OK':
-            print("Error updating dtoverlay!")
+    if device_overlay_exists:
+        device_config.update(dt_overlay_var_id, dt_overlay_string)
+        print(f"Updated device overlay: {dt_overlay_string}")
 
     else:
-        res = device_config.create(device_uuid, "BALENA_HOST_CONFIG_dtoverlay", uart_overlay)
-        if res != b'OK':
-            print("Error creating dtoverlay")
+        device_config.create(device_uuid, "BALENA_HOST_CONFIG_dtoverlay", dt_overlay_string)
+        print(f"Created BALENA_HOST_CONFIG_dtoverlay={dt_overlay_string}")
 
     print(f"UART0 {control}d.")
 
