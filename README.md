@@ -1,6 +1,6 @@
 # Ribbit Network Frog Sensor
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [This project will create the world's largest Greenhouse Gas Emissions dataset that will empower anyone to join in the work on climate and provide informed data for climate action.](https://ribbitnetwork.org/)
 
@@ -75,6 +75,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://www.linkedin.com/in/lancebantoto/"><img src="https://avatars.githubusercontent.com/u/7238692?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lance Bantoto</b></sub></a><br /><a href="#ideas-lwbantoto" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-lwbantoto" title="Project Management">📆</a></td>
     <td align="center"><a href="https://github.com/kevinjmiller2"><img src="https://avatars.githubusercontent.com/u/69079270?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Miller</b></sub></a><br /><a href="#ideas-kevinjmiller2" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-kevinjmiller2" title="Content">🖋</a></td>
+    <td align="center"><a href="https://balena.io"><img src="https://avatars.githubusercontent.com/u/173156?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marc Pous</b></sub></a><br /><a href="https://github.com/Ribbit-Network/ribbit-network-frog-sensor/commits?author=mpous" title="Tests">⚠️</a></td>
   </tr>
 </table>
 

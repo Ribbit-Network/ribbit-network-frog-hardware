@@ -100,6 +100,15 @@
         "ideas",
         "content"
       ]
+    },
+    {
+      "login": "mpous",
+      "name": "Marc Pous",
+      "avatar_url": "https://avatars.githubusercontent.com/u/173156?v=4",
+      "profile": "https://balena.io",
+      "contributions": [
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
