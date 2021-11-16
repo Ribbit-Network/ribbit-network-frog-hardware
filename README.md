@@ -1,5 +1,5 @@
 # Ribbit Network Frog Sensor
-[![Chat](https://img.shields.io/discord/870113194289532969.svg?style=flat-square&colorB=758ED3)](https://discord.gg/Yk5Efra)
+[![Chat](https://img.shields.io/discord/870113194289532969.svg?style=flat-square&colorB=758ED3)](https://discord.gg/vq8PkDb2TC)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
