@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-FROM balenalib/%%BALENA_MACHINE_NAME%%-python
+FROM balenalib/%%BALENA_MACHINE_NAME%%-python:buster
 
 RUN install_packages vim build-essential wget gpsd-clients dbus
 
