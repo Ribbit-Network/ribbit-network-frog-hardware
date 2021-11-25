@@ -30,6 +30,8 @@ import os
 import json
 import gpsd
 
+from adafruit_extended_bus import ExtendedI2C as I2C
+
 from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 
@@ -51,7 +53,7 @@ org = "keenan.johnson@gmail.com"
 
 write_api = client.write_api(write_options=SYNCHRONOUS)
 
-i2c_bus = board.I2C()
+i2c_bus = I2C(11)
 scd = adafruit_scd30.SCD30(i2c_bus)
 time.sleep(1)
 scd.ambient_pressure = 1007
