@@ -13,12 +13,7 @@ We also have an on-going effort to create different versions of the Bill of Mate
 The diagram above can be edited with drawio or with the awesome [Draw.io Visual Studio Code Plugin](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
 
 ## Assembly Instructions
-Assembly instructions can all be found [here](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/assembly-instructions/0-start-here.md).
-
-## 3D Printed Components
-
-There are a few custom components desribed [here](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/assembly-instructions/2-3d-printing.md).
+Assembly instructions are a work in progress for V2.
 
 ## Main Readme
-
 [Head back to the main readme for more info!](https://github.com/Ribbit-Network/ribbit-network-sensor)
