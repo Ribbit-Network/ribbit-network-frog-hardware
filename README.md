@@ -31,7 +31,7 @@ Check out our issues for ongoing work! In the near future we have several major 
 * [Improve the sustainability](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/projects/7) We strive to ensure that the Frog is the most sustainable version of the sensor that we can reasonably produce.
 
 ## Build a Frog!
-[Check out the instructions](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/assembly-instructions/0-start-here.md) to build your own Frog Sensor
+[Check out the instructions in the hardware folder](hardware/) to build your own Frog Sensor!
 
 ## Technical Details
 See the [hardware](hardware/) and [software](software/) README's and folders for more technical details!
