@@ -1,0 +1,36 @@
+Item,Quantity,Unit Price,Price,Unit Mass (g),Mass (g),Vendor,Link,Notes
+Sensors,,,,,,,,
+SCD-30 - NDIR CO2 Temperature and Humidity Sensor,1.00,$58.95,$58.95,10.00,10.00,Adafruit,https://www.adafruit.com/product/4867,
+Barometer,1.00,$6.95,$6.95,2.00,2.00,Adafruit,https://www.adafruit.com/product/4494,
+GPS,1.00,$29.95,$29.95,10.00,10.00,Adafruit,https://www.adafruit.com/product/4415,
+,,,,,,,,
+Compute / Connectivity,,,,,,,,
+BeagleBone Black,1.00,$52.50,$52.50,9.00,9.00,Mouser,https://www.mouser.com/ProductDetail/BeagleBoard-by-Seeed-Studio/102110420?qs=sGAEpiMZZMv0NwlthflBi9BphqbQOpewohXHvmXEj%252BM%3D,
+USB WiFi Adapter,1.00,$15.99,$15.99,12.00,12.00,Amazon,https://www.amazon.com/dp/B004AC0L4Y?psc=1&ref=ppx_yo2_dt_b_product_details,
+GROVE BASE CAPE FOR BEAGLEBONE,1.00,11.90,$11.90,14.00,14.00,Digikey,"https://www.digikey.com/en/products/detail/seeed-technology-co.,-ltd/103030035/5973993?utm_adgroup=Evaluation%20Boards%20-%20Expansion%20Boards%2C%20Daughter%20Cards&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_Development%20Boards%2C%20Kits%2C%20Programmers&utm_term=&utm_content=Evaluation%20Boards%20-%20Expansion%20Boards%2C%20Daughter%20Cards&gclid=CjwKCAiAhreNBhAYEiwAFGGKPLOwu8qko886bKSIWiJFDCfm3RiOt8fkTvEmj87_xLbs6dKDBdfXBRoCDPMQAvD_BwE",
+,,,,,,,,
+Cables,,,,,,,,
+Power Supply,1.00,$7.99,$7.99,94.00,94.00,Amazon,https://www.amazon.com/dp/B00GUO5WUI?psc=1&ref=ppx_yo2_dt_b_product_details,
+STEMMA QT / Qwiic JST SH 4-pin Cable - 50mm Long,2.00,$0.95,$1.90,0.25,0.50,Adafruit,https://www.adafruit.com/product/4399,
+STEMMA QT / Qwiic JST SH 4-pin Cable - 100mm Long,1.00,$0.95,$0.95,0.25,0.25,Adafruit,https://www.adafruit.com/product/4210,
+WIFI USB Cable 6 Inch Extension,1.00,$2.50,$2.50,2.00,2.00,Amazon,https://www.amazon.com/dp/B01GA1GKYW?psc=1&ref=ppx_yo2_dt_b_product_details,
+,,,,,,,,
+Mechanical,,,,,,,,
+Brass Standoffs,11.00,$0.39,$4.29,0.50,5.50,Mouser,https://www.mouser.com/ProductDetail/Wurth-Elektronik/971050154?qs=%2Fha2pyFadug7qq2IzcSrT%252BYVQHUMIDTw9stfCXr5XQXy%2Fhi8l70USQ%3D%3D,
+M2.5 x 5 Screws,11.00,$0.04,$0.44,0.25,2.75,McMaster,https://www.mcmaster.com/92000A103/,
+M4 x 0.7mm x 30mm,2.00,$0.14,$0.28,1.00,2.00,McMaster,https://www.mcmaster.com/91292A130/,
+M4 x 0.7mm x 10mm Button Head,2.00,$0.09,$0.18,1.00,2.00,McMaster,https://www.mcmaster.com/92095A190/,
+,,,,,,,,
+3D Printed Parts,,,,,,,,Quantity shows percentage of a filament roll used for each part
+Enclosure Box,0.20,$22.99,$4.60,84.00,16.80,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Enclosure Lid,0.10,$22.99,$2.30,84.00,8.40,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Sensor Shroud,0.10,$22.99,$2.30,84.00,8.40,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Frog Eyes,0.02,$22.99,$0.46,2.00,0.04,Amazon,https://www.amazon.com/gp/product/B00ZAUQZTA/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Frog Mouth,0.01,$21.99,$0.22,1.00,0.01,Amazon,https://www.amazon.com/gp/product/B07VBKP1PN/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Frog Head,0.11,$23.99,$2.64,60.00,6.60,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+,,,,,,,,
+Consumables,,,,,,,,
+Two Part Epoxy,0.10,$3.59,$0.36,0.00,0.00,Amazon,https://www.amazon.com/Loctite-Instant-0-47-Fluid-Syringe-1365868/dp/B0044F9KFI/ref=sr_1_4?dchild=1&keywords=two%2Bpart%2Bepoxy&qid=1628644111&sr=8-4&th=1,
+Loctite,0.10,$5.97,$0.60,0.00,0.00,Amazon,https://www.amazon.com/Loctite-Heavy-Duty-Threadlocker-Single/dp/B000I1RSNS/ref=sr_1_2?dchild=1&keywords=loctite&qid=1629786956&sr=8-2,
+,,,,,,,,
+Parts Total,,,$208.24,,206.25,,,

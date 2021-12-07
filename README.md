@@ -9,7 +9,7 @@ Ribbit Network is a large network of open-source, low-cost, Greenhouse Gas (CO2 
 
 [See more about the cloud database here.](https://github.com/Ribbit-Network/ribbit-network-dashboard)
 
-![OSHW](assembly-instructions/images/oshw-logo.svg)
+![OSHW](images/oshw-logo.svg)
 
 ## Frog Sensors
 Our “Frogs” are tiny sensors that you can buy and deploy at your own home! It’s a small, open-source box that measures the amount of CO2 in the air using a tiny laser.
@@ -31,7 +31,7 @@ Check out our issues for ongoing work! In the near future we have several major 
 * [Improve the sustainability](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/projects/7) We strive to ensure that the Frog is the most sustainable version of the sensor that we can reasonably produce.
 
 ## Build a Frog!
-[Check out the instructions](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/assembly-instructions/0-start-here.md) to build your own Frog Sensor
+[Check out the instructions in the hardware folder](hardware/) to build your own Frog Sensor!
 
 ## Technical Details
 See the [hardware](hardware/) and [software](software/) README's and folders for more technical details!
