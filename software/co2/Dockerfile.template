@@ -22,7 +22,16 @@
 
 FROM balenalib/%%BALENA_MACHINE_NAME%%-python:buster
 
-RUN install_packages vim build-essential wget gpsd-clients dbus libffi-dev
+RUN install_packages \
+    vim \
+    wget \
+    build-essential \
+    gpsd-clients \
+    dbus \
+    libffi-dev \
+    libssl-dev \
+    python3-dev \
+    cargo
 
 # This will copy all files in our root to the working  directory in the container
 # Set our working directory
