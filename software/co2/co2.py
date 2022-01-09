@@ -23,7 +23,10 @@
 import json
 import os
 import time
+from abc import ABC, abstractmethod
+from dataclasses import dataclass
 from datetime import datetime
+from enum import Enum
 from typing import Mapping, Optional
 
 import adafruit_scd30
@@ -34,7 +37,6 @@ from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 
 BUCKET = "co2"
-DEVICE_UUID = os.getenv("BALENA_DEVICE_UUID")
 ORG = "keenan.johnson@gmail.com"
 
 ENABLE_INFLUXDB = os.getenv("ENABLE_INFLUXDB", "true") in [
@@ -61,6 +63,61 @@ def get_i2c_bus_id() -> int:
     return retval
 
 
+class GpsSourceType(Enum):
+    gpsd = "gpsd"
+    i2c = "i2c"
+
+
+DEVICE_UUID = os.getenv("BALENA_DEVICE_UUID")
+GPS_SOURCE = GpsSourceType(os.getenv("GPS_SOURCE", "gpsd"))
+GPS_DIGITS_PRECISION = int(os.getenv("GPS_DIGITS_PRECISION", "2"))
+POLL_INTERVAL_SECONDS = float(os.getenv("POLL_INTERVAL_SECONDS", "0.5"))
+
+
+@dataclass
+class GpsData:
+    latitude: float
+    longitude: float
+    altitude: float
+
+
+class BaseGps(ABC):
+    @abstractmethod
+    def get_data(self) -> GpsData:
+        raise NotImplementedError()
+
+
+class GpsdGps(BaseGps):
+    def __init__(self):
+        self._is_valid = False
+
+    def _connect(self) -> None:
+        try:
+            gpsd.connect()
+        except Exception:
+            self._is_valid = False
+            raise
+        finally:
+            self._is_valid = True
+
+    def get_data(self) -> GpsData:
+        if not self._is_valid:
+            self._connect()
+        try:
+            packet = gpsd.get_current()
+            # Read GPS Data
+            # See https://github.com/Ribbit-Network/ribbit-network-frog-sensor/issues/41
+            # for more information about the rounding of the coordinates
+            return GpsData(
+                latitude=round(packet.position()[0], GPS_DIGITS_PRECISION),
+                longitude=round(packet.position()[1], GPS_DIGITS_PRECISION),
+                altitude=packet.altitude(),
+            )
+        except Exception:
+            self._is_valid = False
+            raise
+
+
 def main() -> None:
     if ENABLE_INFLUXDB:
         #
@@ -82,90 +139,76 @@ def main() -> None:
     scd.ambient_pressure = 1007
     dps310 = DPS310(i2c_bus)
 
+    gps = GpsdGps()
+
     # Enable self calibration mode
     scd.temperature_offset = 4.0
     scd.altitude = 0
     scd.self_calibration_enabled = True
 
-    gps_valid = False
-
     while True:
-        if not gps_valid:
-            try:
-                gpsd.connect()
-            except Exception as ex:  # pylint: disable=broad-except; gpsd actually throws an Exception
-                print(f"Error connecting to GPS: {ex}")
-                # TODO: log GPS failures to database?
-            finally:
-                gps_valid = True
-        else:
-            # since the measurement interval is long (2+ seconds) we check for new data
-            # before reading the values, to ensure current readings.
-            if scd.data_available:
-                try:
-                    # Get gps position
-                    packet = gpsd.get_current()
-                except Exception as ex:  # pylint: disable=broad-except; gpsd actually throws an Exception
-                    # Unable to get current GPS position
-                    # log error and attempt to reconnect GPS
-                    gps_valid = False
-                    # TODO: log GPS failures to database?
-                    print(f"Error getting current GPS position: {ex}")
-                    continue
+        # Sleep at the top of the loop allows calling `continue` anywhere to skip this
+        # cycle, without entering a busy loop
+        time.sleep(POLL_INTERVAL_SECONDS)
 
-                # Read GPS Data
-                # https://github.com/Ribbit-Network/ribbit-network-frog-sensor/issues/41
-                # for more information about the rounding of the coordinates
-                gps_digits_precision = 2
-                latitude = round(packet.position()[0], gps_digits_precision)
-                longitude = round(packet.position()[1], gps_digits_precision)
-                altitude = packet.altitude()
+        # since the measurement interval is long (2+ seconds) we check for new data
+        # before reading the values, to ensure current readings.
+        if not scd.data_available:
+            continue
 
-                # Set SCD Pressure from Barometer
-                #
-                # See Section 1.4.1 in SCD30 Interface Guide
-                # https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf
-                #
-                # The Reference pressure must be greater than 0.
-                if dps310.pressure > 0:
-                    scd.ambient_pressure = dps310.pressure
+        try:
+            gps_data = gps.get_data()
+        except Exception as ex:  # pylint: disable=broad-except; gpsd actually throws an Exception
+            # Unable to get current GPS position
+            # log error and attempt to reconnect GPS
+            # TODO: log GPS failures to database?
+            print(f"Error getting current GPS position: {ex}")
+            continue
 
-                # Publish to Influx DB Cloud
-                if ENABLE_INFLUXDB:
-                    point = (
-                        Point("ghg_point")
-                        .tag("host", DEVICE_UUID)
-                        .field("co2", scd.CO2)
-                        .time(datetime.utcnow(), WritePrecision.NS)
-                        .field("temperature", scd.temperature)
-                        .field("humidity", scd.relative_humidity)
-                        .field("lat", latitude)
-                        .field("lon", longitude)
-                        .field("alt", altitude)
-                        .field("baro_pressure", dps310.pressure)
-                        .field("baro_temperature", dps310.temperature)
-                        .field("scd30_pressure_mbar", scd.ambient_pressure)
-                        .field("scd30_altitude_m", scd.altitude)
-                    )
-                    write_api.write(BUCKET, ORG, point)
+        # Set SCD Pressure from Barometer
+        #
+        # See Section 1.4.1 in SCD30 Interface Guide
+        # https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf
+        #
+        # The Reference pressure must be greater than 0.
+        if dps310.pressure > 0:
+            scd.ambient_pressure = dps310.pressure
 
-                # Publish to Local MQTT Broker
-                data = {}
-                data["CO2"] = scd.CO2
-                data["Temperature"] = scd.temperature
-                data["Relative_Humidity"] = scd.relative_humidity
-                data["Latitude"] = latitude
-                data["Longitude"] = longitude
-                data["Altitude"] = altitude
-                data["scd_temp_offset"] = scd.temperature_offset
-                data["baro_temp"] = dps310.temperature
-                data["baro_pressure_hpa"] = dps310.pressure
-                data["scd30_pressure_mbar"] = scd.ambient_pressure
-                data["scd30_alt_m"] = scd.altitude
+        # Publish to Influx DB Cloud
+        if ENABLE_INFLUXDB:
+            point = (
+                Point("ghg_point")
+                .tag("host", DEVICE_UUID)
+                .field("co2", scd.CO2)
+                .time(datetime.utcnow(), WritePrecision.NS)
+                .field("temperature", scd.temperature)
+                .field("humidity", scd.relative_humidity)
+                .field("lat", gps_data.latitude)
+                .field("lon", gps_data.longitude)
+                .field("alt", gps_data.altitude)
+                .field("baro_pressure", dps310.pressure)
+                .field("baro_temperature", dps310.temperature)
+                .field("scd30_pressure_mbar", scd.ambient_pressure)
+                .field("scd30_altitude_m", scd.altitude)
+            )
 
-                print(json.dumps(data))
+            write_api.write(BUCKET, ORG, point)
 
-        time.sleep(0.5)
+        # Publish to Local MQTT Broker
+        data = {}
+        data["CO2"] = scd.CO2
+        data["Temperature"] = scd.temperature
+        data["Relative_Humidity"] = scd.relative_humidity
+        data["Latitude"] = gps_data.latitude
+        data["Longitude"] = gps_data.longitude
+        data["Altitude"] = gps_data.altitude
+        data["scd_temp_offset"] = scd.temperature_offset
+        data["baro_temp"] = dps310.temperature
+        data["baro_pressure_hpa"] = dps310.pressure
+        data["scd30_pressure_mbar"] = scd.ambient_pressure
+        data["scd30_alt_m"] = scd.altitude
+
+        print(json.dumps(data))
 
 
 if __name__ == "__main__":
