@@ -30,6 +30,7 @@ WORKDIR /usr/src/
 COPY . ./
 
 # Install Python Packages
+RUN pip install pip --upgrade
 RUN pip install wheel poetry
 RUN poetry install
 
