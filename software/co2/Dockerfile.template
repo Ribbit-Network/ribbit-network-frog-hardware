@@ -26,13 +26,8 @@ RUN install_packages \
     vim \
     wget \
     build-essential \
-    git \
     gpsd-clients \
-    dbus \
-    libffi-dev \
-    libssl-dev \
-    python3-dev \
-    cargo
+    dbus 
 
 # Get ready to install Python packages
 RUN pip install wheel
@@ -41,9 +36,6 @@ RUN pip install pip --upgrade
 # Packages used only for talking to the hardware.
 # Adafruit_BBIO fails to build on a local dev machine; until that's fixed, it lives here instead of pyproject.toml
 RUN pip install RPi.GPIO==0.7.1a4 Adafruit_BBIO
-
-# Do we really need this? If yes, probably best to move into pyproject.toml. If not, let's drop it.
-RUN pip install numpy --upgrade
 
 # Set our working directory
 WORKDIR /usr/src/
