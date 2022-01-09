@@ -26,6 +26,7 @@ RUN install_packages \
     vim \
     wget \
     build-essential \
+    git \
     gpsd-clients \
     dbus \
     libffi-dev \
@@ -33,21 +34,24 @@ RUN install_packages \
     python3-dev \
     cargo
 
-# This will copy all files in our root to the working  directory in the container
-# Set our working directory
-WORKDIR /usr/src/
-COPY . ./
-
-# Install Python Packages
+# Get ready to install Python packages
+RUN pip install wheel
 RUN pip install pip --upgrade
-RUN pip install wheel poetry
-RUN poetry install
 
 # Packages used only for talking to the hardware.
-# Adafruit_BBIO fails to build on my local machine; until that's fixed, it lives here instead of pyproject.toml
+# Adafruit_BBIO fails to build on a local dev machine; until that's fixed, it lives here instead of pyproject.toml
 RUN pip install RPi.GPIO==0.7.1a4 Adafruit_BBIO
 
 # Do we really need this? If yes, probably best to move into pyproject.toml. If not, let's drop it.
 RUN pip install numpy --upgrade
+
+# Set our working directory
+WORKDIR /usr/src/
+# This will copy all files in our root to the working  directory in the container
+# It's almost guaranteed to bust the Docker build cache, so do it as late as possible
+COPY . ./
+
+# Install Python packages; dependencies from pyproject.toml via poetry-core / PEP 517
+RUN pip install .
 
 CMD python co2.py
