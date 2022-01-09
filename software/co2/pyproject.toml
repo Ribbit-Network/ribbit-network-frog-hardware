@@ -13,10 +13,7 @@ adafruit-circuitpython-scd30 = "^2.2.1"
 adafruit-extended-bus = "^1.0.2"
 gpsd-py3 = "^0.3.0"
 influxdb-client = "^1.24.0"
-paho-mqtt = "^1.6.1"
 python = "^3.9"
-requests = "^2.27.1"
-smbus = "^1.1.post2"
 
 [tool.poetry.dev-dependencies]
 black = "^21.12b0"
