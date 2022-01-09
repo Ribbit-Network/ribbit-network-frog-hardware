@@ -69,7 +69,7 @@ def main() -> None:
             try:
                 gpsd.connect()
             except Exception as ex:  # pylint: disable=broad-except; gpsd actually throws an Exception
-                print("Error connecting to GPS: %s" % ex)
+                print(f"Error connecting to GPS: {ex}")
                 # TODO: log GPS failures to database?
             finally:
                 gps_valid = True
@@ -85,7 +85,7 @@ def main() -> None:
                     # log error and attempt to reconnect GPS
                     gps_valid = False
                     # TODO: log GPS failures to database?
-                    print("Error getting current GPS position: %s" % ex)
+                    print(f"Error getting current GPS position: {ex}")
                     continue
 
                 # Read GPS Data
