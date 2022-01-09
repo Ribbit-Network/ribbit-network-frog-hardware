@@ -29,6 +29,7 @@ from datetime import datetime
 from enum import Enum
 from typing import Mapping, Optional
 
+import adafruit_gps
 import adafruit_scd30
 import gpsd
 from adafruit_dps310.advanced import DPS310
@@ -64,8 +65,10 @@ def get_i2c_bus_id() -> int:
 
 
 class GpsSourceType(Enum):
-    gpsd = "gpsd"
-    i2c = "i2c"
+    """Enum for the different types of GPS sources"""
+
+    GPSD = "gpsd"
+    I2C = "i2c"
 
 
 DEVICE_UUID = os.getenv("BALENA_DEVICE_UUID")
@@ -76,18 +79,25 @@ POLL_INTERVAL_SECONDS = float(os.getenv("POLL_INTERVAL_SECONDS", "0.5"))
 
 @dataclass
 class GpsData:
+    """Uniform data type to be returned by GPS implementations"""
+
     latitude: float
     longitude: float
-    altitude: float
+    altitude: Optional[float]
 
 
 class BaseGps(ABC):
+    """Base class for GPS implementations"""
+
     @abstractmethod
     def get_data(self) -> GpsData:
+        """Get the current GPS data. Raises if no data is available for any reason."""
         raise NotImplementedError()
 
 
 class GpsdGps(BaseGps):
+    """Read GPS data from the GPSD daemon"""
+
     def __init__(self):
         self._is_valid = False
 
@@ -118,7 +128,32 @@ class GpsdGps(BaseGps):
             raise
 
 
-def main() -> None:
+class I2CGps(BaseGps):
+    """Read GPS data from from I2C via the Adafruit GPS library"""
+
+    def __init__(self, i2c: I2C) -> None:
+        self._i2c = i2c
+        self._gps = adafruit_gps.GPS_GtopI2C(i2c)
+
+        # Initialize what data to receive. As seen on
+        # https://circuitpython.readthedocs.io/projects/gps/en/latest/examples.html
+        self._gps.send_command(b"PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0")
+
+        # Set the update rate to twice our polling interval
+        gps_poll_interval = round(POLL_INTERVAL_SECONDS * 2 * 1000)
+        self._gps.send_command(f"PMTK220,{gps_poll_interval}".encode("ascii"))
+
+    def get_data(self) -> GpsData:
+        if not self._gps.has_fix:
+            raise Exception("No GPS Fix")
+        return GpsData(
+            latitude=round(self._gps.latitude, GPS_DIGITS_PRECISION),
+            longitude=round(self._gps.longitude, GPS_DIGITS_PRECISION),
+            altitude=self._gps.altitude_m,
+        )
+
+
+def main() -> None:  # pylint: disable=missing-function-docstring
     if ENABLE_INFLUXDB:
         #
         # config ini file
@@ -139,7 +174,13 @@ def main() -> None:
     scd.ambient_pressure = 1007
     dps310 = DPS310(i2c_bus)
 
-    gps = GpsdGps()
+    gps: BaseGps
+    if GPS_SOURCE == GpsSourceType.GPSD:
+        gps = GpsdGps()
+    elif GPS_SOURCE == GpsSourceType.I2C:
+        gps = I2CGps(i2c_bus)
+    else:
+        raise ValueError(f"Unknown GPS Source: {GPS_SOURCE}")
 
     # Enable self calibration mode
     scd.temperature_offset = 4.0
