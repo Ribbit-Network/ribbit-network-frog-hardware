@@ -22,7 +22,7 @@
 
 FROM balenalib/%%BALENA_MACHINE_NAME%%-python:buster
 
-RUN install_packages vim build-essential wget gpsd-clients dbus
+RUN install_packages vim build-essential wget gpsd-clients dbus libffi-dev
 
 # This will copy all files in our root to the working  directory in the container
 # Set our working directory
@@ -30,11 +30,11 @@ WORKDIR /usr/src/
 COPY . ./
 
 # Install Python Packages
-RUN pip install poetry
+RUN pip install wheel poetry
 RUN poetry install
 
 # Packages used only for talking to the hardware.
-# Adafruit_BBIO fails to build on local machines; until that's fixed, it lives here instead of pyproject.toml
+# Adafruit_BBIO fails to build on my local machine; until that's fixed, it lives here instead of pyproject.toml
 RUN pip install RPi.GPIO==0.7.1a4 Adafruit_BBIO
 
 # Do we really need this? If yes, probably best to move into pyproject.toml. If not, let's drop it.
