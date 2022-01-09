@@ -24,14 +24,20 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-python:buster
 
 RUN install_packages vim build-essential wget gpsd-clients dbus
 
-# Install Python Packages
-RUN pip install RPi.GPIO==0.7.1a4 Adafruit_BBIO
-RUN pip install smbus adafruit-circuitpython-scd30 influxdb-client paho-mqtt requests gpsd-py3 adafruit-circuitpython-ina219 adafruit-circuitpython-lc709203f adafruit-circuitpython-dps310 adafruit-extended-bus
-RUN pip install numpy --upgrade
-
 # This will copy all files in our root to the working  directory in the container
 # Set our working directory
 WORKDIR /usr/src/
 COPY . ./
+
+# Install Python Packages
+RUN pip install poetry
+RUN poetry install
+
+# Packages used only for talking to the hardware.
+# Adafruit_BBIO fails to build on local machines; until that's fixed, it lives here instead of pyproject.toml
+RUN pip install RPi.GPIO==0.7.1a4 Adafruit_BBIO
+
+# Do we really need this? If yes, probably best to move into pyproject.toml. If not, let's drop it.
+RUN pip install numpy --upgrade
 
 CMD python co2.py

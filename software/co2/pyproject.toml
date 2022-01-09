@@ -1,0 +1,32 @@
+[tool.poetry]
+authors = ["Keenan Johnson  <keenan.johnson@gmail.com>"]
+description = """
+Part of Ribbit Network Frog Sensor: open-source, low-cost, Greenhouse Gas Detection Sensors.
+This is the main python script responsible for connecting to the CO2 sensor and publishing the data to the InfluxDB database.
+"""
+license = "MIT"
+name = "co2"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+adafruit-circuitpython-dps310 = "^2.0.0"
+adafruit-circuitpython-ina219 = "^3.4.10"
+adafruit-circuitpython-lc709203f = "^2.2.0"
+adafruit-circuitpython-scd30 = "^2.2.1"
+adafruit-extended-bus = "^1.0.2"
+gpsd-py3 = "^0.3.0"
+influxdb-client = "^1.24.0"
+paho-mqtt = "^1.6.1"
+python = "^3.9"
+requests = "^2.27.1"
+smbus = "^1.1.post2"
+
+[tool.poetry.dev-dependencies]
+black = "^21.12b0"
+isort = "^5.10.1"
+mypy = "^0.931"
+pylint = "^2.12.2"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
