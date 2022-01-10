@@ -37,6 +37,14 @@ BUCKET = "co2"
 DEVICE_UUID = os.getenv("BALENA_DEVICE_UUID")
 ORG = "keenan.johnson@gmail.com"
 
+ENABLE_INFLUXDB = os.getenv("ENABLE_INFLUXDB", "true") in [
+    "true",
+    "True",
+    "1",
+    "yes",
+    "Yes",
+]
+
 DEFAULT_I2C_BUS_ID = 11
 I2C_BUS_ID_MAP: Mapping[Optional[str], int] = {"beaglebone-green-gateway": 2}
 
@@ -54,18 +62,19 @@ def get_i2c_bus_id() -> int:
 
 
 def main() -> None:
-    #
-    # config ini file
-    #
-    # [influx2]
-    # url=http://localhost:8086
-    # org=my-org
-    # token=my-token
-    # timeout=6000
-    # verify_ssl=False
-    #
-    client = InfluxDBClient.from_config_file("influx_config.ini")
-    write_api = client.write_api(write_options=SYNCHRONOUS)
+    if ENABLE_INFLUXDB:
+        #
+        # config ini file
+        #
+        # [influx2]
+        # url=http://localhost:8086
+        # org=my-org
+        # token=my-token
+        # timeout=6000
+        # verify_ssl=False
+        #
+        client = InfluxDBClient.from_config_file("influx_config.ini")
+        write_api = client.write_api(write_options=SYNCHRONOUS)
 
     i2c_bus = I2C(get_i2c_bus_id())
     scd = adafruit_scd30.SCD30(i2c_bus)
@@ -122,23 +131,23 @@ def main() -> None:
                     scd.ambient_pressure = dps310.pressure
 
                 # Publish to Influx DB Cloud
-                point = (
-                    Point("ghg_point")
-                    .tag("host", DEVICE_UUID)
-                    .field("co2", scd.CO2)
-                    .time(datetime.utcnow(), WritePrecision.NS)
-                    .field("temperature", scd.temperature)
-                    .field("humidity", scd.relative_humidity)
-                    .field("lat", latitude)
-                    .field("lon", longitude)
-                    .field("alt", altitude)
-                    .field("baro_pressure", dps310.pressure)
-                    .field("baro_temperature", dps310.temperature)
-                    .field("scd30_pressure_mbar", scd.ambient_pressure)
-                    .field("scd30_altitude_m", scd.altitude)
-                )
-
-                write_api.write(BUCKET, ORG, point)
+                if ENABLE_INFLUXDB:
+                    point = (
+                        Point("ghg_point")
+                        .tag("host", DEVICE_UUID)
+                        .field("co2", scd.CO2)
+                        .time(datetime.utcnow(), WritePrecision.NS)
+                        .field("temperature", scd.temperature)
+                        .field("humidity", scd.relative_humidity)
+                        .field("lat", latitude)
+                        .field("lon", longitude)
+                        .field("alt", altitude)
+                        .field("baro_pressure", dps310.pressure)
+                        .field("baro_temperature", dps310.temperature)
+                        .field("scd30_pressure_mbar", scd.ambient_pressure)
+                        .field("scd30_altitude_m", scd.altitude)
+                    )
+                    write_api.write(BUCKET, ORG, point)
 
                 # Publish to Local MQTT Broker
                 data = {}
