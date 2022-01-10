@@ -21,6 +21,7 @@
 # THE SOFTWARE.
 
 import json
+import logging
 import os
 import time
 from abc import ABC, abstractmethod
@@ -42,6 +43,8 @@ ORG = "keenan.johnson@gmail.com"
 DEVICE_UUID = os.getenv("BALENA_DEVICE_UUID")
 RESIN_DEVICE_TYPE = os.getenv("RESIN_DEVICE_TYPE")
 POLL_INTERVAL_SECONDS = float(os.getenv("POLL_INTERVAL_SECONDS", "0.5"))
+
+LOGGER = logging.getLogger(__name__)
 
 ENABLE_INFLUXDB = os.getenv("ENABLE_INFLUXDB", "true") in [
     "true",
@@ -161,26 +164,30 @@ class DummyGps(BaseGps):
 def get_i2c_bus_id() -> int:
     override = os.getenv("I2C_BUS_ID")
     if override is not None:
-        print(f"Using I2C bus override: {override}")
+        logging.info("Using I2C bus override: %s", override)
         return int(override)
 
     retval = I2C_BUS_ID_MAP.get(RESIN_DEVICE_TYPE, DEFAULT_I2C_BUS_ID)
-    print(f"I2C bus for device type {RESIN_DEVICE_TYPE}: {retval}")
+    logging.info("I2C bus for device type %s: %s", RESIN_DEVICE_TYPE, retval)
     return retval
 
 
 def get_gps_source() -> GpsSourceType:
     override = os.getenv("GPS_SOURCE")
     if override is not None:
-        print(f"Using GPS source override: {override}")
+        logging.info("Using GPS source override: %s", override)
         return GpsSourceType(override)
 
     retval = GPS_SOURCE_MAP.get(RESIN_DEVICE_TYPE, DEFAULT_GPS_SOURCE)
-    print(f"GPS source for device type {RESIN_DEVICE_TYPE}: {retval}")
+    logging.info("GPS source for device type %s: %s", RESIN_DEVICE_TYPE, retval)
     return retval
 
 
 def main() -> None:  # pylint: disable=missing-function-docstring
+    logging.basicConfig(
+        format="%(asctime)s %(levelname)s %(message)s", level=logging.INFO
+    )
+
     if ENABLE_INFLUXDB:
         #
         # config ini file
@@ -229,11 +236,11 @@ def main() -> None:  # pylint: disable=missing-function-docstring
 
         try:
             gps_data = gps.get_data()
-        except Exception as ex:  # pylint: disable=broad-except; gpsd actually throws an Exception
+        except Exception:  # pylint: disable=broad-except; gpsd actually throws an Exception
             # Unable to get current GPS position
             # log error and attempt to reconnect GPS
             # TODO: log GPS failures to database?
-            print(f"Error getting current GPS position: {ex}")
+            logging.exception("Error getting current GPS position")
             continue
 
         # Set SCD Pressure from Barometer
@@ -279,7 +286,7 @@ def main() -> None:  # pylint: disable=missing-function-docstring
         data["scd30_pressure_mbar"] = scd.ambient_pressure
         data["scd30_alt_m"] = scd.altitude
 
-        print(json.dumps(data))
+        logging.info(json.dumps(data))
 
 
 if __name__ == "__main__":
