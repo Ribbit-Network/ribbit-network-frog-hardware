@@ -39,6 +39,9 @@ from influxdb_client.client.write_api import SYNCHRONOUS
 
 BUCKET = "co2"
 ORG = "keenan.johnson@gmail.com"
+DEVICE_UUID = os.getenv("BALENA_DEVICE_UUID")
+RESIN_DEVICE_TYPE = os.getenv("RESIN_DEVICE_TYPE")
+POLL_INTERVAL_SECONDS = float(os.getenv("POLL_INTERVAL_SECONDS", "0.5"))
 
 ENABLE_INFLUXDB = os.getenv("ENABLE_INFLUXDB", "true") in [
     "true",
@@ -52,29 +55,17 @@ DEFAULT_I2C_BUS_ID = 11
 I2C_BUS_ID_MAP: Mapping[Optional[str], int] = {"beaglebone-green-gateway": 2}
 
 
-def get_i2c_bus_id() -> int:
-    override = os.getenv("I2C_BUS_ID")
-    if override is not None:
-        print(f"Using I2C bus override: {override}")
-        return int(override)
-
-    device_type = os.getenv("RESIN_DEVICE_TYPE")
-    retval = I2C_BUS_ID_MAP.get(device_type, DEFAULT_I2C_BUS_ID)
-    print(f"I2C bus for device type {device_type}: {retval}")
-    return retval
-
-
 class GpsSourceType(Enum):
-    """Enum for the different types of GPS sources"""
-
+    DUMMY = "dummy"
     GPSD = "gpsd"
     I2C = "i2c"
 
 
-DEVICE_UUID = os.getenv("BALENA_DEVICE_UUID")
-GPS_SOURCE = GpsSourceType(os.getenv("GPS_SOURCE", "gpsd"))
+DEFAULT_GPS_SOURCE = GpsSourceType.GPSD
+GPS_SOURCE_MAP: Mapping[Optional[str], GpsSourceType] = {
+    "beaglebone-green-gateway": GpsSourceType.I2C
+}
 GPS_DIGITS_PRECISION = int(os.getenv("GPS_DIGITS_PRECISION", "2"))
-POLL_INTERVAL_SECONDS = float(os.getenv("POLL_INTERVAL_SECONDS", "0.5"))
 
 
 @dataclass
@@ -153,6 +144,42 @@ class I2CGps(BaseGps):
         )
 
 
+class DummyGps(BaseGps):
+    """Always return a static fix. Useful for testing without a GPS."""
+
+    def __init__(self) -> None:
+        self._latitude = float(os.getenv("DUMMY_GPS_LATITUDE", "0"))
+        self._longitude = float(os.getenv("DUMMY_GPS_LONGITUDE", "0"))
+        self._altitude = float(os.getenv("DUMMY_GPS_ALTITUDE", "0"))
+
+    def get_data(self) -> GpsData:
+        return GpsData(
+            latitude=self._latitude, longitude=self._longitude, altitude=self._altitude
+        )
+
+
+def get_i2c_bus_id() -> int:
+    override = os.getenv("I2C_BUS_ID")
+    if override is not None:
+        print(f"Using I2C bus override: {override}")
+        return int(override)
+
+    retval = I2C_BUS_ID_MAP.get(RESIN_DEVICE_TYPE, DEFAULT_I2C_BUS_ID)
+    print(f"I2C bus for device type {RESIN_DEVICE_TYPE}: {retval}")
+    return retval
+
+
+def get_gps_source() -> GpsSourceType:
+    override = os.getenv("GPS_SOURCE")
+    if override is not None:
+        print(f"Using GPS source override: {override}")
+        return GpsSourceType(override)
+
+    retval = GPS_SOURCE_MAP.get(RESIN_DEVICE_TYPE, DEFAULT_GPS_SOURCE)
+    print(f"GPS source for device type {RESIN_DEVICE_TYPE}: {retval}")
+    return retval
+
+
 def main() -> None:  # pylint: disable=missing-function-docstring
     if ENABLE_INFLUXDB:
         #
@@ -175,12 +202,15 @@ def main() -> None:  # pylint: disable=missing-function-docstring
     dps310 = DPS310(i2c_bus)
 
     gps: BaseGps
-    if GPS_SOURCE == GpsSourceType.GPSD:
+    gps_source = get_gps_source()
+    if gps_source == GpsSourceType.GPSD:
         gps = GpsdGps()
-    elif GPS_SOURCE == GpsSourceType.I2C:
+    elif gps_source == GpsSourceType.I2C:
         gps = I2CGps(i2c_bus)
+    elif gps_source == GpsSourceType.DUMMY:
+        gps = DummyGps()
     else:
-        raise ValueError(f"Unknown GPS Source: {GPS_SOURCE}")
+        raise ValueError(f"Unknown GPS Source: {gps_source}")
 
     # Enable self calibration mode
     scd.temperature_offset = 4.0
