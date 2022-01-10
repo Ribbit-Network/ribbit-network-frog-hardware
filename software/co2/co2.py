@@ -138,6 +138,7 @@ class I2CGps(BaseGps):
         self._gps.send_command(f"PMTK220,{gps_poll_interval}".encode("ascii"))
 
     def get_data(self) -> GpsData:
+        self._gps.update()
         if not self._gps.has_fix:
             raise Exception("No GPS Fix")
         return GpsData(
