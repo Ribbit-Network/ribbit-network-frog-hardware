@@ -24,6 +24,7 @@ import json
 import os
 import time
 from datetime import datetime
+from typing import Mapping, Optional
 
 import adafruit_scd30
 import gpsd
@@ -35,6 +36,21 @@ from influxdb_client.client.write_api import SYNCHRONOUS
 BUCKET = "co2"
 DEVICE_UUID = os.getenv("BALENA_DEVICE_UUID")
 ORG = "keenan.johnson@gmail.com"
+
+DEFAULT_I2C_BUS_ID = 11
+I2C_BUS_ID_MAP: Mapping[Optional[str], int] = {"beaglebone-green-gateway": 2}
+
+
+def get_i2c_bus_id() -> int:
+    override = os.getenv("I2C_BUS_ID")
+    if override is not None:
+        print(f"Using I2C bus override: {override}")
+        return int(override)
+
+    device_type = os.getenv("RESIN_DEVICE_TYPE")
+    retval = I2C_BUS_ID_MAP.get(device_type, DEFAULT_I2C_BUS_ID)
+    print(f"I2C bus for device type {device_type}: {retval}")
+    return retval
 
 
 def main() -> None:
@@ -51,7 +67,7 @@ def main() -> None:
     client = InfluxDBClient.from_config_file("influx_config.ini")
     write_api = client.write_api(write_options=SYNCHRONOUS)
 
-    i2c_bus = I2C(11)
+    i2c_bus = I2C(get_i2c_bus_id())
     scd = adafruit_scd30.SCD30(i2c_bus)
     time.sleep(1)
     scd.ambient_pressure = 1007
