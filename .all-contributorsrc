@@ -109,6 +109,15 @@
       "contributions": [
         "test"
       ]
+    },
+    {
+      "login": "abesto",
+      "name": "Zoltán Nagy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59982?v=4",
+      "profile": "https://abesto.net",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
