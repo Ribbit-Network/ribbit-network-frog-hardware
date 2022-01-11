@@ -177,3 +177,7 @@ cython_debug/
 # Support for Project snippet scope
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
+
+# Dockerfile can be used for local testing, but shouldn't be committed
+# to avoid confusion as production ONLY cares about Dockerfile.template
+Dockerfile
