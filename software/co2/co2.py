@@ -25,8 +25,8 @@ import logging
 import os
 import time
 from abc import ABC, abstractmethod
-from dataclasses import dataclass
-from datetime import datetime
+from dataclasses import dataclass, field
+from datetime import datetime, timedelta
 from enum import Enum
 from typing import Mapping, Optional
 
@@ -69,6 +69,7 @@ GPS_SOURCE_MAP: Mapping[Optional[str], GpsSourceType] = {
     "beaglebone-green-gateway": GpsSourceType.I2C
 }
 GPS_DIGITS_PRECISION = int(os.getenv("GPS_DIGITS_PRECISION", "2"))
+GPS_FIX_MAX_AGE = timedelta(seconds=int(os.getenv("GPS_FIX_MAX_AGE_SECONDS", "600")))
 
 
 @dataclass
@@ -78,21 +79,44 @@ class GpsData:
     latitude: float
     longitude: float
     altitude: Optional[float]
+    acquired_at: datetime = field(default_factory=datetime.now)
 
 
-class BaseGps(ABC):
+class BaseGps(ABC):  # pylint: disable=too-few-public-methods
     """Base class for GPS implementations"""
 
+    def __init__(self) -> None:
+        self._last_fix: Optional[GpsData] = None
+
     @abstractmethod
-    def get_data(self) -> GpsData:
-        """Get the current GPS data. Raises if no data is available for any reason."""
+    def _get_data(self) -> GpsData:
         raise NotImplementedError()
 
+    def get_data(self) -> GpsData:
+        """Get the current GPS data. Raises if no data is available for any reason."""
+        try:
+            self._last_fix = self._get_data()
+        except Exception as ex:  # pylint: disable=broad-except; gpsd actually throws an Exception
+            if self._last_fix is not None:
+                age = datetime.now() - self._last_fix.acquired_at
+                if age < GPS_FIX_MAX_AGE:
+                    LOGGER.warning(
+                        "Failed to fetch GPS data, using last known fix (age: %s)", age
+                    )
+                else:
+                    raise Exception(
+                        f"Last fix is too old ({age} > {GPS_FIX_MAX_AGE})"
+                    ) from ex
+        if self._last_fix is None:
+            raise Exception("Waiting for first fix")
+        return self._last_fix
 
-class GpsdGps(BaseGps):
+
+class GpsdGps(BaseGps):  # pylint: disable=too-few-public-methods
     """Read GPS data from the GPSD daemon"""
 
     def __init__(self):
+        super().__init__()
         self._is_valid = False
 
     def _connect(self) -> None:
@@ -104,7 +128,7 @@ class GpsdGps(BaseGps):
         finally:
             self._is_valid = True
 
-    def get_data(self) -> GpsData:
+    def _get_data(self) -> GpsData:
         if not self._is_valid:
             self._connect()
         try:
@@ -122,10 +146,11 @@ class GpsdGps(BaseGps):
             raise
 
 
-class I2CGps(BaseGps):
+class I2CGps(BaseGps):  # pylint: disable=too-few-public-methods
     """Read GPS data from from I2C via the Adafruit GPS library"""
 
     def __init__(self, i2c: I2C) -> None:
+        super().__init__()
         self._i2c = i2c
         self._gps = adafruit_gps.GPS_GtopI2C(i2c)
 
@@ -137,7 +162,7 @@ class I2CGps(BaseGps):
         gps_poll_interval = round(POLL_INTERVAL_SECONDS * 2 * 1000)
         self._gps.send_command(f"PMTK220,{gps_poll_interval}".encode("ascii"))
 
-    def get_data(self) -> GpsData:
+    def _get_data(self) -> GpsData:
         self._gps.update()
         if not self._gps.has_fix:
             raise Exception("No GPS Fix")
@@ -148,15 +173,16 @@ class I2CGps(BaseGps):
         )
 
 
-class DummyGps(BaseGps):
+class DummyGps(BaseGps):  # pylint: disable=too-few-public-methods
     """Always return a static fix. Useful for testing without a GPS."""
 
     def __init__(self) -> None:
+        super().__init__()
         self._latitude = float(os.getenv("DUMMY_GPS_LATITUDE", "0"))
         self._longitude = float(os.getenv("DUMMY_GPS_LONGITUDE", "0"))
         self._altitude = float(os.getenv("DUMMY_GPS_ALTITUDE", "0"))
 
-    def get_data(self) -> GpsData:
+    def _get_data(self) -> GpsData:
         return GpsData(
             latitude=self._latitude, longitude=self._longitude, altitude=self._altitude
         )
