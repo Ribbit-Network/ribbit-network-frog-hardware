@@ -36,6 +36,19 @@ adafruit-circuitpython-busdevice = "*"
 adafruit-circuitpython-register = "*"
 
 [[package]]
+name = "adafruit-circuitpython-gps"
+version = "3.9.6"
+description = "CircuitPython library for GPS modules."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Adafruit-Blinka = "*"
+adafruit-circuitpython-busdevice = "*"
+pyserial = "*"
+
+[[package]]
 name = "adafruit-circuitpython-ina219"
 version = "3.4.10"
 description = "CircuitPython library for INA219 high side DC current sensor."
@@ -410,7 +423,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "3cde07c2c4ac2027bbdd6b7fd3b81b5f2730770cb0efb1a2a918c333f9418f57"
+content-hash = "8c11dbfadceefe5c536f8fa83361be776cbfd782f42f5dd357fc96837816e27e"
 
 [metadata.files]
 adafruit-blinka = [
@@ -421,6 +434,9 @@ adafruit-circuitpython-busdevice = [
 ]
 adafruit-circuitpython-dps310 = [
     {file = "adafruit-circuitpython-dps310-2.0.0.tar.gz", hash = "sha256:811b46a3905b6b2cd3c42f4eb8de291a98fa8c85e059d3d8af3518d75cb65f85"},
+]
+adafruit-circuitpython-gps = [
+    {file = "adafruit-circuitpython-gps-3.9.6.tar.gz", hash = "sha256:ce4b659f7eb90cfe5caed629a37cea46dcbe8330bce90425d134e2d606aa9beb"},
 ]
 adafruit-circuitpython-ina219 = [
     {file = "adafruit-circuitpython-ina219-3.4.10.tar.gz", hash = "sha256:854f971da6e8ce902e53ecb70f491cdc7ee638b3949875c4c899c3008ac401bf"},

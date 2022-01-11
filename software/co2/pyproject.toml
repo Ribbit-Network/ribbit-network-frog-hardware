@@ -7,6 +7,7 @@ version = "0.1.0"
 
 [tool.poetry.dependencies]
 adafruit-circuitpython-dps310 = "^2.0.0"
+adafruit-circuitpython-gps = "^3.9.6"
 adafruit-circuitpython-ina219 = "^3.4.10"
 adafruit-circuitpython-lc709203f = "^2.2.0"
 adafruit-circuitpython-scd30 = "^2.2.1"
