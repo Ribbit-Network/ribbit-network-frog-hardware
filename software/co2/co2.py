@@ -30,13 +30,13 @@ from datetime import datetime, timedelta
 from enum import Enum
 from typing import Mapping, Optional
 
-import adafruit_gps
-import adafruit_scd30
-import gpsd
-from adafruit_dps310.advanced import DPS310
-from adafruit_extended_bus import ExtendedI2C as I2C
-from influxdb_client import InfluxDBClient, Point, WritePrecision
-from influxdb_client.client.write_api import SYNCHRONOUS
+import adafruit_gps  # type: ignore
+import adafruit_scd30  # type: ignore
+import gpsd  # type: ignore
+from adafruit_dps310.advanced import DPS310  # type: ignore
+from adafruit_extended_bus import ExtendedI2C as I2C  # type: ignore
+from influxdb_client import InfluxDBClient, Point, WritePrecision  # type: ignore
+from influxdb_client.client.write_api import SYNCHRONOUS  # type: ignore
 
 BUCKET = "co2"
 ORG = "keenan.johnson@gmail.com"
