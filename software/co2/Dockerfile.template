@@ -62,7 +62,7 @@ RUN install_packages -y --no-install-recommends \
     gpsd-clients \
     dbus \
     # Convenience tools
-    vim
+    vim-tiny
 
 # Grab the virtualenv and activate it
 COPY --from=build /usr/venv /usr/venv
