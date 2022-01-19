@@ -11,6 +11,19 @@
 - [gpsd](/gpsd) - This folder contains the dockerfile that configures [gpsd](https://gpsd.gitlab.io/gpsd/) to connect to a gps device for recieving the device location.
 - [wifi-connect](/wifi-connect) - This is a git submodule to the wifi connect repo. This allows easy reconfiguration of the sensor's wifi connection.
 
+## Local Development
+
+The `co2` and `gpsd` folders are Python projects with identical setup. To work on them locally (including helping your IDE understand the dependencies):
+
+1. Install the Poetry package manager as described [here](https://python-poetry.org/docs/master/#installing-with-the-official-installer), then in either `gpsd` or `co2`:
+1. `poetry install` to create a virtualenv with all production *and* development dependencies
+1. `poetry run ./check.sh` to execute all the linters and tests
+
+Some further notes:
+* You can run `poetry run <whatever>` to execute commands in the virtualenv, or `poetry shell` to enter a shell with the virtualenv activated.
+* If your IDE needs help finding the location of the virtualenv, `poetry env info` will tell you what you need.
+* You can add / remove dependencies with `poetry add` and `poetry remove`. Similarly, `poetry update` can be used to bump the version of dependencies.
+
 ## Deployment
 The software is deployed via the [Balena CLI](https://www.balena.io/docs/reference/balena-cli/) with the following command:
 
