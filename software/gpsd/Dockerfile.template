@@ -42,7 +42,7 @@ WORKDIR /usr/src/
 # Copy in just enough to install dependencies
 COPY pyproject.toml poetry.lock ./
 # Install Python packages; dependencies from pyproject.toml via poetry-core / PEP 517
-# Create an empty co2.py so that pip is not confused
+# Create an empty gpsd.py so that pip is not confused
 RUN touch gpsd.py && pip install .
 # Save a tiny amount of space: we don't need `wheel` at runtime
 # We also don't need our own package in the virtualenv, we'll run from source
