@@ -5,9 +5,9 @@ volumes:
   dashboard-data:
 
 services: 
-  gpsd:
+  gps:
     privileged: true
-    build: "./gpsd"
+    build: "./gps"
     devices: 
       - "/dev/ttyACM0:/dev/ttyACM0"
       # Provide UART0 for gpsd to fall back to.
@@ -27,7 +27,7 @@ services:
     build: "./co2"
     network_mode: host  
     depends_on:
-      - gpsd
+      - gps
     expose:
       - "2947"
       - "7575"
