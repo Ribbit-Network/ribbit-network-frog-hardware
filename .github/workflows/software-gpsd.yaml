@@ -1,21 +1,21 @@
-name: Tests for software/gpsd
+name: Tests for software/gps
 
 on:
   push:
     branches: [ $default-branch ]
-    paths: [ software/gpsd/** ]
+    paths: [ software/gps/** ]
   pull_request:
     branches: [ $default-branch ]
-    paths: [ software/gpsd/** ]
+    paths: [ software/gps/** ]
   workflow_dispatch:
     branches: [ $default-branch ]
-    paths: [ software/gpsd/** ]
+    paths: [ software/gps/** ]
 
 jobs:
   build:
     defaults:
       run:
-        working-directory: software/gpsd
+        working-directory: software/gps
 
     runs-on: ubuntu-latest
 
@@ -25,7 +25,7 @@ jobs:
     - uses: actions/cache@v2
       with:
         path: ~/.cache/pip
-        key: ${{ hashFiles('software/gpsd/poetry.lock') }}
+        key: ${{ hashFiles('software/gps/poetry.lock') }}
 
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
