@@ -13,7 +13,7 @@ We also have an on-going effort to create different versions of the Bill of Mate
 The diagram above can be edited with drawio or with the awesome [Draw.io Visual Studio Code Plugin](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
 
 ## Assembly Instructions
-Assembly instructions are a work in progress for V2.
+Assembly instructions for V2 can be found [here](assembly-instructions/0-start-here.md).
 
 ## Main Readme
 [Head back to the main readme for more info!](https://github.com/Ribbit-Network/ribbit-network-sensor)
