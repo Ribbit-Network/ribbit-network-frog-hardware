@@ -6,16 +6,8 @@ The document linked above contains quantities and links to purchase all of the p
 
 Note that there are several 3D printed parts that you'll need to 3D print yourself. The next section will cover that in more detail.
 
-![Parts](images/parts.jpeg)
-
-## International BOMs
-
-If you're not located in the United States, check out alternatives BOMs that are specific to your country below. The parts are the same but prices are in a local currency and links are replaced with local supplier alternatives to avoid high shipping and import fees.
-
-* [Canada](../hardware/international_boms/ribbit_network_frog_sensor_bom_ca.csv)
-* [United Kingdom](../hardware/international_boms/ribbit_network_frog_sensor_bom_uk.csv)
-
-If your country isn't listed, consider contributing!
+![Parts](images/all_parts.jpg)
+<img src="images/all_parts.jpg" width="600">
 
 ## Next Step
 [3D Printing](2-3d-printing.md)
