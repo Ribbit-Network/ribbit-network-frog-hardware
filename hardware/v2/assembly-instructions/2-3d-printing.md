@@ -1,6 +1,8 @@
 # 3D Printing
 
-There are several 3D printed parts you'll need to print in order to build a Frog Sensor. All parts can be found [in this folder](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical).
+There are several 3D printed parts you'll need to print in order to build a Frog Sensor. All parts can be found [in this folder](../mechanical).
+
+<img src="images/3d_printed_parts.jpg" width="600">
 
 The parts are divided into two sections described below:
 
