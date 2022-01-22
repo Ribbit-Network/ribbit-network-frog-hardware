@@ -20,6 +20,9 @@ If your country isn't listed, consider contributing!
 ## Next Step
 [3D Printing](2-3d-printing.md)
 
+## Previous Step
+[Go Back](0-start-here.md)
+
 ## Table of Contents
 [Return to the Beginning](0-start-here.md)
 
