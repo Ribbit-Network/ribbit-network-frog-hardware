@@ -6,7 +6,6 @@ The document linked above contains quantities and links to purchase all of the p
 
 Note that there are several 3D printed parts that you'll need to 3D print yourself. The next section will cover that in more detail.
 
-![Parts](images/all_parts.jpg)
 <img src="images/all_parts.jpg" width="600">
 
 ## Next Step
