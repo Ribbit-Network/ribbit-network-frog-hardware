@@ -2,25 +2,29 @@
 
 There are several 3D printed parts you'll need to print in order to build a Frog Sensor. All parts can be found [in this folder](../mechanical).
 
-The parts are divided into two sections described below:
+![Parts](images/3d_printed_parts.jpg)
 
 ## Minimum Parts
 These are the parts required for the Frog Sensor construction:
-* Bracket
+* Enclosure Base
   * Quantity:1
   * Suggested Color: Green
-* GPS Clip
+* Enclosure Lid
   * Quantity:1
   * Suggested Color: Green
+* Lower Shroud
+  * Quantity:1
+  * Suggested Color: Green
+* Frog Head - With Eyes
+  * Quantity:1
+  * Suggested Color: Green
+  * This can be printed with eyes and mouth all as a green piece or you can
+  print the eyes and mouth as unique pieces in different colors and glue together.
 
-The bracket is the biggest part and will generally take many hours to print. It's printed in this orientation to allow it to be printed as a single part:
-
-![Bracket](images/bracket_on_printer.jpeg)
 
 ## Bonus Parts
-These parts only serve a cosmetic function and are therefore optional. However, they are fun and cute, so we suggest including them if you can.
-
-![Frog Head](images/finished_frog_head.jpeg)
+These parts only serve a cosmetic function and are therefore optional. 
+However, they are fun and cute, so we suggest including them if you can.
 
 * 1 - Frog Head - No Eyes
   * Quantity:1
