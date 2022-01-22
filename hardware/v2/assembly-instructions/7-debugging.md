@@ -21,8 +21,5 @@ No problem! The Ribbit Network team is here for you! We have lots of ways to con
 * [Start a discussion here](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/discussions/new)
 * [Join the Developer Discord](https://discord.gg/vq8PkDb2TC)
 
-## Previous Step
-[Go Back](8-done.md)
-
 ## Table of Contents
 [Return to the Beginning](0-start-here.md)

@@ -35,10 +35,7 @@ If you didn't enter your home network WiFi information previously, or you purcha
 If there are any connection problems, the sensor will restart and broadcast the Wifi Connect hotspot again.
 
 ## Next Step
-[View the data!](8-done.md)
-
-## Previous Step
-[Go Back](6-software.md)
+[View the data!](6-done.md)
 
 ## Table of Contents
 [Return to the Beginning](0-start-here.md)
