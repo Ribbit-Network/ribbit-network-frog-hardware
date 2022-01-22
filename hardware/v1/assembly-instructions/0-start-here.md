@@ -4,12 +4,11 @@ Welcome! These are the instructions that describe the process to build a Frog Se
 
 1. [Parts List (Bill of Materials)](1-parts.md)
 2. [3D Printing](2-3d-printing.md)
-3. [Enclosure Assembly](3-enclosure.md)
-4. [Electronics Weatherproofing [OPTIONAL]](4-electronics-weatherproofing.md)
-5. [Electronics Assembly](5-electronics-assembly.md)
-6. [Software Installation](6-software.md)
-7. [Placement of Finished Sensor](7-sensor-placement.md)
-8. [You did it!](8-done.md)
+3. [Software Installation](3-software.md)
+4. [Assembly](4-assembly.md)
+5. [Placement of Finished Sensor](5-sensor-placement.md)
+6. [You did it!](6-done.md)
+7. [Something is Wrong](7-debugging.md)
 
 ![Open Source Hardware Logo](images/oshw-logo.svg)
 

@@ -4,7 +4,7 @@ There are several 3D printed parts you'll need to print in order to build a Frog
 
 The parts are divided into two sections described below:
 
-## Required Parts
+## Minimum Parts
 These are the parts required for the Frog Sensor construction:
 * Bracket
   * Quantity:1
@@ -17,12 +17,12 @@ The bracket is the biggest part and will generally take many hours to print. It'
 
 ![Bracket](images/bracket_on_printer.jpeg)
 
-## Optional Parts
+## Bonus Parts
 These parts only serve a cosmetic function and are therefore optional. However, they are fun and cute, so we suggest including them if you can.
 
 ![Frog Head](images/finished_frog_head.jpeg)
 
-* 1 - Frog Head
+* 1 - Frog Head - No Eyes
   * Quantity:1
   * Suggested Color: Green
 * 2 - Frog Eyes
@@ -36,10 +36,7 @@ These parts only serve a cosmetic function and are therefore optional. However, 
 Given that the sensors are designed to sit outside, a PETG 3D Printer Filament should be used for all the parts. This kind of filament is readily available and can be used on almost any 3D printer. It holds up well in moisture and is very UV resistant making it perfect for the sensor. The [parts list](https://docs.google.com/spreadsheets/d/1lsWCXFawsJNGc44bqFXWkpjHfIFZQEj5UceJV4AiuK0/edit#gid=0) links to some suggestions for brands and colors.
 
 ## Next Step
-[Enclosure](3-enclosure.md)
-
-## Previous Step
-[Go Back](1-parts.md)
+[Enclosure](3-software.md)
 
 ## Table of Contents
 [Return to the Beginning](0-start-here.md)
