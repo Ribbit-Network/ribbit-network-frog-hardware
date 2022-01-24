@@ -5,13 +5,17 @@ If you are reading this page, something isn't work with your sensor. Don't panic
 If you have received or built your Frog Sensor, powered it up, but still don't see it on the map, follow the steps below to identify the issue!
 
 1. Verify that the sensor is connected to power by verifying you see some LEDs on the electronics inside.
-2. Verify that the sensor is connected to a wifi network. This can be verified by ensuring the device is NOT broadcasting the "Wifi-Connect" SSID and by checking the ACT LED on the Raspberry Pi (see image below). If there is a connectivity issue, the ACT LED will flash a repeated pattern of 4 short flashes followed by a pause.
+2. Verify that the sensor is connected to a wifi network. This can be verified by ensuring the device is NOT broadcasting the "Wifi-Connect" SSID.
 
 <img src="images/act_led.jpeg" width="600">
 
-3. Once wifi connectity is verified, the next most likely issue is that the GPS sensor does have a clear enough view of the sky to establish a GPS location. You can verify this by checking the LED on the GPS module. If the LED is blinking then a GPS location fix is established and everything is great. However, if the light on the GPS module is solid, then the module cannot establish a fix. Try moving the sensor to a less obstructed area.
+3. Once wifi connectity is verified, the next most likely issue is that the GPS sensor does have a clear enough view of the sky to establish a GPS location. You can verify this by checking the LEDs on the GPS module.
+First verify the ON LED. It is lit when the board is recieving power.
+If the PPS LED is blinking then a GPS location fix is established and everything is great. 
+However, if the light on the GPS module is solid, then the module cannot establish a fix. 
+Try moving the sensor to a less obstructed area.
 
-<img src="images/gps_led.png" width="600">
+<img src="images/adafruit_products_Mini_GPS_pinouts_LEDs.png" width="600">
 
 4. If all else fails, try turning the sensor off and on again (Seriously).
 
