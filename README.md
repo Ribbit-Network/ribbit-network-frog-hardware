@@ -12,18 +12,22 @@ Ribbit Network is a large network of open-source, low-cost, Greenhouse Gas (CO2 
 ![OSHW](images/oshw-logo.svg)
 
 ## Frog Sensors
-Our “Frogs” are tiny sensors that you can buy and deploy at your own home! It’s a small, open-source box that measures the amount of CO2 in the air using a tiny laser.
+Our “Frogs” are tiny sensors that you can 
+[build](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware) 
+or [buy](https://ribbitnetwork.org/) and deploy at your own home! It’s a small, 
+open-source box that measures the amount of CO2 in the air using a tiny laser.
 It's easy to set up and will constantly record valuable scientific data on our climate.
-Frogs are one of the species that are most affected by climate change! Just like our sensors, they ribbit to one another to create a powerful network of data about the environment.
+Frogs are one of the species that are most affected by climate change! 
+Just like our sensors, they ribbit to one another to create a powerful network 
+of data about the environment.
 
 <img src="https://user-images.githubusercontent.com/2559382/130338413-c348007f-1a54-47d8-92b0-151f330f476d.png" width="600">
 
-## Current Status
-[The design of sensor version 1](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/milestone/1) has just been completed and is ready for deployment. The first few units are being produced now and sent to a long list of waiting Alpha testers. The instructions are also complete for building a sensor (see below).
-
+# View the Data!
 The first prototype sensors are up and running! [Here is some real data from our sensor network!](https://ribbit-network.herokuapp.com/) (Note this dashboard is still experimental and may be down occasionally).
 
-There is still a ton of interesting work to do however!
+## Current Status
+We've just released the design of the Frog Sensor Version 2.0!
 
 Check out our issues for ongoing work! In the near future we have several major goals:
 * [Reduce the cost of the sensor](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/projects/6) This requires more custom engineering.
