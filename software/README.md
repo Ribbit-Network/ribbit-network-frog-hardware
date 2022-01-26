@@ -3,8 +3,7 @@
 - The raspberry pi runs a docker container inside of [Balena OS + Balena Cloud](https://www.balena.io/cloud/). This makes it easy to deploy software remotely to the PI and will be useful once there is a large fleet of sensors for managing software updates.
 - Inside of the Docker container is a simple Python script that periodically reads data from the sensor and publishes the data to Influx DB.
 
-![image](https://user-images.githubusercontent.com/2559382/128450769-5bc59039-b0de-4313-9170-043455f93940.png)
-
+<img src="https://user-images.githubusercontent.com/2559382/128450769-5bc59039-b0de-4313-9170-043455f93940.png" width="600">
 
 ## Main Software Folders / Docker Images
 - [co2](/co2) - This folder contains the main python script responsible for connecting to the CO2 sensor and publishing the data to the InfluxDB database.
@@ -25,13 +24,41 @@ Some further notes:
 * You can add / remove dependencies with `poetry add` and `poetry remove`. Similarly, `poetry update` can be used to bump the version of dependencies.
 
 ## Deployment
+If you are trying to build a device to contribute data only, we recommend 
+joining our [balena open-fleet](https://hub.balena.io/g_keenan_johnson1/ribbit-network)!
+If you join the fleet, you'll download an image preconfigured with everything 
+and your device will follow the software updates with the rest of the fleet 
+as we build out the network.
+
+However, if you are building your own sensor for development or your own purpose, 
+you can deploy this code to your bown balena fleet.
+
 The software is deployed via the [Balena CLI](https://www.balena.io/docs/reference/balena-cli/) with the following command:
 
 ```
-balena push ribbit-network
+balena push <balena-fleet-name>
 ```
 
-Note you must have the right permissions to actually deploy to the whole ribbit network. Replace "ribbit-network" with your own Balena Application name if you are deploying elsewhere.
+### Database Configuration
+If you are pusing your own image, note that you will need to setup an instance
+of InfluxDB for the device to plublish to. 
+
+The script is looking for a file called influx_config.ini in the software/co2 
+directory.
+
+It has the following format:
+
+```
+[influx2]
+url=https://us-west-2-1.aws.cloud2.influxdata.com
+org=keenan.johnson@gmail.com
+token=#FIXME
+timeout=6000
+verify_ssl=True
+```
+
+You'll need to create an InfluxDB accesss token and add it to that file before 
+pushing the balena fleet.
 
 ## Dashboard Information
 See the [dashboard repo](https://github.com/Ribbit-Network/ribbit-network-dashboard) for more information on the public facing data dashboard.
