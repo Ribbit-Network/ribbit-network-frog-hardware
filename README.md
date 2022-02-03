@@ -29,10 +29,7 @@ The first prototype sensors are up and running! [Here is some real data from our
 ## Current Status
 We've just released the design of the Frog Sensor Version 2.0!
 
-Check out our issues for ongoing work! In the near future we have several major goals:
-* [Reduce the cost of the sensor](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/projects/6) This requires more custom engineering.
-* [Create a solar power version of the sensor](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/projects/2) (this requires reducing the power consumption and designing the solar circuitry)
-* [Improve the sustainability](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/projects/7) We strive to ensure that the Frog is the most sustainable version of the sensor that we can reasonably produce.
+Check out [our Project board](https://github.com/orgs/Ribbit-Network/projects/1/views/1) for the list of all work currently in progress on Ribbit!
 
 ## Build a Frog!
 [Check out the instructions in the hardware folder](hardware/) to build your own Frog Sensor!
