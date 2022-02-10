@@ -118,6 +118,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "eliasfallon",
+      "name": "eliasfallon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19410965?v=4",
+      "profile": "https://github.com/eliasfallon",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
