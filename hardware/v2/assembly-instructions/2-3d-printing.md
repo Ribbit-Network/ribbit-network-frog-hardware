@@ -40,7 +40,7 @@ However, they are fun and cute, so we suggest including them if you can.
 Given that the sensors are designed to sit outside, a PETG 3D Printer Filament should be used for all the parts. This kind of filament is readily available and can be used on almost any 3D printer. It holds up well in moisture and is very UV resistant making it perfect for the sensor. The [parts list](https://docs.google.com/spreadsheets/d/1lsWCXFawsJNGc44bqFXWkpjHfIFZQEj5UceJV4AiuK0/edit#gid=0) links to some suggestions for brands and colors.
 
 ## Next Step
-[Enclosure](3-software.md)
+[Software](3-software.md)
 
 ## Table of Contents
 [Return to the Beginning](0-start-here.md)

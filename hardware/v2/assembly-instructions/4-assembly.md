@@ -109,7 +109,7 @@ at the bottom. Be sure not to overtighten into the platic.
 The assembly is now complete! Now we just need to place our sensor outside!
 
 ## Next Step
-[Software Installation](5-sensor-placement.md)
+[Sensor Placement](5-sensor-placement.md)
 
 ## Table of Contents
 [Return to the Beginning](0-start-here.md)
