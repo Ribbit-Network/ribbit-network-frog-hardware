@@ -4,11 +4,11 @@ description: >-
   low-cost, CO2 Gas Detection Sensors.
 fleetcta: Get inspired
 post-provisioning: >-
-  ## Usage instructions
-  Allow a few minutes for your device to download the application. Once it's
-  completed you should see your device on the Ribbit Network Dashboard.
+  ## Build Instructions
+  Buidling a Frog Sensor requires some specialized hardware and a place to put
+  an outdoor sensor. For more information check out the instructions on 
+  Github: https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware
 
-  See more information at https://ribbitnetwork.org/
 type: sw.application
 assets:
   repository:
