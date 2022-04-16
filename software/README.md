@@ -1,82 +1,68 @@
+## High Level Overview
 
- ![The Whole Home Air Quality Monitoring Project](https://github.com/wjlove/WHAQM/blob/main/documentation/images/two-display-sidebyside.jpg?raw=true)
+- The raspberry pi runs a docker container inside of [Balena OS + Balena Cloud](https://www.balena.io/cloud/). This makes it easy to deploy software remotely to the PI and will be useful once there is a large fleet of sensors for managing software updates.
+- Inside of the Docker container is a simple Python script that periodically reads data from the sensor and publishes the data to Influx DB.
 
-*An extension of the balenAIR project that allows for multiple sensors in various location within your home or any indoor location*
+<img src="https://user-images.githubusercontent.com/2559382/128450769-5bc59039-b0de-4313-9170-043455f93940.png" width="600">
 
-# Whole Home Air Quality Monitoring Project
+## Main Software Folders / Docker Images
+- [co2](/co2) - This folder contains the main python script responsible for connecting to the CO2 sensor and publishing the data to the InfluxDB database.
+- [gps](/gps) - This folder contains the dockerfile that configures [gpsd](https://gpsd.gitlab.io/gpsd/) to connect to a gps device for recieving the device location.
+- [wifi-connect](/wifi-connect) - This is a git submodule to the wifi connect repo. This allows easy reconfiguration of the sensor's wifi connection.
 
-## Reasoning
+## Local Development
 
-I was wondering if the quality of the air in my office was affecting my work and was looking to measure the levels of hazardous gasses while my office door was closed.   There are many products out there that one can purchase that will monitor indoor air quality but as a tinkerer I wanted to build one myself.  After some online research I came across the excellent baleaAIR (https://github.com/balena-io-playground/balena-iaq) project and thought this might be fun to build so I started constructing one.  
+The `co2` and `gpsd` folders are Python projects with identical setup. To work on them locally (including helping your IDE understand the dependencies):
 
-During the process of testing my device I noticed that my measurements were wildly different throughout the day and often in the danger zones while working in my office.  I thought I’d done everything correctly so what was wrong?  As a test I moved my device to another room in my home and what a difference, these measurements were stable and “safe”.  With those results in hand, I went to several other rooms in my home and noticed each one produced results that were slightly different generally and fluctuated during the day.   It is from here I wondered if having a small sensor in each room, monitored by a central location might be useful and thus this project was born.
+1. Install the Poetry package manager as described [here](https://python-poetry.org/docs/master/#installing-with-the-official-installer), then in either `gpsd` or `co2`:
+1. `poetry install` to create a virtualenv with all production *and* development dependencies
+1. `poetry run ./check.sh` to execute all the linters and tests
 
-## New Features
+Some further notes:
+* You can run `poetry run <whatever>` to execute commands in the virtualenv, or `poetry shell` to enter a shell with the virtualenv activated.
+* If your IDE needs help finding the location of the virtualenv, `poetry env info` will tell you what you need.
+* You can add / remove dependencies with `poetry add` and `poetry remove`. Similarly, `poetry update` can be used to bump the version of dependencies.
 
-At its core, this project is simply an extension of the great work done on the balenAIR project and adds the following features:
+## Deployment
+If you are trying to build a device to contribute data only, we recommend 
+joining our [balena open-fleet](https://hub.balena.io/g_keenan_johnson1/ribbit-network)!
+If you join the fleet, you'll download an image preconfigured with everything 
+and your device will follow the software updates with the rest of the fleet 
+as we build out the network.
 
-- A standalone balenAIR like device with a touchscreen display
-- A centralized balenAIR like device with a touchscreen display
-- Ability to collect data from multiple air quality devices
-- Ability to display aggregated measurements from multiple devices
-- Ability to predict air quality conditions based on previous measurements
- 
+However, if you are building your own sensor for development or your own purpose, 
+you can deploy this code to your bown balena fleet.
 
-## Hardware Selection
+The software is deployed via the [Balena CLI](https://www.balena.io/docs/reference/balena-cli/) with the following command:
 
- There are a number of options when it comes to selecting hardware for the IAQ. Cost, availability and performance are some factors to consider when choosing the parts below.
+```
+balena push <balena-fleet-name>
+```
 
-### Choosing your Pi
+### Database Configuration
+If you are pusing your own image, note that you will need to setup an instance
+of InfluxDB for the device to plublish to. 
 
+The script is looking for a file called influx_config.ini in the software/co2 
+directory.
 
-This project currently runs on a Raspberry Pi, so you'll need one of the following compatible devices:
+It has the following format:
 
-- [Pi 3B](https://www.raspberrypi.com/products/raspberry-pi-3-model-b/)
-- [Pi 3B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/)
-- [Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
+```
+[influx2]
+url=https://us-west-2-1.aws.cloud2.influxdata.com
+org=keenan.johnson@gmail.com
+token=#FIXME
+timeout=6000
+verify_ssl=True
+```
 
-Note: If you plan on having a significant number of remote sensor devices like those from the balenAIR project you should consider using a Pi 4 as the prediction software can be rather compute intensive.
+You'll need to create an InfluxDB accesss token and add it to that file before 
+pushing the balena fleet.
 
-### The Display and Case
+## Dashboard Information
+See the [dashboard repo](https://github.com/Ribbit-Network/ribbit-network-dashboard) for more information on the public facing data dashboard.
 
-There are many options for choosing a case that will house the Raspberry Pi, the touchscreen device and all the sensors or you can make your own.  After some review I settled on the [SmartiPi Touch Pro - Small](https://smarticase.com/products/smartipi-touch-pro) and the original [Raspberry Pi Touch Display](https://www.raspberrypi.com/products/raspberry-pi-touch-display/).  Both are easily available for purchase and well supported.  
+## Main Readme
 
-![](https://github.com/wjlove/WHAQM/blob/main/documentation/images/case-display.jpg?raw=true)
-
-### Sensors
-
-The sensors evaluate your air and return data that is used to deterime your air quality score. This project, like balenAIR,  supports the three different sensors listed below. You can choose to have one, two, or all three present in your device, depending on your budget and air quality analysis needs.
-
-| Sensor | Detects | Description |  Specifications (approx.) |
-| ------------ | ----------- | ----------- | ----------- |
-| [PMSA003I](https://www.adafruit.com/product/4632) | Smoke, dust, dirt, pollen particles | laser-scattering type  | 0.3-1.0,1.0-2.5, 2.5-10 Micrometer particles |
-| [SCD-40](https://www.adafruit.com/product/5187) | Exhaled breath and burning fossil fuels |  CO2 photoacoustic sensor CO2 (plus temp and humidity)  | 400 - 2000 PPM |
-| [SGP-30](https://www.adafruit.com/product/3709) | Gasses emitted by solid and liquid products  |  VOC (and eCO2) Hot-plate MOX sensor | eCO2 400-60,000 ppm, TVOC 0-60,000 ppb |
-
-![](https://github.com/wjlove/WHAQM/blob/main/documentation/images/sensors-alone.jpg?raw=true)  *Sensors from left to right: SGP-30, SCD-40 and PMSA003I* 
-
-All of these sensors use the popular I2C protocol to communicate with the Pi and include [Qwiic](https://www.sparkfun.com/qwiic) connectors so you don't need to do any soldering to use these sensors.
-
-### Sensor Carrier Board
-
-In order to install the sensors inside the SmartiPi case they need to be installed on a carrier board.  Ideally and ultimately this will be a 3D printed part but for now I simply cut up an old blank PCB to the dimensions that fit the case and drilled a few holes that allowed me to affix the sensors securely to the back of the display case.  You can read about that process [here](https://fix.this.later) along with details about dimensions and hole locations.
-![](https://github.com/wjlove/WHAQM/blob/main/documentation/images/carrier-board.jpg?raw=true)*Carrier board with holes*
-
-![](https://github.com/wjlove/WHAQM/blob/main/documentation/images/sensors-on-carrier.jpg?raw=true) *Sensors mounted on carrier board*
-
-
-As it currently stands this design is not ideal as the amount of heat generated internally by both the Raspi and the touchscreen affect  the temperature measurements provided by the SCD-40 by as much as 5 degrees.  Various insulating mitigations can be applied to the case and carrier board to reduce this effect but my results to date have been varied.   The case does come with an optional fan which does resolve the issue but the additional noise created by it was unacceptable to me.
-
-### Miscellaneous Items
-
-
-Additionally you will need some SparkFun qwiic cables to connect the sensors together [100mm QT to QT cable](https://www.adafruit.com/product/4210) and a qwiic to female header cable to connect the sensors to the Raspberry Pi you selected [Qwiic to female header cable](https://www.adafruit.com/product/4397).  Lastly you will need a way to affix the sensors to the carrier board, I used some M2 screws and bolts but you could also use plastic spacers or double sided tape but I wouldn’t recommend the latter.
-
-### Putting it All Together
-
-I won’t go into much detail about setting up the SmartiPi case and installing the Raspberry Pi touchscreen as those details can be found on the [SmartiCase web site](https://smarticase.com/)  Installing your Raspberry Pi of choice and the sensor carrier board on the rear of the case is done using the supplied screws.  You may want to attach the power adapter before installing the carrier board as it is significantly harder to do so with that installed. 
-
-![](https://github.com/wjlove/WHAQM/blob/main/documentation/images/case-with-power-pi.jpg?raw=true) *Install power connector first...*
-![](https://github.com/wjlove/WHAQM/blob/main/documentation/images/case-power-pi-sensors.jpg?raw=true) *...then the sensors.*
-
-## Software
+[Head back to the main readme for more info!](https://github.com/Ribbit-Network/ribbit-network-sensor)
