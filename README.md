@@ -50,12 +50,10 @@ We have a [contributing guide](https://github.com/Ribbit-Network/ribbit-network-
 ## Background Information
 [See the Wiki for background research.](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/wiki/Background-Research.md) This project is inspired by some awesome research by incedible scientists in academia.
 
-## Maintainer
-Hi, I'm [Keenan](https://www.keenanjohnson.com/) and I head this project! Reach out if you are interested or just want to chat.
+## Ribbit Network
+Ribbit Network is a non-profit (501c3) creating the world's largest Greenhouse Gas Emissions dataset that will empower anyone to join in the work on climate and provide informed data for climate action. We're an all volunteer team building everything we do in the open-source community.
 
-Consider sponsoring me on [Ko-fi](https://ko-fi.com/W7W14VTU8) or through [Github Sponsors](https://github.com/sponsors/keenanjohnson) to help cover the research and development costs.
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W14VTU8)
+If you would like to consider sponsoring Ribbit Nework you can do [via this link](https://givebutter.com/ribbitnetwork). The money is used to pay for software fees, purchase R&D hardware and generally support the mission of Ribbit Network.
 
 ## Contributors ✨
 
