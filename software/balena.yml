@@ -4,8 +4,7 @@ description: >-
   low-cost, CO2 Gas Detection Sensors.
 fleetcta: Get inspired
 post-provisioning: >-
-  ## Build Instructions
-  Buidling a Frog Sensor requires some specialized hardware and a place to put
+  Building a Frog Sensor requires some specialized hardware and a place to put
   an outdoor sensor. For more information check out the instructions on 
   Github: https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware
 
