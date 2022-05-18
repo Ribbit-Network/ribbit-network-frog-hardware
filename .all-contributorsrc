@@ -127,6 +127,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "rhampt",
+      "name": "Ryan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6423385?v=4",
+      "profile": "https://github.com/rhampt",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
