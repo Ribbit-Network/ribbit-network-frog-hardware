@@ -9,7 +9,7 @@ The location will need to be near a power outlet to ensure there is power for th
 <img src="images/sensor_placement.jpg" width="400">
 
 ## Power Cable
-Connect the USB C power supply to the USB C connector on the bottom of the Raspberry Pi carrier board and plug the sensor into a normal wall outlet.
+Connect the USB C power supply to the USB C connector on the bottom of the Raspberry Pi carrier board and plug the sensor into a normal wall outlet. If your USB C power supply is connected to an extension cord, you may want to protect that connection from the weather in an enclosure. Search online for weatherproof extension cord covers, outdoor electrical boxes, or build your own out of a waterproof container. Make sure that all the cables enter through an opening in bottom of the enclosure so that water can’t collect inside.
 
 ## WiFi Connection
 
