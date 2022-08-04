@@ -9,6 +9,7 @@ to build a V2 Frog and the instructions can be found in the [V2 folder.](v2/asse
 There have been two major versions of the Frog Sensor to date:
 * [Frog Sensor Version 1](v1) - This version was based on the Raspberry Pi and included an off-the-shelf enclosure
 * [Frog Sensor Version 2](v2) - This version is based on a Beaglebone black and includes a fully 3D printed enclosure.
+* [Frog Sensor Version 3](v3) - This version is based on a Raspberry Pi CM4 and includes a fully 3D printed enclosure.
 
 See each folder linked above for the relevant design files, CAD, and assembly instructions!
 
