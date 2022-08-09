@@ -1,6 +1,6 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
-import { getSensorData } from "./sensorData";
+import { getAllSensorReadings, getSensorData } from "./sensorData";
 
 dotenv.config();
 
@@ -14,6 +14,8 @@ app.get("/heartbeat", (req: Request, res: Response) => {
 });
 
 app.get("/sensorData", getSensorData);
+
+app.get("/getAllSensorReadings", getAllSensorReadings);
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${port}`);

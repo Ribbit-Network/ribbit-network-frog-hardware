@@ -9,12 +9,21 @@ export const getSensorData = async (req: Request, res: Response) => {
 
   const python = spawn("py", ["./scripts/co2.py"]);
 
-  python.stdout.on("data", (data: Buffer) => {
+  python.stdout.on("data", async (data: Buffer) => {
     const sensorReading = JSON5.parse(data.toString()) as SensorReading;
 
-    db.addSensorReading(sensorReading);
+    await db.addSensorReading(sensorReading);
 
     res.json(sensorReading);
+
     console.log("[API:Success] /sensorData");
   });
+};
+
+export const getAllSensorReadings = async (req: Request, res: Response) => {
+  console.log("[API] /getAllSensorReadings");
+
+  res.json(await db.getAllSensorReadings());
+
+  console.log("[API:Success] /getAllSensorReadings");
 };

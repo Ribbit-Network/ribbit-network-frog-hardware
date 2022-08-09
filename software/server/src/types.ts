@@ -1,10 +1,10 @@
 export interface SensorReading {
-  CO2: number;
-  Temperature: number;
-  Relative_Humidity: number;
-  Latitude: number;
-  Longitude: number;
-  Altitude: number;
+  co2: number;
+  temp: number;
+  relative_humidity: number;
+  lat: number;
+  lon: number;
+  alt: number;
   scd_temp_offset: number;
   baro_temp: number;
   baro_pressure_hpa: number;

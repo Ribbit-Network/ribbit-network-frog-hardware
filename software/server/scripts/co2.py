@@ -6,12 +6,12 @@ import time
 def main() -> None:
 
     data = {}
-    data["CO2"] = 1
-    data["Temperature"] = 32.2
-    data["Relative_Humidity"] = 100
-    data["Latitude"] = -34.1
-    data["Longitude"] = 11.1
-    data["Altitude"] = 100
+    data["co2"] = 1
+    data["temp"] = 32.2
+    data["relative_humidity"] = 100
+    data["lat"] = -34.1
+    data["lon"] = 11.1
+    data["alt"] = 100
     data["scd_temp_offset"] = -2
     data["baro_temp"] = 32.6
     data["baro_pressure_hpa"] = 360

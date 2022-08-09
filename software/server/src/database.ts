@@ -28,15 +28,32 @@ class AppDAO {
 
     console.log("[DB] Initializing sensorReadings table...");
     await this.db.run(
-      "CREATE TABLE IF NOT EXISTS sensorReadings(name TEXT, value TEXT)"
+      "CREATE TABLE IF NOT EXISTS sensorReadings(timestamp TEXT, co2 TEXT, temp TEXT, relative_humidity TEXT, lat TEXT, lon TEXT, alt TEXT, scd_temp_offset TEXT, baro_temp TEXT, baro_pressure_hpa TEXT, scd30_pressure_mbar TEXT, scd30_alt_m TEXT)"
     );
   }
 
   async addSensorReading(reading: SensorReading) {
+    const {
+      co2,
+      temp,
+      relative_humidity,
+      baro_temp,
+      baro_pressure_hpa,
+      lat,
+      lon,
+      scd30_pressure_mbar,
+      scd30_alt_m,
+      alt,
+      scd_temp_offset,
+    } = reading;
+
     await this.db.exec(
-      'INSERT INTO sensorReadings VALUES (":CO2 :Temperature :Relative_Humidity :Latitude :Longitude :Altitude :scd_temp_offset :baro_temp :baro_pressure_hpa :scd30_pressure_mbar :scd30_alt_m")',
+      `INSERT INTO sensorReadings VALUES (${Date.now()}, ${co2}, ${temp}, ${relative_humidity}, ${lat}, ${lon}, ${alt}, ${scd_temp_offset}, ${baro_temp}, ${baro_pressure_hpa}, ${scd30_pressure_mbar}, ${scd30_alt_m})`,
       reading
     );
+  }
+  async getAllSensorReadings(): Promise<SensorReading[]> {
+    return this.db.all<SensorReading[]>("SELECT * FROM sensorReadings");
   }
 }
 
