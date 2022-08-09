@@ -4,12 +4,12 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app: Express = express();
-const port = process.env.PORT || 3004;
+const port = process.env.PORT || 3000;
 
 app.use("/", express.static("dashboard/build"));
 
 app.get("/heartbeat", (req: Request, res: Response) => {
-  res.setHeader("access-control-allow-origin", "http://localhost:3000");
+  // res.setHeader("access-control-allow-origin", "http://localhost:3000");
 
   res.send("Express + TypeScript Server");
 });
