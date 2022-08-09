@@ -23,14 +23,12 @@ class Core {
     this.analytics = getAnalytics(this.app);
 
     makeAutoObservable(this);
-
-    this.getMap();
   }
 
-  async getMap() {
-    const response = await fetch('https://us-central1-ribbit-network.cloudfunctions.net/getSensorData')
+  async getMap() {}
 
-    this.sensorData = await response.json()
+  async heartbeat() {
+    return await fetch("http://localhost:3004/heartbeat");
   }
 }
 

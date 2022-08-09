@@ -1,36 +1,44 @@
 import React from "react";
 import "./App.css";
-
-import { AppBar, Button, IconButton, Toolbar, Typography } from "@mui/material";
+import {
+  AppBar,
+  Button,
+  IconButton,
+  Toolbar,
+  Typography,
+  Box,
+} from "@mui/material";
 import frog from "./frog.svg";
-import MyMapComponent from "./components/Map";
+import core from "./core/core";
 
 function App() {
   return (
-    <>
-      <AppBar color={"default"}>
-        <Toolbar color={"transparent"}>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <img width={48} src={frog} />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Welcome to Ribbit Network!
-          </Typography>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        alignItems: "space-between",
 
-          <Button color="inherit" href={"https://ko-fi.com/keenanjohnson"}>
-            Support
-          </Button>
-        </Toolbar>
-      </AppBar>
+        height: "100%",
+      }}
+    >
+      <Box>
+        <Typography variant="h3">Welcome to the Ribbit Network.</Typography>
 
-      <Typography></Typography>
-    </>
+        <Typography variant="h5">
+          We're so glad you got here. Let's set you up in a few quick steps, and
+          off we go measuring CO2 and saving the planet.
+        </Typography>
+      </Box>
+
+      <Box>
+        <Button sx={{ mr: 2 }} variant={"contained"}>
+          Login
+        </Button>
+        <Button variant={"contained"}>Sign Up</Button>
+      </Box>
+    </Box>
   );
 }
 
