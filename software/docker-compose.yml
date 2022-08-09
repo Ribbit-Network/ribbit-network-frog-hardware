@@ -6,9 +6,11 @@ volumes:
 
 services:
   dashboard:
-    build: "./dashboard"
+    build: "./server"
+    networks:
+      - main
     ports:
-      - "3002"
+      - "80"
 #  gps:
 #    privileged: true
 #    build: "./gps"
