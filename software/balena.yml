@@ -27,5 +27,5 @@ data:
     - raspberry-pi
     - raspberrypi3-64
     - raspberrypi4-64
-    - raspberrypicm4-ioboard
+    - raspberrypicm4-board
 version: 0.0.1
