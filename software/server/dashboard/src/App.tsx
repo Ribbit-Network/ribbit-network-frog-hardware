@@ -20,29 +20,16 @@ function App() {
             <img width={48} src={frog} />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Ribbit Network
+            Welcome to Ribbit Network!
           </Typography>
-          <Button color="inherit" href={"https://ribbitnetwork.org/"}>
-            Learn
-          </Button>
-          <Button
-            color="inherit"
-            href={
-              "https://github.com/Ribbit-Network/ribbit-network-frog-sensor#build-a-frog"
-            }
-          >
-            Build
-          </Button>
-          <Button color="inherit" href={"https://ribbitnetwork.org/#buy"}>
-            Order
-          </Button>
+
           <Button color="inherit" href={"https://ko-fi.com/keenanjohnson"}>
             Support
           </Button>
         </Toolbar>
       </AppBar>
 
-      <MyMapComponent />
+      <Typography></Typography>
     </>
   );
 }
