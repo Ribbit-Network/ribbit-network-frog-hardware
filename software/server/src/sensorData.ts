@@ -5,6 +5,7 @@ import { db } from "./database";
 import { Request, Response } from "express";
 
 export const getSensorData = async (req: Request, res: Response) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
   console.log("[API] /sensorData");
 
   const python = spawn("py", ["./scripts/co2.py"]);
@@ -21,6 +22,7 @@ export const getSensorData = async (req: Request, res: Response) => {
 };
 
 export const getAllSensorReadings = async (req: Request, res: Response) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
   console.log("[API] /getAllSensorReadings");
 
   res.json(await db.getAllSensorReadings());

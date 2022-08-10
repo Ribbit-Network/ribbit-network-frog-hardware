@@ -7,38 +7,45 @@ import {
   Typography,
   Box,
 } from "@mui/material";
-import frog from "./frog.svg";
-import core from "./core/core";
+import { core } from "./core";
+import Authentication from "./pages/Authentication";
 
 function App() {
-  return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        alignItems: "space-between",
+  core.heartbeat();
 
-        height: "100%",
-      }}
-    >
-      <Box>
-        <Typography variant="h3">Welcome to the Ribbit Network.</Typography>
+  if (!core.settings.onboarded) {
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          alignItems: "space-between",
+          padding: 4,
+        }}
+      >
+        <Box>
+          <Typography variant="h3">Welcome to the Ribbit Network.</Typography>
 
-        <Typography variant="h5">
-          We're so glad you got here. Let's set you up in a few quick steps, and
-          off we go measuring CO2 and saving the planet.
-        </Typography>
+          <Typography variant="h5">
+            We're so glad you got here. Now that you have a running Frog, let's
+            set you up in a few quick steps, and off we go measuring CO2 and
+            saving the planet.
+          </Typography>
+        </Box>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Authentication />
+        </Box>
       </Box>
-
-      <Box>
-        <Button sx={{ mr: 2 }} variant={"contained"}>
-          Login
-        </Button>
-        <Button variant={"contained"}>Sign Up</Button>
-      </Box>
-    </Box>
-  );
+    );
+  }
+  return <Box />;
 }
 
 export default App;

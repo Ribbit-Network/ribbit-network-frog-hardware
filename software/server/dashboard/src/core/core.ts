@@ -1,5 +1,7 @@
 import { initializeApp, FirebaseApp } from "firebase/app";
 import { getAnalytics, Analytics } from "firebase/analytics";
+import auth, { Auth, getAuth } from "firebase/auth";
+import { getFirestore, Firestore } from "firebase/firestore";
 import { makeAutoObservable } from "mobx";
 
 const firebaseConfig = {
@@ -8,31 +10,63 @@ const firebaseConfig = {
   projectId: "ribbit-network",
   storageBucket: "ribbit-network.appspot.com",
   messagingSenderId: "56492711430",
-  appId: "1:56492711430:web:6a5d17592974fa06492d87",
-  measurementId: "G-METWMB8750",
+  appId: "1:56492711430:web:1451d6012c0874e1492d87",
+  measurementId: "G-8FFJCG61RL",
 };
+
+const serverURL = "http://localhost:80";
 
 class Core {
   app: FirebaseApp;
   analytics: Analytics;
+  auth: Auth;
+  firestore: Firestore;
+  authUI?: any;
 
   sensorData: SensorData[] = [];
+
+  isOffline: boolean = true;
+
+  public loading = true;
+
+  settings = {
+    uuid: "",
+    hostname: "",
+
+    onboarded: false,
+  };
 
   constructor() {
     this.app = initializeApp(firebaseConfig);
     this.analytics = getAnalytics(this.app);
+    this.auth = getAuth(this.app);
+    this.firestore = getFirestore(this.app);
 
     makeAutoObservable(this);
+
+    console.log("here");
+    this.getSettings();
   }
 
   async getMap() {}
 
   async heartbeat() {
-    return await fetch("http://localhost:3004/heartbeat");
+    return await fetch(`${serverURL}/heartbeat`);
+  }
+
+  async getSettings() {
+    const settings = await (await fetch(`${serverURL}/settings`)).json();
+
+    this.settings = settings;
+
+    console.log(settings);
+
+    this.loading = false;
+    return settings;
   }
 }
 
-export default new Core();
+export const core = new Core();
 
 export interface SensorData {
   co2: number;

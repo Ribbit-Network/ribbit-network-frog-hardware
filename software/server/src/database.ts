@@ -5,7 +5,7 @@ import { makeAutoObservable } from "mobx";
 import { v5, v4 as uuidv4 } from "uuid";
 
 class AppDAO {
-  db: Database;
+  public db: Database;
 
   platformUUID?: string;
 
