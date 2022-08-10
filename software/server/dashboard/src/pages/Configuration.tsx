@@ -84,7 +84,7 @@ export default observer(() => {
             onboardingCore.saveSettings().then(() => {
               setTimeout(() => {
                 setLoading(false);
-              }, 400);
+              }, 1000);
             });
           }}
         >

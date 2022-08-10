@@ -13,6 +13,8 @@ class OnboardingCore {
     frequency: "",
   };
 
+  testsComplete = false;
+
   get onboardingStep() {
     // auth
     if (!userCore.activeUser) {
@@ -20,13 +22,20 @@ class OnboardingCore {
     }
 
     // config
-    if (!core.settings?.platformName || !core.settings?.hostname) {
+    if (
+      (!core.settings?.platformName || !core.settings?.hostname) &&
+      !core.settings?.uuid
+    ) {
       return 1;
     }
 
     // test
-    if (core.settings?.platformName) {
+    if (core.settings?.uuid && !this.testsComplete) {
       return 2;
+    }
+
+    if (this.testsComplete) {
+      return 3;
     }
   }
 
@@ -44,6 +53,10 @@ class OnboardingCore {
     );
 
     core.settings = this.settings;
+  }
+
+  completeTests() {
+    this.testsComplete = true;
   }
 }
 
