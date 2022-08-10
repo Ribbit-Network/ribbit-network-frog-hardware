@@ -13,7 +13,7 @@ export const getSettings = async (req: Request, res: Response) => {
   console.log(settings);
 
   res.json({
-    uuid,
+    // uuid,
     settings,
   });
 

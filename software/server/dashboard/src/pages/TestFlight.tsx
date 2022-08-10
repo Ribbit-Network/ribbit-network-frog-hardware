@@ -37,7 +37,7 @@ class TestFlight {
       this.testGPS();
       this.testCO2();
       this.testBarometry();
-    }, 500);
+    }, 6000);
   }
 
   testLocalDB() {

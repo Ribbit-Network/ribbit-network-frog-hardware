@@ -18,6 +18,7 @@ import { observer } from "mobx-react";
 import Configuration from "./pages/Configuration";
 import { onboardingCore } from "./core/OnboardingCore";
 import TestFlight from "./pages/TestFlight";
+import Finish from "./pages/Finish";
 
 export default observer(() => {
   return (
@@ -40,9 +41,10 @@ export default observer(() => {
         </Step>
       </Stepper>
 
-      {onboardingCore.onboardingStep === 0 && <Authentication />}
-      {onboardingCore.onboardingStep === 1 && <Configuration />}
-      {onboardingCore.onboardingStep === 2 && <TestFlight />}
+      {onboardingCore.onboardingStep == 0 && <Authentication />}
+      {onboardingCore.onboardingStep == 1 && <Configuration />}
+      {onboardingCore.onboardingStep == 2 && <TestFlight />}
+      {onboardingCore.onboardingStep == 3 && <Finish />}
     </Box>
   );
 });
