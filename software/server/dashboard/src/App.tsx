@@ -6,46 +6,43 @@ import {
   Toolbar,
   Typography,
   Box,
+  TextField,
+  Select,
+  Stepper,
+  StepLabel,
+  Step,
+  StepContent,
 } from "@mui/material";
-import { core } from "./core";
 import Authentication from "./pages/Authentication";
+import { observer } from "mobx-react";
+import Configuration from "./pages/Configuration";
+import { onboardingCore } from "./core/OnboardingCore";
+import TestFlight from "./pages/TestFlight";
 
-function App() {
-  core.heartbeat();
+export default observer(() => {
+  return (
+    <Box sx={{ padding: 2 }}>
+      <Stepper activeStep={onboardingCore.onboardingStep}>
+        <Step key={0}>
+          <StepLabel>Authentication 🥳</StepLabel>
+        </Step>
 
-  if (!core.settings.onboarded) {
-    return (
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          alignItems: "space-between",
-          padding: 4,
-        }}
-      >
-        <Box>
-          <Typography variant="h3">Welcome to the Ribbit Network.</Typography>
+        <Step key={1}>
+          <StepLabel>Configuration ⚙️</StepLabel>
+        </Step>
 
-          <Typography variant="h5">
-            We're so glad you got here. Now that you have a running Frog, let's
-            set you up in a few quick steps, and off we go measuring CO2 and
-            saving the planet.
-          </Typography>
-        </Box>
+        <Step key={2}>
+          <StepLabel>Test flight 🛫</StepLabel>
+        </Step>
 
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Authentication />
-        </Box>
-      </Box>
-    );
-  }
-  return <Box />;
-}
+        <Step key={3}>
+          <StepLabel>Launch 🚀</StepLabel>
+        </Step>
+      </Stepper>
 
-export default App;
+      {onboardingCore.onboardingStep === 0 && <Authentication />}
+      {onboardingCore.onboardingStep === 1 && <Configuration />}
+      {onboardingCore.onboardingStep === 2 && <TestFlight />}
+    </Box>
+  );
+});

@@ -2,6 +2,7 @@
   "name": "frog-server",
   "dependencies": {
     "@types/sqlite3": "^3.1.8",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "json5": "^2.2.1",

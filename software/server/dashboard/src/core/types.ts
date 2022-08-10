@@ -8,3 +8,10 @@ export interface UserProfile {
   avatarUrl: string;
   verified: boolean;
 }
+
+export interface Settings {
+  uuid?: string;
+  platformName: string;
+  hostname: string;
+  frequency: string;
+}

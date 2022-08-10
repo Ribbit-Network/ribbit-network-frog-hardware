@@ -36,7 +36,6 @@ class UserCore {
     core.auth.onAuthStateChanged((user) => {
       this.authCheckComplete = true;
       if (user) {
-        console.log(user);
         // @ts-ignore
         this.activeUser = user;
         // @ts-ignore

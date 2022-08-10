@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { core } from "../core";
 import { observer } from "mobx-react";
 import * as firebaseui from "firebaseui";
@@ -27,5 +27,34 @@ export default observer(() => {
 
     core.authUI.start("#firebaseui-auth-container", uiConfig);
   }, []);
-  return <div id="firebaseui-auth-container"></div>;
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        alignItems: "space-between",
+        padding: 4,
+      }}
+    >
+      <Box>
+        <Typography variant="h3">Welcome to the Ribbit Network.</Typography>
+
+        <Typography variant="h5">
+          We're so glad you got here. Now that you have a running Frog, let's
+          set you up in a few quick steps, and off we go measuring CO2 and
+          saving the planet.
+        </Typography>
+      </Box>
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div id="firebaseui-auth-container"></div>;
+      </Box>
+    </Box>
+  );
 });

@@ -3,6 +3,9 @@ import { getAnalytics, Analytics } from "firebase/analytics";
 import auth, { Auth, getAuth } from "firebase/auth";
 import { getFirestore, Firestore } from "firebase/firestore";
 import { makeAutoObservable } from "mobx";
+import axios from "axios";
+
+import { Settings } from "./types";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD35dn4IMvA7-Tul_OPeBGerHPHJfqypSk",
@@ -17,6 +20,17 @@ const firebaseConfig = {
 const serverURL = "http://localhost:80";
 
 class Core {
+  constructor() {
+    this.app = initializeApp(firebaseConfig);
+    this.analytics = getAnalytics(this.app);
+    this.auth = getAuth(this.app);
+    this.firestore = getFirestore(this.app);
+
+    makeAutoObservable(this);
+
+    this.getSettings();
+  }
+
   app: FirebaseApp;
   analytics: Analytics;
   auth: Auth;
@@ -29,24 +43,7 @@ class Core {
 
   public loading = true;
 
-  settings = {
-    uuid: "",
-    hostname: "",
-
-    onboarded: false,
-  };
-
-  constructor() {
-    this.app = initializeApp(firebaseConfig);
-    this.analytics = getAnalytics(this.app);
-    this.auth = getAuth(this.app);
-    this.firestore = getFirestore(this.app);
-
-    makeAutoObservable(this);
-
-    console.log("here");
-    this.getSettings();
-  }
+  settings?: Settings;
 
   async getMap() {}
 
@@ -58,8 +55,6 @@ class Core {
     const settings = await (await fetch(`${serverURL}/settings`)).json();
 
     this.settings = settings;
-
-    console.log(settings);
 
     this.loading = false;
     return settings;
