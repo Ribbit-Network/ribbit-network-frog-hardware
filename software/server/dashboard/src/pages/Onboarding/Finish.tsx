@@ -11,6 +11,7 @@ import { core, userCore } from "../../core";
 import { observer } from "mobx-react";
 import "firebase/compat/auth";
 import { LoadingButton } from "@mui/lab";
+import { onboardingCore } from "./OnboardingCore";
 
 export default observer(() => {
   const [loading, setLoading] = useState(false);
@@ -40,6 +41,7 @@ export default observer(() => {
 
             setTimeout(() => {
               userCore.doLogout();
+              onboardingCore.onboardingStep = 0;
               setLoading(false);
             }, 1000);
           }}
