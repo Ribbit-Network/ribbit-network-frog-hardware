@@ -132,3 +132,5 @@ dmypy.json
 
 # Influx DB Config
 influx_config.ini
+
+vcs.xml

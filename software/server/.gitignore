@@ -9,3 +9,5 @@
 dist/
 node_modules/
 
+database.sqlite
+vcs.xml
