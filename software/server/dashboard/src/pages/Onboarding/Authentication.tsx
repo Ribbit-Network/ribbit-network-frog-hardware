@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Box, Typography } from "@mui/material";
-import { core } from "../core";
+import { core } from "../../core";
 import { observer } from "mobx-react";
 import * as firebaseui from "firebaseui";
 import firebaseAuth from "firebase/compat/app";
@@ -53,7 +53,7 @@ export default observer(() => {
           justifyContent: "center",
         }}
       >
-        <div id="firebaseui-auth-container"></div>;
+        <div id="firebaseui-auth-container"></div>
       </Box>
     </Box>
   );

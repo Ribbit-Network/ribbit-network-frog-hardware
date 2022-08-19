@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
-import { core, userCore } from "../core";
+import { core, userCore } from "../../core";
 import { observer } from "mobx-react";
 import "firebase/compat/auth";
-import { onboardingCore } from "../core/OnboardingCore";
+import { onboardingCore } from "./OnboardingCore";
 import { LoadingButton } from "@mui/lab";
 
 export default observer(() => {
@@ -71,10 +71,7 @@ export default observer(() => {
         }}
       ></TextField>
 
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <LoadingButton loading={loading} variant={"outlined"}>
-          Back: Authentication
-        </LoadingButton>
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
         <LoadingButton
           loading={loading}
           variant={"contained"}
@@ -83,6 +80,7 @@ export default observer(() => {
 
             onboardingCore.saveSettings().then(() => {
               setTimeout(() => {
+                onboardingCore.onboardingStep++;
                 setLoading(false);
               }, 1000);
             });

@@ -7,10 +7,10 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { core, userCore } from "../core";
+import { core, userCore } from "../../core";
 import { observer } from "mobx-react";
 import "firebase/compat/auth";
-import { onboardingCore } from "../core/OnboardingCore";
+import { onboardingCore } from "./OnboardingCore";
 import { LoadingButton } from "@mui/lab";
 import { Check, Error } from "@mui/icons-material";
 import { makeAutoObservable } from "mobx";
@@ -148,7 +148,7 @@ export default observer(() => {
       <Box
         sx={{
           display: "flex",
-          mb: 1,
+          mb: 6,
         }}
       >
         {indicator(testFlight.barometry)}
@@ -156,7 +156,11 @@ export default observer(() => {
       </Box>
 
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <LoadingButton loading={loading} variant={"outlined"}>
+        <LoadingButton
+          loading={loading}
+          variant={"outlined"}
+          onClick={() => onboardingCore.onboardingStep--}
+        >
           Back: Configuration
         </LoadingButton>
         <LoadingButton
@@ -167,6 +171,7 @@ export default observer(() => {
 
             setTimeout(() => {
               onboardingCore.completeTests();
+              onboardingCore.onboardingStep++;
               setLoading(false);
             }, 1000);
           }}
