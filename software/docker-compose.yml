@@ -1,8 +1,7 @@
-version: '2.1'
+version: '3.9'
 
 volumes:
-  sense-data:
-  dashboard-data:
+  server-data:
 
 services:
   dashboard:
@@ -11,6 +10,8 @@ services:
       - main
     ports:
       - "80"
+    volumes:
+      - server-data:/data
 #  gps:
 #    privileged: true
 #    build: "./gps"
