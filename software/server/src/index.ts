@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { getAllSensorReadings, getSensorData } from "./sensorData";
 import { getSettings, postSettings } from "./settings";
 import cors from "cors";
+import { postWifiSettings } from "./wifi";
 dotenv.config();
 
 const app: Express = express();
@@ -23,6 +24,8 @@ app.get("/getAllSensorReadings", getAllSensorReadings);
 app.get("/settings", getSettings);
 
 app.post("/settings", postSettings);
+
+app.post("/updateWifiSettings", postWifiSettings);
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
