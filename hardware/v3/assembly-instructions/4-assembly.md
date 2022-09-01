@@ -18,7 +18,7 @@ and nut.  Thread the nut onto the base, but do not tighten all the way.
 
 <img src="images/Install antenna connector mount.jpg" width="600">
 
-Attach the antenna extension onto the antenna base by threading the two back together.
+Attach the antenna extension to the antenna base by threading the two back together.
 Use the 5/16" wrench to tighten.  Do not over tighten.  Snugging it up will work fine.
 
 <img src="images/install antenna using wrench.jpg" width="600">
@@ -26,7 +26,7 @@ Use the 5/16" wrench to tighten.  Do not over tighten.  Snugging it up will work
 ## Install the Raspberry Pi carrier board
 For this step you will need the carrier board, four M2.5mm screws, and a small phillips screwdriver
 
-<img src="images/Install pi board overview.jpg" width="600">
+<img src="images/Install Pi board overview.jpg" width="600">
 
 Place the board on the four mount points molded into the enclosure base.
 Use the four screws to secure the board to the mount points. 
@@ -45,27 +45,26 @@ A 5mm socket can be used to tighten the standoffs.
 <img src="images/Install standoffs overhead.jpg" width="600">
 
 ## Plug in cables to the SDC-30 sensor
-Next, we need to attach two cables (150mm and 100mm) to the SDC-30.  
+Next, we need to attach two cables (200mm and 100mm) to the SDC-30.  
 
 <img src="images/Install Cables to SDC-30 overview.jpg" width="600">
 
-As shown in the picture, the 150mm cable is plugged into the right port and the 100mm cable
+As shown in the picture, the 200mm cable is plugged into the right port and the 100mm cable
 is plugged into the left port.  
 
 <img src="images/Install cables to SDC-30 in place.jpg" width="600">
 
 ## Install the SDC-30 sensor on the enclosure base
 Now the SDC-30 is ready to be mounted on the enclosure base.  You will need the SDC-30 with attached cables,
-the two medium and two long brass standoffs, and the 5mm socket.
+the four long brass standoffs, and the 5mm socket.
 
 <img src="images/Install SDC-30 overview.jpg" width="600">
 
-Place the SDC-30 on the four short brass standoffs with the cables sitting over the hole in the top of the enclosure base.
+First route the 200mm cable through the hole in the top of the enclosure base.  Then place the SDC-30 on the four short brass standoffs.
 
 <img src="images/Install SDC-30 overhead cable route.jpg" width="600">
 
-Use the two medium brass standoffs on the left (side with the cable ports) to secure the SDC-30 in place.  
-Use the two long brass standoffs on the right (opposite the cable ports) to secure the other side of the SDC-30.
+Use the four long brass standoffs to secure the SDC-30 in place.  
 
 <img src="images/Install SDC-30 in place.jpg" width="600">
 <img src="images/Install SDC-30 overhead in place.jpg" width="600">
@@ -83,8 +82,7 @@ You'll need to solder on headers to the bottom, like so:
 
 <img src="images/Install WIIC adapter overview.jpg" width="600">
 
-First, thread the 150mm cable from the SDC-30 through the hole in the top of the enclosure.
-Then plug the cable into the qWIIC adapter as shown:
+Plug the 200mm cable into the qWIIC adapter as shown:
 
 <img src="images/Install WIIC to cable.jpg" width="600">
 
@@ -104,7 +102,7 @@ To mount the barometer you will need two M2.5mm screws and a small phillips scre
 
 <img src="images/Install barometer overview.jpg" width="600">
 
-The Barometer sits on the two medium brass standoffs above the cable ports on the SDC-30.  
+The Barometer sits on the two long brass standoffs above the cable ports on the SDC-30.  
 Use the screws to secure it in place. 
 
 <img src="images/Install barometer in place.jpg" width="600">
@@ -115,7 +113,7 @@ To mount the GPS you will need two M2.5mm screws and a small phillips screwdrive
 
 <img src="images/Install GPS overview.jpg" width="600">
 
-The GPS sits on top of the two large brass standoffs, opposite the barometer.  Use the two screws
+The GPS sits on top of the two remaining long brass standoffs, opposite the barometer.  Use the two screws
 to secure the GPS in place.
 
 <img src="images/Install GPS in place.jpg" width="600">
@@ -127,7 +125,7 @@ Plug the cable into the port that is on the back, above the words "MiniGPS".
 
 The cable should now run from the SDC-30 sensor to the GPS.  
 
-<img src="images/Install 100mmm cable to GPS.jpg" width="600">
+<img src="images/Install 100mm cable to GPS.jpg" width="600">
 
 Next, the 50mm cable needs to be plugged in.  
 
