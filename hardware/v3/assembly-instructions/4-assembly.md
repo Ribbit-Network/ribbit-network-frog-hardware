@@ -8,7 +8,7 @@ You will need a 5/16" wrench to remove and tighten the nut on the antenna base.
 
 <img src="images/Install antenna overview.jpg" width="600">
 
-Seperate the antenna base from the extension by unscrewing the two.
+Seperate the antenna base from the antenna extension by unscrewing the two.
 Remove the lock washer and nut from the base.
 
 <img src="images/install antenna disassembled.jpg" width="600">
@@ -100,13 +100,13 @@ power port.
 ## Install the Barometer
 To mount the barometer you will need two M2.5mm screws and a small phillips screwdriver.
 
-<img src="images/Install barometer overview.jpg" width="600">
+<img src="images/Install baro overview.jpg" width="600">
 
 The Barometer sits on the two long brass standoffs above the cable ports on the SDC-30.  
 Use the screws to secure it in place. 
 
-<img src="images/Install barometer in place.jpg" width="600">
-<img src="images/Install barometer overhead.jpg" width="600">
+<img src="images/Install baro in place.jpg" width="600">
+<img src="images/Install baro overhead.jpg" width="600">
 
 ## Install the GPS
 To mount the GPS you will need two M2.5mm screws and a small phillips screwdriver.  
