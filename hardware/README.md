@@ -3,7 +3,7 @@ This is the hardware respository that contains all the design files and document
 
 ## Build a Sensor
 We encourage you to jump in and build your own Frog Sensor! It's reccomended
-to build a V2 Frog and the instructions can be found in the [V2 folder.](v2/assembly-instructions/0-start-here.md)
+to build a V3 Frog and the instructions can be found in the [V3 folder.](v3/assembly-instructions/0-start-here.md)
 
 ## Sensor Versions
 There have been two major versions of the Frog Sensor to date:
