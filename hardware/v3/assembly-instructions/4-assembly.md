@@ -84,9 +84,15 @@ The qWIIC adapter, used to connect the CO2 sensor to the Raspberry Pi, comes wit
 
 <img src="images/qwiic_shim_no_headers.jpg" width="600">
 
-You'll need to solder on headers to the bottom, like so:
+Slide the qwiic shim onto the header as shown in the model
 
 <img src="images/qwiic_shim_headers.jpg" width="600">
+
+You'll need to solder at each of the six headers as shown in the close up picture below.  
+
+<img src="images/solder close up 1.jpg" width="600">
+
+<img src="images/solder close up 2.jpg" width="600">
 
 ## Install the qWIIC adapter on the Raspberry Pi carrier board
 
@@ -96,7 +102,7 @@ Plug the 200mm cable into the qWIIC adapter as shown:
 
 <img src="images/Install WIIC to cable.jpg" width="600">
 
-Plug the qWIIC adaper into place on the bottom six pins of the carrier board.  Orientation shown in picture below:
+Plug the qWIIC adaper into place on the bottom six pins of the carrier board.  Orientation shown in picture below.  There is also a closer picture in the next section.  
 
 <img src="images/Install WIIC in place.jpg" width="600">
 
