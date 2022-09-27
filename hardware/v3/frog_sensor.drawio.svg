@@ -1,4 +1,6 @@
+
 <svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="442px" height="291px" viewBox="-0.5 -0.5 442 291" content="&lt;mxfile&gt;&lt;diagram id=&quot;bwr-bv00ejiUvLx5Wd45&quot; name=&quot;Page-1&quot;&gt;zVjLbqMwFP0alq0AQyZZNo92Rmo10aB5dOkEF1wZjIxpQr9+bLiEh5MqSkZlNpHvsa+xz7GPb2uhRbJ/EDiLn3hImOXa4d5CS8t1vyCkfjVQ1gByZjUQCRrWkNMCAX0nANqAFjQkeW+g5JxJmvXBLU9TspU9DAvBd/1hL5z1v5rhiBhAsMXMRH/TUMY1OvXtFv9KaBQ3X3Zs6ElwMxiAPMYh33UgtLLQQnAu61ayXxCmuWt4qfPuT/QeFiZIKs9KcGEdsmw2R0K1Vwi5kDGPeIrZqkXnghdpSPQMtoraMY+cZwp0FPhKpCxBOFxIrqBYJgx6yZ7KPzr91ofoGSbT7eW+G5QQ5BILeafFU8CW4Tyn2wa+p6yZ2iQAOMl5IbawRdi0So0IjPJqSG++kwakPRCeEClKNUAQhiV96x8EDOcpOoxrKVcNYP2EApMLFLiSS8WNKDtJOnxu5tNBm1ZFTd5rkWQgqm2cg0uZ98diHtbyhlkBk/7AebYhovrcmqofrzKRJCsk0beXhwXTDZ5qXDkJJUK1NhyL0FCxZUfTuoupJEGGKyJ2yhX7Kp4k740ISfYfEgO9aAKe0piqB/GutSin8Z24Y09N3jVcIoPLxXcNBCTNueJowtTH5hvdinQrWCyR/d9RdnhgPoMyz6BsjoWehhzha7kOkDM+Ya49ImG+QdjDOlDAE1zLkbnx3RG5caZXv+MDcx/piTnrFZmYr4j7r18RSF1zqhZyENkbiOwNxavXBFkD/Q7LOE/SmXHefwbzm8VRoR/xRpXYPdUwo1GqayXFpLIUNNdHmaoi9g46EhqG9TkgOX3HG9ZIn+nVV/vx55a/PK7K9MT9OFTdMKHVLWyP3Rv71u2/W3V0pVCoN+ekn85fXnJyrT4TQx7/l64b+K4qCoIiy1j5gSvZozxx3mdWBY0Ddjj65qosBau92RVfy0VL2vBgp+GJgt+Eu3Z1ofVcYnNn2dWRohedaVeg4o1963juzFDOPyJcg117gWaDchINDkS9Q8PpTMv0Bu/i9DzLbCe65tqqsP1ruh7e/ksCrf4C&lt;/diagram&gt;&lt;/mxfile&gt;">
+
     <defs/>
     <g>
         <path d="M 220 123.63 L 220 95 L 60 95 L 60 66.37" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
@@ -13,13 +15,17 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 160px; margin-left: 161px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                                Raspberry Pi 4 compute module on carrier board
+
+                                Raspberry Pi CM4 + Waveshare Carrier Board
+
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="220" y="164" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Raspberry Pi 4 compu...
+
+                    Raspberry Pi CM4 + W...
+
                 </text>
             </switch>
         </g>
@@ -83,16 +89,20 @@
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 212px; margin-left: 220px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
                                 USB-C
+
                             </div>
                         </div>
                     </div>
                 </foreignObject>
+
                 <text x="220" y="216" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px" text-anchor="middle">
                     USB-C
+
                 </text>
             </switch>
         </g>
@@ -103,13 +113,16 @@
                     <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 260px; margin-left: 161px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+
                                 5V Power Supply
+
                             </div>
                         </div>
                     </div>
                 </foreignObject>
                 <text x="220" y="264" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
                     5V Power Supply
+
                 </text>
             </switch>
         </g>
