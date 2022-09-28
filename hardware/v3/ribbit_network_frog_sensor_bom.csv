@@ -11,9 +11,13 @@ Wifi Antennae,1.00,$5.00,$5.00,2.00,4.00,Adafruit,https://www.adafruit.com/produ
 8 GB SD Card,1.00,$9.95,$9.95,0.25,0.25,Adafruit,https://www.adafruit.com/product/1294,
 ,,,,,,,,
 Cables,,,,,,,,
-Power Supply,1.00,$6.99,$6.99,94.00,94.00,Amazon,https://www.amazon.com/dp/B077PW5JC3?psc=1&ref=ppx_yo2_dt_b_product_details,
-STEMMA QT / Qwiic JST SH 4-pin Cable - 50mm Long,2.00,$0.95,$1.90,0.25,0.50,Adafruit,https://www.adafruit.com/product/4399,
-STEMMA QT / Qwiic JST SH 4-pin Cable - 200mm Long,1.00,$0.95,$0.95,0.25,0.25,Adafruit,https://www.adafruit.com/product/4401,
+
+Power Supply,1.00,$12.95,$12.95,109.00,109.00,Amazon,https://www.amazon.com/Raspberry-Model-Official-SC0218-Accessory/dp/B07W8XHMJZ/ref=sr_1_5?crid=PU3BZXU6P8YV&keywords=Raspberry%2BPi%2Bpower%2Bsupply&qid=1663597873&s=electronics&sprefix=raspberry%2Bpi%2Bpower%2Bsupply%2Celectronics%2C119&sr=1-5&th=1,
+STEMMA QT / Qwiic JST SH 4-pin Cable - 50mm Long,1.00,$0.95,$0.95,0.25,0.25,Adafruit,https://www.adafruit.com/product/4399,
+STEMMA QT / Qwiic JST SH 4-pin Cable - 100mm Long,1.00,$0.95,$0.95,0.50,0.50,Adafruit,https://www.adafruit.com/product/4210,
+STEMMA QT / Qwiic JST SH 4-pin Cable - 200mm Long,1.00,$1.25,$1.25,1.00,1.00,Adafruit,https://www.adafruit.com/product/4401,
+
+
 SparkFun Qwiic or Stemma QT SHIM,1,$0.95 ,$1.50 ,1,1,Adafruit,https://www.adafruit.com/product/4463,
 2x3 Female Header,1,$0.66 ,$0.66 ,0.25,0.25,Pololu,https://www.pololu.com/product/1023,
 ,,,,,,,,

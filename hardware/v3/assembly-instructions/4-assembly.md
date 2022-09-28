@@ -23,6 +23,16 @@ Use the 5/16" wrench to tighten.  Do not over tighten.  Snugging it up will work
 
 <img src="images/install antenna using wrench.jpg" width="600">
 
+## Install the Raspberry Pi4 Compute Module onto the Carrier Board
+
+<img src="images/carrier and pi overview.jpg" width="600">
+
+The compute module snaps onto the carrier board as shown:
+
+<img src="images/carrier and pi attached.jpg" width="600">
+
+<img src="images/carrier and pi assembly.jpg" width="600">
+
 ## Install the Raspberry Pi carrier board
 For this step you will need the carrier board, four M2.5mm screws, and a small phillips screwdriver
 
@@ -74,6 +84,17 @@ The qWIIC adapter, used to connect the CO2 sensor to the Raspberry Pi, comes wit
 
 <img src="images/qwiic_shim_no_headers.jpg" width="600">
 
+
+Slide the qwiic shim onto the header as shown in the model
+
+<img src="images/qwiic_shim_headers.jpg" width="600">
+
+You'll need to solder at each of the six headers as shown in the close up picture below.  
+
+<img src="images/solder close up 1.jpg" width="600">
+
+<img src="images/solder close up 2.jpg" width="600">
+
 You'll need to solder on headers to the bottom, like so:
 
 <img src="images/qwiic_shim_headers.jpg" width="600">
@@ -86,7 +107,8 @@ Plug the 200mm cable into the qWIIC adapter as shown:
 
 <img src="images/Install WIIC to cable.jpg" width="600">
 
-Plug the qWIIC adaper into place on the bottom six pins of the carrier board.  Orientation shown in picture below:
+
+Plug the qWIIC adaper into place on the bottom six pins of the carrier board.  Orientation shown in picture below.  There is also a closer picture in the next section.  
 
 <img src="images/Install WIIC in place.jpg" width="600">
 
