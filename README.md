@@ -21,15 +21,13 @@ Frogs are one of the species that are most affected by climate change!
 Just like our sensors, they ribbit to one another to create a powerful network 
 of data about the environment.
 
-<img src="https://user-images.githubusercontent.com/2559382/130338413-c348007f-1a54-47d8-92b0-151f330f476d.png" width="600">
+<img src="images/frog_sensor_canyon.jpeg" width="600">
 
 # View the Data!
 The first prototype sensors are up and running! [Here is some real data from our sensor network!](https://ribbit-network.herokuapp.com/) (Note this dashboard is still experimental and may be down occasionally).
 
 ## Current Status
-We've just released the design of the Frog Sensor Version 2.0!
-
-Check out [our Project board](https://github.com/orgs/Ribbit-Network/projects/1/views/1) for the list of all work currently in progress on Ribbit!
+We've just released the design of the Frog Sensor Version 3.0!
 
 ## Build a Frog!
 [Check out the instructions in the hardware folder](hardware/) to build your own Frog Sensor!
