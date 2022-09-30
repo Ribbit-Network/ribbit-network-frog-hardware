@@ -1,0 +1,1 @@
+A folder to hold software related to an ESP32 version of the Frog Sensor.
