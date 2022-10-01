@@ -1,3 +1,6 @@
 [submodule "software/wifi-connect"]
 	path = software/wifi-connect
 	url = https://github.com/balena-io/wifi-connect
+[submodule "software_esp32/third_party/golioth-esp-idf-sdk"]
+	path = software_esp32/third_party/golioth-esp-idf-sdk
+	url = https://github.com/golioth/golioth-esp-idf-sdk.git
