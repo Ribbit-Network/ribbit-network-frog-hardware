@@ -4,3 +4,6 @@
 [submodule "software_esp32/third_party/golioth-esp-idf-sdk"]
 	path = software_esp32/third_party/golioth-esp-idf-sdk
 	url = https://github.com/golioth/golioth-esp-idf-sdk.git
+[submodule "software_esp32/third_party/esp-idf-lib"]
+	path = software_esp32/third_party/esp-idf-lib
+	url = https://github.com/UncleRus/esp-idf-lib.git
