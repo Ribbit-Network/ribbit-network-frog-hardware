@@ -15,6 +15,8 @@
 #endif
 #include "golioth.h"
 
+#include <scd30.h>
+
 #define TAG "golioth_example"
 
 // Current firmware version
