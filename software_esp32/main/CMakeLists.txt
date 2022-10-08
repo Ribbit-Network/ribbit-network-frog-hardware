@@ -14,7 +14,10 @@ set(deps
     "driver"
     "esp_hw_support"
     "bt"
+    "scd30"
 )
+
+set(EXTRA_COMPONENT_DIRS $ENV{HOME}/third_party/esp-idf-lib/components)
 
 if(CONFIG_GOLIOTH_BLE_SERVICE_ENABLED)
     list(APPEND srcs "../common/ble.c")

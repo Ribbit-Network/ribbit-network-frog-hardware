@@ -15,7 +15,7 @@
 #endif
 #include "golioth.h"
 
-#include <scd30.h>
+#include "scd30.h"
 
 #define TAG "golioth_example"
 
