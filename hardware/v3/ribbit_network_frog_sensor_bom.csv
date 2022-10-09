@@ -11,20 +11,17 @@ Wifi Antennae,1.00,$5.00,$5.00,2.00,4.00,Adafruit,https://www.adafruit.com/produ
 8 GB SD Card,1.00,$9.95,$9.95,0.25,0.25,Adafruit,https://www.adafruit.com/product/1294,
 ,,,,,,,,
 Cables,,,,,,,,
-
 Power Supply,1.00,$12.95,$12.95,109.00,109.00,Amazon,https://www.amazon.com/Raspberry-Model-Official-SC0218-Accessory/dp/B07W8XHMJZ/ref=sr_1_5?crid=PU3BZXU6P8YV&keywords=Raspberry%2BPi%2Bpower%2Bsupply&qid=1663597873&s=electronics&sprefix=raspberry%2Bpi%2Bpower%2Bsupply%2Celectronics%2C119&sr=1-5&th=1,
 STEMMA QT / Qwiic JST SH 4-pin Cable - 50mm Long,1.00,$0.95,$0.95,0.25,0.25,Adafruit,https://www.adafruit.com/product/4399,
 STEMMA QT / Qwiic JST SH 4-pin Cable - 100mm Long,1.00,$0.95,$0.95,0.50,0.50,Adafruit,https://www.adafruit.com/product/4210,
 STEMMA QT / Qwiic JST SH 4-pin Cable - 200mm Long,1.00,$1.25,$1.25,1.00,1.00,Adafruit,https://www.adafruit.com/product/4401,
-
-
-SparkFun Qwiic or Stemma QT SHIM,1,$0.95 ,$1.50 ,1,1,Adafruit,https://www.adafruit.com/product/4463,
-2x3 Female Header,1,$0.66 ,$0.66 ,0.25,0.25,Pololu,https://www.pololu.com/product/1023,
+SparkFun Qwiic or Stemma QT SHIM,1,"$0.95 ","$1.50 ",1,1,Adafruit,https://www.adafruit.com/product/4463,
+2x3 Female Header,1,"$0.66 ","$0.66 ",0.25,0.25,Pololu,https://www.pololu.com/product/1023,
 ,,,,,,,,
 Mechanical,,,,,,,,
 Brass Standoffs M2.5x10mm,8.00,$0.62,$4.96,0.50,4.00,Mouser,https://www.mouser.com/ProductDetail/Wurth-Elektronik/971100154?qs=wr8lucFkNMUP5RNWEZb8yA%3D%3D,
 M4 x 0.7mm x 10mm Button Head,2.00,$0.09,$0.18,1.00,2.00,McMaster,https://www.mcmaster.com/92095A190/,
-M2.5 x 5 Screws,11,$0.04 ,$0.44 ,0.25,2.75,McMaster,https://www.mcmaster.com/92000A103/,
+M2.5 x 5 Screws,11,"$0.04 ","$0.44 ",0.25,2.75,McMaster,https://www.mcmaster.com/92000A103/,
 ,,,,,,,,
 3D Printed Parts,,,,,,,,Quantity shows percentage of a filament roll used for each part
 Enclosure Box,0.20,$22.99,$4.60,84.00,16.80,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
@@ -38,3 +35,5 @@ Consumables,,,,,,,,
 Two Part Epoxy,0.10,$3.59,$0.36,0.00,0.00,Amazon,https://www.amazon.com/Loctite-Instant-0-47-Fluid-Syringe-1365868/dp/B0044F9KFI/ref=sr_1_4?dchild=1&keywords=two%2Bpart%2Bepoxy&qid=1628644111&sr=8-4&th=1,
 Loctite,0.10,$5.97,$0.60,0.00,0.00,Amazon,https://www.amazon.com/Loctite-Heavy-Duty-Threadlocker-Single/dp/B000I1RSNS/ref=sr_1_2?dchild=1&keywords=loctite&qid=1629786956&sr=8-2,
 ,,,,,,,,
+Required Tools,,,,,,,,
+Soldering Iron Kit,1,9.99,9.99,0.00,0.00,Amazon,https://www.amazon.com/gp/product/B083L8BXRC/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1,
