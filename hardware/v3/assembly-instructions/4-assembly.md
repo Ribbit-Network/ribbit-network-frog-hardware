@@ -8,7 +8,7 @@ You will need a 5/16" wrench to remove and tighten the nut on the antenna base.
 
 <img src="images/Install antenna overview.jpg" width="600">
 
-Seperate the antenna base from the antenna extension by unscrewing the two.
+Separate the antenna base from the antenna extension by unscrewing the two.
 Remove the lock washer and nut from the base.
 
 <img src="images/install antenna disassembled.jpg" width="600">
@@ -181,7 +181,7 @@ the other side to snap it down as well.
 <img src="images/Install shroud in place.jpg" width="600">
 
 ## Assemble the Frog Head
-The eyes and mouth need to be glued in place (if printed seperate from the head)
+The eyes and mouth need to be glued in place (if printed separate from the head)
 
 <img src="images/Assemble head overview.jpg" width="600">
 
