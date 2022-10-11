@@ -13,7 +13,7 @@ To do this, [visit this link.](https://hub.balena.io/g_keenan_johnson1/ribbit-ne
 ![Balena Fleet](images/balena_fleet.png)
 
 The next screen will present you with a few options. For device, select 
-BeagleBone Green Gateway.
+Raspberry Pi CM4.
 For network conenction, you'll want to select "Wifi + Ethernet" and enter your wifi connection details. Don't worry, these are kept secret and no one on the balena or Ribbit Network team can ever access them.
 
 ![Balena Download](images/balena_image_download.png)
