@@ -147,6 +147,13 @@ CONFIG_GOLIOTH_BLE_SERVICE_ENABLED=y
 # end of Golioth Example Configuration
 
 #
+# SCD30 configuration
+#
+CONFIG_SCD30_I2C_MASTER_SCL=19
+CONFIG_SCD30_I2C_MASTER_SDA=18
+# end of SCD30 configuration
+
+#
 # Compiler options
 #
 CONFIG_COMPILER_OPTIMIZATION_DEFAULT=y
