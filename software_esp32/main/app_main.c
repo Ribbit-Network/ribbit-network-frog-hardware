@@ -11,6 +11,7 @@
 #include "nvs.h"
 #include "shell.h"
 #include "wifi.h"
+#include "driver/gpio.h"
 #if CONFIG_GOLIOTH_BLE_SERVICE_ENABLED
 #include "ble.h"
 #endif
@@ -19,6 +20,8 @@
 #include "scd30.h"
 
 #define TAG "golioth_example"
+
+#define i2c_power 7
 
 #ifndef APP_CPU_NUM
 #define APP_CPU_NUM PRO_CPU_NUM
@@ -171,6 +174,12 @@ void scd30_task(void *pvParameters)
 }
 
 void app_main(void) {
+
+    // The adafruit dev board we are using has an I2C Power Switch on Pin 7.
+    gpio_pad_select_gpio(i2c_power);
+	gpio_set_direction(7, GPIO_MODE_OUTPUT);
+    gpio_set_level(7, 1); 
+
     // Initialize NVS first. For this example, it is assumed that WiFi and Golioth
     // PSK credentials are stored in NVS.
     nvs_init();
@@ -182,6 +191,10 @@ void app_main(void) {
 
     // Create a background shell/CLI task (type "help" to see a list of supported commands)
     shell_start();
+
+    // Set up the SCD30 task
+    ESP_ERROR_CHECK(i2cdev_init());
+    xTaskCreatePinnedToCore(scd30_task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL, APP_CPU_NUM);
 
     // If the credentials haven't been set in NVS, we will wait here for the user
     // to input them via the shell.
@@ -324,11 +337,6 @@ void app_main(void) {
     // When the cloud has new settings for us, the on_setting function will be called
     // for each setting.
     golioth_settings_register_callback(client, on_setting);
-
-
-    // Set up the SCD30 task
-    ESP_ERROR_CHECK(i2cdev_init());
-    xTaskCreatePinnedToCore(scd30_task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL, APP_CPU_NUM);
 
     // Now we'll just sit in a loop and update a LightDB state variable every
     // once in a while.
