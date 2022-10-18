@@ -177,7 +177,7 @@ void app_main(void) {
 
     // The adafruit dev board we are using has an I2C Power Switch on Pin 7.
     gpio_pad_select_gpio(i2c_power);
-	gpio_set_direction(7, GPIO_MODE_OUTPUT);
+    gpio_set_direction(7, GPIO_MODE_OUTPUT);
     gpio_set_level(7, 1); 
 
     // Initialize NVS first. For this example, it is assumed that WiFi and Golioth
