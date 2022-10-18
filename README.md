@@ -21,15 +21,13 @@ Frogs are one of the species that are most affected by climate change!
 Just like our sensors, they ribbit to one another to create a powerful network 
 of data about the environment.
 
-<img src="https://user-images.githubusercontent.com/2559382/130338413-c348007f-1a54-47d8-92b0-151f330f476d.png" width="600">
+<img src="images/frog_sensor_canyon.jpeg" width="600">
 
 # View the Data!
 The first prototype sensors are up and running! [Here is some real data from our sensor network!](https://ribbit-network.herokuapp.com/) (Note this dashboard is still experimental and may be down occasionally).
 
 ## Current Status
-We've just released the design of the Frog Sensor Version 2.0!
-
-Check out [our Project board](https://github.com/orgs/Ribbit-Network/projects/1/views/1) for the list of all work currently in progress on Ribbit!
+We've just released the design of the Frog Sensor Version 3.0!
 
 ## Build a Frog!
 [Check out the instructions in the hardware folder](hardware/) to build your own Frog Sensor!
@@ -54,6 +52,10 @@ We have a [contributing guide](https://github.com/Ribbit-Network/ribbit-network-
 Ribbit Network is a non-profit (501c3) creating the world's largest Greenhouse Gas Emissions dataset that will empower anyone to join in the work on climate and provide informed data for climate action. We're an all volunteer team building everything we do in the open-source community.
 
 If you would like to consider sponsoring Ribbit Nework you can do [via this link](https://givebutter.com/ribbitnetwork). The money is used to pay for software fees, purchase R&D hardware and generally support the mission of Ribbit Network.
+
+## Ribbit Network Code of Conduct
+By participating in this project, you agree to follow the <a href="https://ribbitnetwork.notion.site/Ribbit-Network-Code-of-Conduct-and-anti-harassment-policy-cc998ef83e7d4ae7abc95508ee6f2b0d">Ribbit Network Code of Conduct and Anti-Harassement Policy</a>.
+Violations can be reported anonymously by filling out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSemQSAER8az1lNGoWkL1udsv6O8oPc1WQ3dvQ0b9fJSSMeetQ/viewform"> form </a>. 
 
 ## Contributors ✨
 

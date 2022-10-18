@@ -8,6 +8,15 @@ Note that there are several 3D printed parts that you'll need to 3D print yourse
 
 ![Parts](images/all_parts.jpg)
 
+## Tools
+
+Additionally, the assembly instructions call for these tools:
+* 5/16" wrench
+* Small phillips screwdriver
+* 5mm socket
+* Soldering kit
+* Allen wrench
+
 ## International BOMs
 
 If you're not located in the United States, check out alternatives BOMs that are specific to your country below. The parts are the same but prices are in a local currency and links are replaced with local supplier alternatives to avoid high shipping and import fees.
