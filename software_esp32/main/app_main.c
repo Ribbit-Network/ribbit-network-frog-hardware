@@ -182,10 +182,7 @@ void app_main(void) {
     gpio_set_level(7, 1); 
     */
    // There is some error in the above code. Modify it to check for and log the error.
-    esp_err_t err = gpio_pad_select_gpio(i2c_power);
-    if (err != ESP_OK) {
-        ESP_LOGE(TAG, "Error selecting GPIO %d: %s", i2c_power, esp_err_to_name(err));
-    }
+    gpio_pad_select_gpio(i2c_power);
     err = gpio_set_direction(7, GPIO_MODE_OUTPUT);
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "Error setting direction for GPIO %d: %s", i2c_power, esp_err_to_name(err));
