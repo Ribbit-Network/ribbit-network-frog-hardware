@@ -29,18 +29,10 @@ Once Etcher is installed and you have the image, do the following:
 2. If you haven't already done so, insert your SD card into your computer. Etcher will automatically detect it. If you have more than one SD card inserted, you will need to select the appropriate one.
 3. Click the "Flash!" button.
 
-# Insert the SD Card into the Beagle
-Now that the SD card is ready to go, remove it from your computer and insert it 
-into the Beaglebone Green Gateway per the instructions from Balena.
+# Insert the SD Card into the Raspberry Pi carrier board
+Now that the SD card is ready to go, remove it from your computer and insert it into the Raspberry Pi carrier board SD card slot on the bottom of the board.
 
-Power up the BeagleBone Green Gateway while holding down the small button near 
-the SD slot. You need to keep it pressed until the blue LEDs start flashing wildly.
-
-Wait 5 seconds after the blue leds stopped flashing wildly, 
-then remove power from the board. On some boards the leds will shut down completely.
-Remove the balenaOS installation media.
-
-Now you're device has it's software and is ready to go!
+<img src="images/sd_card_slot.jpg" width="300"> <img src="images/sd_card.jpg" height="310">
 
 ## Next Step
 [Sensor Placement](4-assembly.md)

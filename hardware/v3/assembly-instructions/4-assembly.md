@@ -23,6 +23,20 @@ Use the 5/16" wrench to tighten.  Do not over tighten.  Snugging it up will work
 
 <img src="images/install antenna using wrench.jpg" width="600">
 
+## Clip the Antenna Cable to the Raspberry Pi CM4
+
+It is easiest to attach the antenna clip onto the Pi CM4 before installing the Pi CM4 onto the carrier board.  
+
+<img src="images/antenna_picm4.jpg" width="600">
+
+For this step align the clip at the end of the antenna cable up with the port on the CM4
+
+<img src="images/antenna_cable_picm4.jpg" width="600">
+
+Now firmly pinch the two together.  This takes a little effort!
+
+<img src="images/antenna_cable_alignment.jpg" width="600">
+
 ## Install the Raspberry Pi4 Compute Module onto the Carrier Board
 
 <img src="images/carrier and pi overview.jpg" width="600">
@@ -83,7 +97,6 @@ Use the four long brass standoffs to secure the SDC-30 in place.
 The qWIIC adapter, used to connect the CO2 sensor to the Raspberry Pi, comes without headers soldered on.
 
 <img src="images/qwiic_shim_no_headers.jpg" width="600">
-
 
 Slide the qwiic shim onto the header as shown in the model
 
