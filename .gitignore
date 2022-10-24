@@ -112,7 +112,7 @@ venv.bak/
 # Spyder project settings
 .spyderproject
 .spyproject
-
+  
 # Rope project settings
 .ropeproject
 
@@ -132,3 +132,6 @@ dmypy.json
 
 # Influx DB Config
 influx_config.ini
+
+# VS Code
+.vscode/

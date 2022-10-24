@@ -2,7 +2,7 @@ A folder to hold software related to an ESP32 version of the Frog Sensor.
 
 ### Build Instructions
 
-First, setup the environment. This step assumes you've installed esp-idf to `~/esp/esp-idf`
+First, setup the environment. This step assumes you've [installed](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html) esp-idf to `~/esp/esp-idf`
 
 ```sh
 source ~/esp/esp-idf/export.sh
