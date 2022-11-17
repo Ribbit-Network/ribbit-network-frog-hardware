@@ -24,7 +24,7 @@ of data about the environment.
 <img src="images/frog_sensor_canyon.jpeg" width="600">
 
 # View the Data!
-The first prototype sensors are up and running! [Here is some real data from our sensor network!](https://ribbit-network.herokuapp.com/) (Note this dashboard is still experimental and may be down occasionally).
+The first prototype sensors are up and running! [Here is some real data from our sensor network!](https://dashboard.ribbitnetwork.org/) (Note this dashboard is still experimental and may be down occasionally).
 
 ## Current Status
 We've just released the design of the Frog Sensor Version 3.0!
