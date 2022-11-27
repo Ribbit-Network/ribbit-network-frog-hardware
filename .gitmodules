@@ -10,3 +10,6 @@
 [submodule "v4/software/third_party/golioth-firmware-sdk"]
 	path = v4/software/third_party/golioth-firmware-sdk
 	url = https://github.com/golioth/golioth-firmware-sdk.git
+[submodule "v4/software/third_party/esp-idf-lib"]
+	path = v4/software/third_party/esp-idf-lib
+	url = https://github.com/UncleRus/esp-idf-lib.git
