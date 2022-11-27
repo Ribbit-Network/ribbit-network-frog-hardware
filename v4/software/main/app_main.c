@@ -13,6 +13,8 @@
 #include "golioth.h"
 #include "driver/gpio.h"
 
+#include "scd30.h"
+
 #define TAG "golioth_example"
 
 #define i2c_power 7

@@ -1,3 +1,5 @@
+set(EXTRA_COMPONENT_DIRS $ENV{HOME}/third_party/esp-idf-lib/components)
+
 idf_component_register(
     INCLUDE_DIRS
         "."
@@ -14,4 +16,5 @@ idf_component_register(
         "json"
         "driver"
         "esp_hw_support"
+        "scd30"
 )
