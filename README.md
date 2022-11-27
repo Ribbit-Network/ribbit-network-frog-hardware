@@ -7,33 +7,40 @@
 
 Ribbit Network is a large network of open-source, low-cost, Greenhouse Gas (CO2 and hopefully other gasses in the future) Detection Sensors. These sensor units will be sold by the Ribbit Network and will upload their data to the cloud, creating the world's most complete Greenhouse Gas dataset.
 
-[See more about the cloud database here.](https://github.com/Ribbit-Network/ribbit-network-dashboard)
+This respository contains the design files, software, documentation, and assembly instructions for the Frog Sensor.
 
 ![OSHW](images/oshw-logo.svg)
 
 ## Frog Sensors
-Our “Frogs” are tiny sensors that you can 
-[build](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware) 
-or [buy](https://ribbitnetwork.org/) and deploy at your own home! It’s a small, 
-open-source box that measures the amount of CO2 in the air using a tiny laser.
+Our “Frogs” are tiny sensors that you can build and deploy at your own home! It’s a small, 
+open-source device that measures the amount of CO2 in the air using a tiny laser.
 It's easy to set up and will constantly record valuable scientific data on our climate.
+
 Frogs are one of the species that are most affected by climate change! 
 Just like our sensors, they ribbit to one another to create a powerful network 
 of data about the environment.
 
 <img src="images/frog_sensor_canyon.jpeg" width="600">
 
+## Build a Frog!
+We encourage you to jump in and build your own Frog Sensor! It's reccomended
+to build a V3 Frog and the instructions can be found in the [V3 folder.](v3/assembly-instructions/0-start-here.md)
+
+There have been three major versions of the Frog Sensor to date. We currently reccomend building version 3 of the Frog.
+
+* [Frog Sensor Version 3](v3) - This version is based on a Raspberry Pi CM4 and includes a fully 3D printed enclosure.
+* [Frog Sensor Version 2](v2) - This version is based on a Beaglebone black and includes a fully 3D printed enclosure.
+* [Frog Sensor Version 1](v1) - This version was based on the Raspberry Pi and included an off-the-shelf enclosure
+
+See each folder linked above for the relevant design files, CAD, and assembly instructions!
+
+## Need Help?
+[If you are not sure where to start or just want to chat join our developer discord here.](https://discord.gg/vq8PkDb2TC). You can also [start a discussion](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/discussions) right here in Github.
+
 # View the Data!
 The first prototype sensors are up and running! [Here is some real data from our sensor network!](https://dashboard.ribbitnetwork.org/) (Note this dashboard is still experimental and may be down occasionally).
 
-## Current Status
-We've just released the design of the Frog Sensor Version 3.0!
-
-## Build a Frog!
-[Check out the instructions in the hardware folder](hardware/) to build your own Frog Sensor!
-
-## Technical Details
-See the [hardware](hardware/) and [software](software/) README's and folders for more technical details!
+[See more about the cloud database here.](https://github.com/Ribbit-Network/ribbit-network-dashboard)
 
 ## Questions?
 [Check out the Frequently Asked Questions section.](https://github.com/Ribbit-Network/ribbit-network-faq) If you don't see your question, let us know either in a Github Discussion or via Discord.

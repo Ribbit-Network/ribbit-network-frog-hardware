@@ -1,0 +1,20 @@
+[tool.poetry]
+authors = ["Keenan Johnson  <keenan.johnson@gmail.com>"]
+description = "Part of Ribbit Network Frog Sensor: open-source, low-cost, Greenhouse Gas Detection Sensors. This script configures GPSD."
+license = "MIT"
+name = "gpsd"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+balena-sdk = "^11.0.3"
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+black = "^21.12b0"
+isort = "^5.10.1"
+mypy = "^0.931"
+pylint = "^2.12.2"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]

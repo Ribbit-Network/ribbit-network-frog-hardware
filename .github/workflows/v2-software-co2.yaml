@@ -1,21 +1,21 @@
-name: Tests for software/gps
+name: Tests for v2/software/co2
 
 on:
   push:
     branches: [ $default-branch ]
-    paths: [ software/gps/** ]
+    paths: [ v2/software/co2/** ]
   pull_request:
     branches: [ $default-branch ]
-    paths: [ software/gps/** ]
+    paths: [ v2/software/co2/** ]
   workflow_dispatch:
     branches: [ $default-branch ]
-    paths: [ software/gps/** ]
+    paths: [ v2/software/co2/** ]
 
 jobs:
   build:
     defaults:
       run:
-        working-directory: software/gps
+        working-directory: v2/software/co2
 
     runs-on: ubuntu-latest
 
@@ -25,12 +25,12 @@ jobs:
     - uses: actions/cache@v2
       with:
         path: ~/.cache/pip
-        key: ${{ hashFiles('software/gps/poetry.lock') }}
+        key: ${{ hashFiles('software/co2/poetry.lock') }}
 
-    - name: Set up Python 3.9
+    - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:
-        python-version: "3.9"
+        python-version: "3.10"
 
     - name: Install poetry
       run: |
