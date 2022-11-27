@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "software_esp32"
+		}
+	],
+	"settings": {}
+}
