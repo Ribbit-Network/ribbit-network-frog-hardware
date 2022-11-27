@@ -1,6 +1,6 @@
 # The MIT License (MIT)
 #
-# Copyright (c) 2021 Keenan Johnson
+# Copyright (c) 2022 Keenan Johnson
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -66,7 +66,7 @@ class GpsSourceType(Enum):
 
 DEFAULT_GPS_SOURCE = GpsSourceType.GPSD
 GPS_SOURCE_MAP: Mapping[Optional[str], GpsSourceType] = {
-    "beaglebone-green-gateway": GpsSourceType.I2C
+    "raspberrypicm4-ioboard": GpsSourceType.I2C
 }
 GPS_DIGITS_PRECISION = int(os.getenv("GPS_DIGITS_PRECISION", "2"))
 GPS_FIX_MAX_AGE = timedelta(seconds=int(os.getenv("GPS_FIX_MAX_AGE_SECONDS", "600")))
