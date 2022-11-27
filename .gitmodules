@@ -7,3 +7,6 @@
 [submodule "v3/software/wifi-connect"]
 	path = v3/software/wifi-connect
 	url = https://github.com/balena-io/wifi-connect.git
+[submodule "v2/software/lab_testing/software/wifi-connect"]
+	path = v2/software/lab_testing/software/wifi-connect
+	url = https://github.com/balena-io/wifi-connect.git
