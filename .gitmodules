@@ -7,3 +7,6 @@
 [submodule "v3/software/wifi-connect"]
 	path = v3/software/wifi-connect
 	url = https://github.com/balena-io/wifi-connect.git
+[submodule "v4/software/third_party/golioth-firmware-sdk"]
+	path = v4/software/third_party/golioth-firmware-sdk
+	url = https://github.com/golioth/golioth-firmware-sdk.git
