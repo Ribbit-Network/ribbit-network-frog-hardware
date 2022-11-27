@@ -4,7 +4,7 @@
 			"path": "."
 		},
 		{
-			"path": "software_esp32"
+			"path": "v4"
 		}
 	],
 	"settings": {}
