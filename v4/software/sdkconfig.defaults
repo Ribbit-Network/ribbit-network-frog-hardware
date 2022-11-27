@@ -14,3 +14,7 @@ CONFIG_PARTITION_TABLE_TWO_OTA=y
 # then this will ensure that rollback happens automatically
 # if/when the device is next rebooted.
 CONFIG_BOOTLOADER_APP_ROLLBACK_ENABLE=y
+
+# Required for esp32s3 console to work
+# - Keenan J.
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
