@@ -1,6 +1,6 @@
 name: Ribbit Network
 description: >-
-  The sensor for the world's largest crowdsourced network of open-source, 
+  The V2 sensor for the world's largest crowdsourced network of open-source, 
   low-cost, CO2 Gas Detection Sensors.
 fleetcta: Get inspired
 post-provisioning: >-
@@ -24,8 +24,4 @@ data:
   supportedDeviceTypes:
     - beaglebone-green-gateway
     - beaglebone-green-wifi
-    - raspberry-pi
-    - raspberrypi3-64
-    - raspberrypi4-64
-    - raspberrypicm4-ioboard
 version: 0.0.1

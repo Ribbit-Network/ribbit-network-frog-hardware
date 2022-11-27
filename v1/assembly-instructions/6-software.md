@@ -7,7 +7,7 @@ The Ribbit Network team uses a service called [balena](https://www.balena.io/) t
 
 In order to add your sensor to the Ribbit Network, you'll need to download the latest software from our balena Fleet and flash it to the SD card.
 
-To do this, [visit this link.](https://hub.balena.io/g_keenan_johnson1/ribbit-network) You'll see the image below. Click on the "Get Started" button
+To do this, [visit this link.](https://hub.balena.io/organizations/g_keenan_johnson1/fleets/ribbit-network-frog-v1) You'll see the image below. Click on the "Get Started" button
 
 ![Balena Fleet](images/balena_fleet.png)
 

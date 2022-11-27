@@ -1,12 +1,12 @@
 name: Ribbit Network
 description: >-
-  The sensor for the world's largest crowdsourced network of open-source, 
+  The V1 sensor for the world's largest crowdsourced network of open-source, 
   low-cost, CO2 Gas Detection Sensors.
 fleetcta: Get inspired
 post-provisioning: >-
   Building a Frog Sensor requires some specialized hardware and a place to put
   an outdoor sensor. For more information check out the instructions on 
-  Github: https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware
+  Github: https://github.com/Ribbit-Network/ribbit-network-frog-sensor/
 
 type: sw.application
 assets:
