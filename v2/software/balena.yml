@@ -23,5 +23,4 @@ data:
   defaultDeviceType: raspberrypicm4-ioboard
   supportedDeviceTypes:
     - beaglebone-green-gateway
-    - beaglebone-green-wifi
 version: 0.0.1
