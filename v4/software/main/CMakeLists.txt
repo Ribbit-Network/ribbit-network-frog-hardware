@@ -17,4 +17,5 @@ idf_component_register(
         "driver"
         "esp_hw_support"
         "scd30"
+        "dps310"
 )
