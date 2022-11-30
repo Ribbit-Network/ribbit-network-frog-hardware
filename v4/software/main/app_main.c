@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 #include <string.h>
+#include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
@@ -13,19 +14,41 @@
 #include "wifi.h"
 #include "golioth.h"
 #include "driver/gpio.h"
+#include "driver/i2c.h"
+#include "sdkconfig.h"
 
 #include "scd30.h"
 #include "dps310.h"
 
+#include "nmea.h"
+#include "gpgll.h"
+#include "gpgga.h"
+#include "gprmc.h"
+#include "gpgsa.h"
+#include "gpvtg.h"
+#include "gptxt.h"
+#include "gpgsv.h"
+
+
 #define TAG "frog_sensor"
 
 #define i2c_power 7
+
+#define I2C_FREQ_HZ 100000
 
 #define I2C_PORT 0
 #define CONFIG_I2C_MASTER_SDA 3
 #define CONFIG_I2C_MASTER_SCL 4
 
 #define DPS_310_I2C_ADDR 0x77
+
+#define PA1010D_ADDR 0x10
+
+#define UART_RX_BUF_SIZE (1024)
+
+static uint8_t s_i2c_link_buf[I2C_LINK_RECOMMENDED_SIZE(2)];
+static char s_buf[UART_RX_BUF_SIZE + 1];
+static size_t s_total_bytes;
 
 static void on_client_event(golioth_client_t client, golioth_client_event_t event, void* arg) {
     ESP_LOGI(
@@ -79,6 +102,221 @@ void scd30_task(void *pvParameters)
             ESP_LOGI(TAG, "Humidity: %.2f %%", humidity);
         }
     }
+}
+
+void nmea_example_init_interface(void)
+{
+    const i2c_config_t conf = {
+        .mode = I2C_MODE_MASTER,
+        .sda_io_num = CONFIG_I2C_MASTER_SDA,
+        .sda_pullup_en = GPIO_PULLUP_ENABLE,
+        .scl_io_num = CONFIG_I2C_MASTER_SCL,
+        .scl_pullup_en = GPIO_PULLUP_ENABLE,
+        .master.clk_speed = I2C_FREQ_HZ,
+    };
+    ESP_ERROR_CHECK(i2c_param_config(I2C_PORT, &conf));
+    esp_err_t err = i2c_driver_install(I2C_PORT, conf.mode, 0, 0, 0);
+    if (err != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Failed to install driver: %s", esp_err_to_name(err));
+        return;
+    }
+}
+
+static esp_err_t i2c_read_byte(char* result)
+{
+	i2c_cmd_handle_t cmd = i2c_cmd_link_create_static(s_i2c_link_buf, sizeof(s_i2c_link_buf));
+    i2c_master_start(cmd);
+    i2c_master_write_byte(cmd, (PA1010D_ADDR << 1) | I2C_MASTER_READ, true);
+    i2c_master_read_byte(cmd, (uint8_t*) result, 1);
+    i2c_master_stop(cmd);
+    esp_err_t err = i2c_master_cmd_begin(I2C_PORT, cmd, 1000 / portTICK_PERIOD_MS);
+    i2c_cmd_link_delete_static(cmd);
+    return err;
+}
+
+void nmea_example_read_line(char** out_line_buf, size_t *out_line_len, int timeout_ms)
+{
+	*out_line_buf = NULL;
+	*out_line_len = 0;
+
+	bool line_start_found = false;
+
+	while (true) {
+		char b;
+		esp_err_t err = i2c_read_byte(&b);
+		if (err != ESP_OK) {
+			ESP_LOGE(TAG, "Failed to read byte over I2C: %s (0x%x)", esp_err_to_name(err), err);
+			return;
+		}
+
+		if (b == 0) {
+			/* No byte available yet, wait a bit and retry */
+			vTaskDelay(pdMS_TO_TICKS(10));
+			continue;
+		}
+
+		if (!line_start_found) {
+			if (b != '$') {
+				continue;
+			} else {
+				line_start_found = true;
+			}
+		}
+
+		s_buf[s_total_bytes] = b;
+		++s_total_bytes;
+
+		if (b == '\n') {
+			*out_line_buf = s_buf;
+			*out_line_len = s_total_bytes;
+			s_total_bytes = 0;
+			return;
+		}
+
+		if (s_total_bytes == sizeof(s_buf)) {
+			ESP_LOGE(TAG, "Line buffer overflow");
+			s_total_bytes = 0;
+		}
+	}
+}
+
+static void read_and_parse_nmea()
+{
+    while (1) {
+		char fmt_buf[32];
+        nmea_s *data;
+
+        char* start;
+        size_t length;
+        nmea_example_read_line(&start, &length, 100 /* ms */);
+        if (length == 0) {
+        	continue;
+        }
+        /* handle data */
+        data = nmea_parse(start, length, 0);
+        if (data == NULL) {
+            printf("Failed to parse the sentence!\n");
+            printf("  Type: %.5s (%d)\n", start+1, nmea_get_type(start));
+
+            nmea_free(data);
+        } else {
+            // log the data
+            if (data->errors != 0) {
+                printf("WARN: The sentence struct contains parse errors!\n");
+            }
+
+            if (NMEA_GPGGA == data->type) {
+                printf("GPGGA sentence\n");
+                nmea_gpgga_s *gpgga = (nmea_gpgga_s *) data;
+                printf("Number of satellites: %d\n", gpgga->n_satellites);
+                printf("Altitude: %f %c\n", gpgga->altitude,
+                        gpgga->altitude_unit);
+                printf("Longitude:\n");
+                printf("  Degrees: %d\n", gpgga->longitude.degrees);
+                printf("  Minutes: %f\n", gpgga->longitude.minutes);
+                printf("  Cardinal: %c\n", (char) gpgga->longitude.cardinal);
+                printf("Latitude:\n");
+                printf("  Degrees: %d\n", gpgga->latitude.degrees);
+                printf("  Minutes: %f\n", gpgga->latitude.minutes);
+                printf("  Cardinal: %c\n", (char) gpgga->latitude.cardinal);
+            }
+
+            if (NMEA_GPGLL == data->type) {
+                printf("GPGLL sentence\n");
+                nmea_gpgll_s *pos = (nmea_gpgll_s *) data;
+                printf("Longitude:\n");
+                printf("  Degrees: %d\n", pos->longitude.degrees);
+                printf("  Minutes: %f\n", pos->longitude.minutes);
+                printf("  Cardinal: %c\n", (char) pos->longitude.cardinal);
+                printf("Latitude:\n");
+                printf("  Degrees: %d\n", pos->latitude.degrees);
+                printf("  Minutes: %f\n", pos->latitude.minutes);
+                printf("  Cardinal: %c\n", (char) pos->latitude.cardinal);
+                strftime(fmt_buf, sizeof(fmt_buf), "%H:%M:%S", &pos->time);
+                printf("Time: %s\n", fmt_buf);
+            }
+
+            if (NMEA_GPRMC == data->type) {
+                printf("GPRMC sentence\n");
+                nmea_gprmc_s *pos = (nmea_gprmc_s *) data;
+                printf("Longitude:\n");
+                printf("  Degrees: %d\n", pos->longitude.degrees);
+                printf("  Minutes: %f\n", pos->longitude.minutes);
+                printf("  Cardinal: %c\n", (char) pos->longitude.cardinal);
+                printf("Latitude:\n");
+                printf("  Degrees: %d\n", pos->latitude.degrees);
+                printf("  Minutes: %f\n", pos->latitude.minutes);
+                printf("  Cardinal: %c\n", (char) pos->latitude.cardinal);
+                strftime(fmt_buf, sizeof(fmt_buf), "%d %b %T %Y", &pos->date_time);
+                printf("Date & Time: %s\n", fmt_buf);
+                printf("Speed, in Knots: %f\n", pos->gndspd_knots);
+                printf("Track, in degrees: %f\n", pos->track_deg);
+                printf("Magnetic Variation:\n");
+                printf("  Degrees: %f\n", pos->magvar_deg);
+                printf("  Cardinal: %c\n", (char) pos->magvar_cardinal);
+                double adjusted_course = pos->track_deg;
+                if (NMEA_CARDINAL_DIR_EAST == pos->magvar_cardinal) {
+                    adjusted_course -= pos->magvar_deg;
+                } else if (NMEA_CARDINAL_DIR_WEST == pos->magvar_cardinal) {
+                    adjusted_course += pos->magvar_deg;
+                } else {
+                    printf("Invalid Magnetic Variation Direction!\n");
+                }
+
+                printf("Adjusted Track (heading): %f\n", adjusted_course);
+            }
+
+            // if (NMEA_GPGSA == data->type) {
+            //     nmea_gpgsa_s *gpgsa = (nmea_gpgsa_s *) data;
+
+            //     printf("GPGSA Sentence:\n");
+            //     printf("  Mode: %c\n", gpgsa->mode);
+            //     printf("  Fix:  %d\n", gpgsa->fixtype);
+            //     printf("  PDOP: %.2lf\n", gpgsa->pdop);
+            //     printf("  HDOP: %.2lf\n", gpgsa->hdop);
+            //     printf("  VDOP: %.2lf\n", gpgsa->vdop);
+            // }
+
+            // if (NMEA_GPGSV == data->type) {
+            //     nmea_gpgsv_s *gpgsv = (nmea_gpgsv_s *) data;
+
+            //     printf("GPGSV Sentence:\n");
+            //     printf("  Num: %d\n", gpgsv->sentences);
+            //     printf("  ID:  %d\n", gpgsv->sentence_number);
+            //     printf("  SV:  %d\n", gpgsv->satellites);
+            //     printf("  #1:  %d %d %d %d\n", gpgsv->sat[0].prn, gpgsv->sat[0].elevation, gpgsv->sat[0].azimuth, gpgsv->sat[0].snr);
+            //     printf("  #2:  %d %d %d %d\n", gpgsv->sat[1].prn, gpgsv->sat[1].elevation, gpgsv->sat[1].azimuth, gpgsv->sat[1].snr);
+            //     printf("  #3:  %d %d %d %d\n", gpgsv->sat[2].prn, gpgsv->sat[2].elevation, gpgsv->sat[2].azimuth, gpgsv->sat[2].snr);
+            //     printf("  #4:  %d %d %d %d\n", gpgsv->sat[3].prn, gpgsv->sat[3].elevation, gpgsv->sat[3].azimuth, gpgsv->sat[3].snr);
+            // }
+
+            if (NMEA_GPTXT == data->type) {
+                nmea_gptxt_s *gptxt = (nmea_gptxt_s *) data;
+
+                printf("GPTXT Sentence:\n");
+                printf("  ID: %d %d %d\n", gptxt->id_00, gptxt->id_01, gptxt->id_02);
+                printf("  %s\n", gptxt->text);
+            }
+
+            if (NMEA_GPVTG == data->type) {
+                nmea_gpvtg_s *gpvtg = (nmea_gpvtg_s *) data;
+
+                printf("GPVTG Sentence:\n");
+                printf("  Track [deg]:   %.2lf\n", gpvtg->track_deg);
+                printf("  Speed [kmph]:  %.2lf\n", gpvtg->gndspd_kmph);
+                printf("  Speed [knots]: %.2lf\n", gpvtg->gndspd_knots);
+            }
+
+            nmea_free(data);
+        }
+    }
+}
+
+void gps_task(void *pvParameters)
+{
+    nmea_example_init_interface();
+    read_and_parse_nmea();
 }
 
 void dps310_task(void *pvParameters)
@@ -299,8 +537,9 @@ void app_main(void) {
 
     ESP_ERROR_CHECK(i2cdev_init());
 
-    xTaskCreatePinnedToCore(scd30_task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL, APP_CPU_NUM);
-    xTaskCreatePinnedToCore(dps310_task, TAG, configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL, APP_CPU_NUM);
+    // xTaskCreatePinnedToCore(scd30_task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL, APP_CPU_NUM);
+    // xTaskCreatePinnedToCore(dps310_task, TAG, configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL, APP_CPU_NUM);
+    xTaskCreatePinnedToCore(gps_task, TAG, configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL, APP_CPU_NUM);
 
     while (1) {
         golioth_lightdb_set_int_async(client, "iteration", iteration, NULL, NULL);
