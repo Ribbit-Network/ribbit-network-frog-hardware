@@ -30,7 +30,7 @@ If you didn't enter your home network WiFi information previously, or you purcha
 * Once you have entered your WiFi information, you should see the following message appear on the page: *"Note! Applying changes... Your device will soon be online. If connection is unsuccessful, the Access Point will be back up in a few minutes, and reloading this page will allow you to try again."*
   * If you receive the error message: *"Danger! Fail to connect to the network. NetworkError when attempting to fetch resource.* Unplug the power cable from the frog sensor, wait 30 seconds, then plug it back in to force it to restart. Then try the above steps again. (See additional help resources [here](#need-help))
 * The sensor will now disconnect from your device, stop broadcasting the "WiFi Connect" hotspot, and connect to your home WiFi network. 
-* You should see the Frog sensor appear on the [web page here shortly](https://ribbit-network.herokuapp.com/). 
+* You should see the Frog sensor appear on the [web page here shortly](https://dashboard.ribbitnetwork.org/). 
 
 If there are any connection problems, the sensor will restart and broadcast the Wifi Connect hotspot again.
 
