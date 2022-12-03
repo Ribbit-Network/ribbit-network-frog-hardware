@@ -2,7 +2,7 @@
 
 Congrats, you're done! The Frog Sensor is complete and collecting data for our planet.
 
-[You can view the live data from your sensor here.](https://ribbit-network.herokuapp.com/)
+[You can view the live data from your sensor here.](https://dashboard.ribbitnetwork.org/)
 
 If you don't see your sensor on the map linked above, [see the debugging steps here.](7-debugging.md)
 
