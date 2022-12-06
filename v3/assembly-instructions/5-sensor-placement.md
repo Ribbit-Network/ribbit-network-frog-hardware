@@ -19,7 +19,7 @@ If you didn't enter your home network WiFi information previously, or you purcha
 
 <img src="https://user-images.githubusercontent.com/2559382/132726575-3b223221-369a-4b77-a6eb-4cfcf5464836.PNG" width="400">
 
-* Upon connecting to the hotspot, or by opening a web browser, you may be redirected to the page pictured below. Otherwise, open a web browser and navigate to https://192.168.42.1 
+* Upon connecting to the hotspot, or by opening a web browser, you may be redirected to the page pictured below. Otherwise, open a web browser and navigate to http://192.168.42.1 
 * On this page, select your home WiFi network (SSID) and enter the Passphrase. This will connect the frog sensor to your home WiFi network.
   * If you do not see your home WiFi network (SSID) name listed in the drop-down menu, try refreshing the page.
   * If refreshing the webpage does not work, unplug the power cable from the frog sensor, wait 30 seconds, then plug it back in to force it to restart. Then try the above steps again.
