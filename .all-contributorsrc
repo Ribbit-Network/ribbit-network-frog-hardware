@@ -145,10 +145,19 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "pascaljoly",
+      "name": "outdoorclone",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17581648?v=4",
+      "profile": "https://github.com/pascaljoly",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "ribbit-network-frog-sensor",
+  "projectName": "ribbit-network-frog-hardware",
   "projectOwner": "Ribbit-Network",
   "repoType": "github",
   "repoHost": "https://github.com",
