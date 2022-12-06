@@ -1,6 +1,8 @@
 ## IDF Component Manager Manifest File
 dependencies:
-  igrr/libnmea: "*"
+  libnmea-esp32:
+    git: https://github.com/igrr/libnmea-esp32.git
+    version: feature/i2c
   ## Required IDF version
   idf:
     version: ">=4.1.0"

@@ -1,0 +1,9 @@
+.settings
+.cproject
+.project
+example/build
+example/sdkconfig
+.DS_Store
+dist/
+dependencies.lock
+sdkconfig.old

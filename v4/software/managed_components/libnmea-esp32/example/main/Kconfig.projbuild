@@ -1,0 +1,41 @@
+menu "libnmea Example Settings"
+
+    choice EXAMPLE_NMEA_INTERFACE
+        prompt "Interface to connect the GPS over"
+        default EXAMPLE_NMEA_INTERFACE_UART
+
+        config EXAMPLE_NMEA_INTERFACE_UART
+            bool "UART"
+
+        config EXAMPLE_NMEA_INTERFACE_I2C
+            bool "I2C"
+
+    endchoice
+
+    if EXAMPLE_NMEA_INTERFACE_UART
+        config EXAMPLE_UART_NUM
+            int "UART port number"
+            default 1
+
+        config EXAMPLE_UART_RX
+            int "UART RX GPIO number"
+            default 21
+    endif
+
+    if EXAMPLE_NMEA_INTERFACE_I2C
+        config EXAMPLE_I2C_NUM
+            int "I2C port number"
+            default 0
+        config EXAMPLE_I2C_SDA_PIN
+            int "I2C SDA GPIO number"
+            default 24
+        config EXAMPLE_I2C_SCL_PIN
+            int "I2C SCL GPIO number"
+            default 25
+        config EXAMPLE_I2C_SLAVE_ADDR
+            hex "I2C address of the GPS"
+            default 0x10
+    endif
+
+
+endmenu

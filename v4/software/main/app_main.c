@@ -487,12 +487,6 @@ fail:
 
 void app_main(void) {
     // The adafruit dev board we are using has an I2C Power Switch on Pin 7.
-    /*
-    gpio_pad_select_gpio(i2c_power);
-    gpio_set_direction(7, GPIO_MODE_OUTPUT);
-    gpio_set_level(7, 1); 
-    */
-   // There is some error in the above code. Modify it to check for and log the error.
     gpio_pad_select_gpio(i2c_power);
     esp_err_t err = gpio_set_direction(7, GPIO_MODE_OUTPUT);
     if (err != ESP_OK) {
