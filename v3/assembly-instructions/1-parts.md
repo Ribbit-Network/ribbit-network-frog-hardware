@@ -16,6 +16,7 @@ Additionally, the assembly instructions call for these tools:
 * 5mm socket
 * Soldering kit
 * Allen wrench
+* Soldering Iron and Solder
 
 ## International BOMs
 
