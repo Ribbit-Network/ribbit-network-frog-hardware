@@ -463,6 +463,9 @@ void app_main(void) {
 
     ESP_ERROR_CHECK(i2cdev_init());
 
+    // Right now, the I2C initialization functions face race condition issues.
+    // TODO: Fix these issues using common mutex controls from UncleRus/esp-idf-lib for the GPS integration
+    // See for more details: https://github.com/Ribbit-Network/ribbit-network-frog-hardware/pull/189
     xTaskCreatePinnedToCore(scd30_task, TAG, configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL, APP_CPU_NUM);
     xTaskCreatePinnedToCore(dps310_task, TAG, configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL, APP_CPU_NUM);
     xTaskCreatePinnedToCore(gps_task, TAG, configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL, APP_CPU_NUM);
