@@ -19,7 +19,7 @@ If you didn't enter your home network WiFi information previously, or you purcha
 
 <img src="https://user-images.githubusercontent.com/2559382/132726575-3b223221-369a-4b77-a6eb-4cfcf5464836.PNG" width="400">
 
-* Upon connecting to the hotspot, or by opening a web browser, you may be redirected to the page pictured below. Otherwise, open a web browser and navigate to https://192.168.42.1 
+* Upon connecting to the hotspot, or by opening a web browser, you may be redirected to the page pictured below. Otherwise, open a web browser and navigate to http://192.168.42.1 
 * On this page, select your home WiFi network (SSID) and enter the Passphrase. This will connect the frog sensor to your home WiFi network.
   * If you do not see your home WiFi network (SSID) name listed in the drop-down menu, try refreshing the page.
   * If refreshing the webpage does not work, unplug the power cable from the frog sensor, wait 30 seconds, then plug it back in to force it to restart. Then try the above steps again.
@@ -30,7 +30,7 @@ If you didn't enter your home network WiFi information previously, or you purcha
 * Once you have entered your WiFi information, you should see the following message appear on the page: *"Note! Applying changes... Your device will soon be online. If connection is unsuccessful, the Access Point will be back up in a few minutes, and reloading this page will allow you to try again."*
   * If you receive the error message: *"Danger! Fail to connect to the network. NetworkError when attempting to fetch resource.* Unplug the power cable from the frog sensor, wait 30 seconds, then plug it back in to force it to restart. Then try the above steps again. (See additional help resources [here](#need-help))
 * The sensor will now disconnect from your device, stop broadcasting the "WiFi Connect" hotspot, and connect to your home WiFi network. 
-* You should see the Frog sensor appear on the [web page here shortly](https://ribbit-network.herokuapp.com/). 
+* You should see the Frog sensor appear on the [web page here shortly](https://dashboard.ribbitnetwork.org/). 
 
 If there are any connection problems, the sensor will restart and broadcast the Wifi Connect hotspot again.
 
