@@ -1,7 +1,7 @@
 # Ribbit Network Frog Sensor
 [![Chat](https://img.shields.io/discord/870113194289532969.svg?style=flat-square&colorB=758ED3)](https://discord.gg/vq8PkDb2TC)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [This project will create the world's largest Greenhouse Gas Emissions dataset that will empower anyone to join in the work on climate and provide informed data for climate action.](https://ribbitnetwork.org/)
 
@@ -93,6 +93,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/pascaljoly"><img src="https://avatars.githubusercontent.com/u/17581648?v=4?s=100" width="100px;" alt="outdoorclone"/><br /><sub><b>outdoorclone</b></sub></a><br /><a href="https://github.com/Ribbit-Network/ribbit-network-frog-hardware/commits?author=pascaljoly" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/muditprotect3d"><img src="https://avatars.githubusercontent.com/u/106998016?v=4?s=100" width="100px;" alt="Mudit Agrawal"/><br /><sub><b>Mudit Agrawal</b></sub></a><br /><a href="#design-muditprotect3d" title="Design">🎨</a></td>
     </tr>
   </tbody>
 </table>
