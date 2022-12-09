@@ -1,0 +1,29 @@
+Item,Quantity,Unit Price,Price,Vendor,Link,Notes
+Sensors,,,,,,
+Raspberry Pi CM4 With Wifi (CM4102000),1.00,$58.95,$58.95,Adafruit,https://www.adafruit.com/product/4867,
+Barometer,1.00,$6.95,$6.95,Adafruit,https://www.adafruit.com/product/4494,
+GPS,1.00,$29.95,$29.95,Adafruit,https://www.adafruit.com/product/4415,
+,,,,,,
+Compute / Connectivity,,,,,,
+Adafruit ESP32-S3 Feather with 4MB Flash 2MB PSRAM - STEMMA QT / Qwiic,1.00,$17.50,$17.50,Adafruit,https://www.adafruit.com/product/5477,
+,,,,,,
+Cables,,,,,,
+Power Supply,1.00,$7.95,$7.95,Adafruit,https://www.adafruit.com/product/4298,
+STEMMA QT / Qwiic JST SH 4-pin Cable - 50mm Long,1.00,$0.95,$0.95,Adafruit,https://www.adafruit.com/product/4399,
+STEMMA QT / Qwiic JST SH 4-pin Cable - 100mm Long,2.00,$0.95,$1.9,Adafruit,https://www.adafruit.com/product/4210,
+,,,,,,
+Mechanical,,,,,,
+Brass Standoffs M2.5x10mm,4,$0.62,2.48,Mouser,https://www.mouser.com/ProductDetail/Wurth-Elektronik/971100154?qs=wr8lucFkNMUP5RNWEZb8yA%3D%3D,
+M2.5 x 5 Screws,6,"$0.04 ","$0.24 ",McMaster,https://www.mcmaster.com/92000A103/,
+,,,,,,
+3D Printed Parts,,,,,,Quantity shows percentage of a filament roll used for each part
+Enclosure Box,0.20,$22.99,$4.60,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Enclosure Lid,0.10,$22.99,$2.30,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Sensor Shroud,0.10,$22.99,$2.30,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Frog Eyes,0.02,$22.99,$0.46,Amazon,https://www.amazon.com/gp/product/B00ZAUQZTA/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Frog Mouth,0.01,$21.99,$0.22,Amazon,https://www.amazon.com/gp/product/B07VBKP1PN/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Frog Head,0.11,$23.99,$2.64,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+,,,,,,
+Consumables,,,,,,
+Loctite,0.10,$5.97,$0.60,Amazon,https://www.amazon.com/Loctite-Heavy-Duty-Threadlocker-Single/dp/B000I1RSNS/ref=sr_1_2?dchild=1&keywords=loctite&qid=1629786956&sr=8-2,
+,,,,,,
