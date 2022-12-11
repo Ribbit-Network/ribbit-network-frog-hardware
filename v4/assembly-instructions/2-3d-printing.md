@@ -2,7 +2,7 @@
 
 There are several 3D printed parts you'll need to print in order to build a Frog Sensor. All parts can be found [in this folder](../mechanical).
 
-![Parts](images/3d_printed_parts.jpg)
+<img src="images/enclosure_components.jpg" width="300">
 
 ## Minimum Parts
 These are the parts required for the Frog Sensor construction:
