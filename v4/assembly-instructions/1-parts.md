@@ -6,17 +6,18 @@ The document linked above contains quantities and links to purchase all of the p
 
 Note that there are several 3D printed parts that you'll need to 3D print yourself. The next section will cover that in more detail.
 
-![Parts](images/all_parts.jpg)
+<img src="images/electric_components.jpg" width="300"> 
+<img src="images/hardware.jpg" width="300">
+<img src="images/enclosure_components.jpg" width="300">
 
 ## Tools
 
 Additionally, the assembly instructions call for these tools:
-* 5/16" wrench
+* 3/16" socket/driver
 * Small phillips screwdriver
-* 5mm socket
-* Soldering kit
-* Allen wrench
-* Soldering Iron and Solder
+* Super Glue
+
+<img src="images/tools.jpg" width="300">
 
 ## International BOMs
 
