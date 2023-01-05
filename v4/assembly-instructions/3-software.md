@@ -2,7 +2,7 @@
 #FIXME
 
 ## Next Step
-[Sensor Placement](4-assembly.md)
+[Assembly](4-assembly.md)
 
 ## Table of Contents
 [Return to the Beginning](0-start-here.md)
