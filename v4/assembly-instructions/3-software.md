@@ -1,5 +1,15 @@
 # Software
-#FIXME
+
+## Install the Software on your Frog
+
+Connect the Frog to your computer via a USB C Cable.
+
+Vist this page https://ribbit-network.github.io/ribbit-network-frog-software/ to install the latest software. 
+
+Hit the "Connect Button" 
+
+<img width="489" alt="image" src="https://user-images.githubusercontent.com/2559382/210677925-f321f429-7811-44c5-a263-5ad1e9addf4d.png">
+
 
 ## Next Step
 [Assembly](4-assembly.md)
