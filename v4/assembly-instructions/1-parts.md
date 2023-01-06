@@ -19,15 +19,6 @@ Additionally, the assembly instructions call for these tools:
 
 <img src="images/tools.jpg" width="300">
 
-## International BOMs
-
-If you're not located in the United States, check out alternatives BOMs that are specific to your country below. The parts are the same but prices are in a local currency and links are replaced with local supplier alternatives to avoid high shipping and import fees.
-
-* [Canada](../hardware/international_boms/ribbit_network_frog_sensor_bom_ca.csv)
-* [United Kingdom](../hardware/international_boms/ribbit_network_frog_sensor_bom_uk.csv)
-
-If your country isn't listed, consider contributing!
-
 ## Next Step
 [3D Printing](2-3d-printing.md)
 
