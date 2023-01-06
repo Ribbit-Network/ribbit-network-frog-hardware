@@ -1,4 +1,4 @@
-## Ribbit Frog V3
+## Ribbit Frog V4
 This is the hardware respository that contains all the design files for the physical assembly of the Frog Sensor.
 
 ## Bill of Materials (Parts List)
@@ -20,7 +20,7 @@ The mechanical design files are hosted on Onshape. Onshape is available to use f
 The diagram above can be edited with drawio or with the awesome [Draw.io Visual Studio Code Plugin](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
 
 ## Assembly Instructions
-Assembly instructions for V3 can be found [here](assembly-instructions/0-start-here.md).
+Assembly instructions for V4 can be found [here](assembly-instructions/0-start-here.md).
 
 ## Main Readme
 [Head back to the main readme for more info!](https://github.com/Ribbit-Network/ribbit-network-sensor)
