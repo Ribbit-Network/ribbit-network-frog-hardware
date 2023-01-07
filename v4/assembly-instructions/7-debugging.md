@@ -1,9 +1,7 @@
 # Debugging
-If you are reading this page, something isn't work with your sensor. Don't panic and follow the steps below to identify the issue and resolve it.
+If you are reading this page, something isn't work with your sensor.
 
-#FIXME
-
-4. If all else fails, try turning the sensor off and on again (Seriously).
+The V4 Frog sensor is still new, so we aren't yet sure about the most common issues. Please reach out to the community in Discord or via a Github issue for help.
 
 
 ## Still Need Help?
