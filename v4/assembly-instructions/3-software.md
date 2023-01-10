@@ -74,8 +74,21 @@ This will take you to a website that is hosted on your esp32 board. Take note of
 
 Copy the following command and update it with your IP address you noted above and the username and password given to you by the Ribbit Network team.
 
+#### Linux / OSX
+
 ```
 curl http://192.168.86.92/api/config -X PATCH -H "Content-Type: application/json" -d '{"golioth.user": "<your device ID>", "golioth.password": "<your device PSK>"}'
+```
+
+#### Windows
+```
+curl http://192.168.86.92/api/config -X PATCH -H "Content-Type: application/json" -d "{\"golioth.user\": \"<your device ID>\", \"golioth.password\": \"<your device PSK>\"}"
+```
+
+Note for Windows you need to include the slashes in front of some of the quotation marks as shown above. Example complete command:
+
+```
+curl http://192.168.86.92/api/config -X PATCH -H "Content-Type: application/json" -d "{\"golioth.user\": \"123456789\", \"golioth.password\": \"top_secret\"}"
 ```
 
 Open a termainl program on your computer, paste the command that you edited above with your correct IP address and credentials into the terminal and hit enter. This will send the command to your Frog configuring the credentials. At this point, the Ribbit Network software team can verify your device connection. Message Keenan in discord.
