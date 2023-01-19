@@ -1,0 +1,32 @@
+Item,Quantity,Unit Price,Price,Vendor,Link,Notes
+Sensors,,,,,,
+SCD-30 - NDIR CO2 Temperature and Humidity Sensor,1.00,$58.95,$58.95,Adafruit,https://www.adafruit.com/product/4867,
+Barometer,1.00,$6.95,$6.95,Adafruit,https://www.adafruit.com/product/4494,
+GPS,1.00,$29.95,$29.95,Adafruit,https://www.adafruit.com/product/4415,
+,,,,,,
+Compute / Connectivity,,,,,,
+Adafruit ESP32-S3 Feather with 4MB Flash 2MB PSRAM - STEMMA QT / Qwiic,1.00,$17.50,$17.50,Adafruit,https://www.adafruit.com/product/5477,
+,,,,,,
+Cables,,,,,,
+Power Supply,1.00,$7.95,$7.95,Adafruit,https://www.adafruit.com/product/4298,
+USBC 90deg Adapter,1.00,$3.95,$3.95,Adafruit,https://www.adafruit.com/product/4432,
+STEMMA QT / Qwiic JST SH 4-pin Cable - 50mm Long,2.00,$0.95,$1.90,Adafruit,https://www.adafruit.com/product/4399,
+STEMMA QT / Qwiic JST SH 4-pin Cable - 100mm Long,1.00,$0.95,$0.95,Adafruit,https://www.adafruit.com/product/4210,
+,,,,,,
+Mechanical,,,,,,
+Brass Standoffs M2.5x10mm,4,$0.62,$2.48,Mouser,https://www.mouser.com/ProductDetail/Wurth-Elektronik/971100154?qs=wr8lucFkNMUP5RNWEZb8yA%3D%3D,
+M2.5 x 5 Screws,6,"$0.04 ","$0.24 ",McMaster,https://www.mcmaster.com/92000A103/,
+4 inch Zip Ties,1,"$3.85","$3.85",Amazon,https://www.amazon.com/Bates-Zip-Ties-4-inch/dp/B08P2HKSVM/ref=sr_1_16?crid=2KSBFTQYYPW52&keywords=zip+ties+4+inch&qid=1672684811&sprefix=zip+ties+4+in%2Caps%2C139&sr=8-16,
+,,,,,,
+3D Printed Parts,,,,,,Quantity shows percentage of a filament roll used for each part
+Enclosure Box,0.20,$22.99,$4.60,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Enclosure Lid,0.10,$22.99,$2.30,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Sensor Shroud,0.10,$22.99,$2.30,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Frog Eyes,0.02,$22.99,$0.46,Amazon,https://www.amazon.com/gp/product/B00ZAUQZTA/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Frog Mouth,0.01,$21.99,$0.22,Amazon,https://www.amazon.com/gp/product/B07VBKP1PN/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+Frog Head,0.11,$23.99,$2.64,Amazon,https://www.amazon.com/gp/product/B014VM991I/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1,https://github.com/Ribbit-Network/ribbit-network-frog-sensor/tree/main/hardware/mechanical
+,,,,,,
+Consumables,,,,,,
+Super Glue,0.10,$10.59,$1.06,Amazon,https://www.amazon.com/Loctite-Ultra-Gel-Super-Glue/dp/B00HYDYSLI/ref=sr_1_1_sspa?gclid=Cj0KCQiAnNacBhDvARIsABnDa69qaUA2syPmCcfXJpT31gPcMqwNnm54lozqX5cxJV_QsbaFQyjPyY4aAixCEALw_wcB&hvadid=616862895093&hvdev=c&hvlocphy=1026969&hvnetw=g&hvqmt=e&hvrand=15026163326929337140&hvtargid=kwd-360199949924&hydadcr=24656_13611721&keywords=loctite+super+glues&qid=1670791479&sr=8-1-spons&psc=1&smid=A6AY1HFZHO49U&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzUVQ0M0ZBRVgxVlhXJmVuY3J5cHRlZElkPUEwOTAyMjI1NDdSUzlVWlJXMUQ4JmVuY3J5cHRlZEFkSWQ9QTA2MzkxMzY1V1kwSU9HUTVPTVImd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl,
+,,,,,,
+Total Cost,,,$148.25,,,

@@ -24,10 +24,11 @@ of data about the environment.
 
 ## Build a Frog!
 We encourage you to jump in and build your own Frog Sensor! It's reccomended
-to build a V3 Frog and the instructions can be found in the [V3 folder.](v3/assembly-instructions/0-start-here.md)
+to build a V4 Frog and the instructions can be found in the [V4 folder.](v4/assembly-instructions/0-start-here.md)
 
-There have been three major versions of the Frog Sensor to date. We currently reccomend building version 3 of the Frog.
+There have been four major versions of the Frog Sensor to date. We currently reccomend building version 4 of the Frog.
 
+* [Frog Sensor Version 4](v4) - This version of the sensor is based on an esp32 microcontroller.
 * [Frog Sensor Version 3](v3) - This version is based on a Raspberry Pi CM4 and includes a fully 3D printed enclosure.
 * [Frog Sensor Version 2](v2) - This version is based on a Beaglebone black and includes a fully 3D printed enclosure.
 * [Frog Sensor Version 1](v1) - This version was based on the Raspberry Pi and included an off-the-shelf enclosure
