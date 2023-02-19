@@ -46,21 +46,16 @@ Now use the second 50mm cable to connect the barometer and GPS
 
 First, connect the 100mm cable to the port in the center of the ESP32.  Then connect the USBC 90 degree adapter to the power port.
 
-<img src="images/esp32_connect.jpg" width="600">
+Note: you may need to remove the cap from the port in the center of the ESP32.
+
+<img src="images/esp32cap.jpg" width="300">
+<img src="images/esp32wocap.jpg" width="300">
+
+<img src="images/esp32_connect2.jpg" width="600">
 
 Now the ESP32 can be mounted in the enclosure base using the remaining two M2.5 screws and the small phillips screw driver.
 
-<img src="images/esp32_install.jpg" width="600">
-
-## (Optional Step) Ziptie
-
-If needed, slide a small ziptie through the port under the USBC adapter pad.
-
-<img src="images/ziptie_option.jpg" width="600">
-
-Use the ziptie to secure the USBC adapter inplace
-
-<img src="images/ziptie_install.jpg" width="600">
+<img src="images/esp32_install2.jpg" width="600">
 
 ## Assemble the Enclosure
 
@@ -103,6 +98,8 @@ The power cable can be routed through the bottom:
 The Frog Sensor can be hung using the loop on top, or the nail hook on the back.  
 
 <img src="images/mounts.jpg" width="600">
+<img src="images/nailhook_bottom.jpg" width="300">
+<img src="images/nailhook.jpg" width="300">
 
 ## Additional Hanging Options
 We have also created dfferent hanging accessories to make hanging your sensor even easier.  These can be found in [3D Printing](2-3d-printing.md). There are currently two additional options that can be printed:
@@ -111,9 +108,13 @@ First is the S-hook:
 
 <img src="images/s_hook.jpg" width="400">
 
-Second is the Over-the-top wall hanger:
+Second is the post mount hanger:
+Use the zip ties to strap around a post and secure in place.
 
-<img src="images/.jpg" width="600">
+<img src="images/postmount_side.jpg" width="300">
+<img src="images/postmount_back.jpg" width="300">
+<img src="images/postmount_bottom.jpg" width="300">
+<img src="images/polemount.jpg" width="300">
 
 ## Next Step
 [Sensor Placement](5-sensor-placement.md)

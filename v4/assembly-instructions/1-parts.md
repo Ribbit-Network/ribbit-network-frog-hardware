@@ -13,11 +13,11 @@ Note that there are several 3D printed parts that you'll need to 3D print yourse
 ## Tools
 
 Additionally, the assembly instructions call for these tools:
-* 3/16" socket/driver
+* Custom Ribbit 5mm socket/driver, or standard.  Both options shown
 * Small phillips screwdriver
 * Super Glue
 
-<img src="images/tools.jpg" width="300">
+<img src="images/tools3.jpg" width="300">
 
 ## Next Step
 [3D Printing](2-3d-printing.md)
