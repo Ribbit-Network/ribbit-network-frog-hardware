@@ -1,22 +1,33 @@
 # Software
 
-In order for your Frog to be useful, you'll need to install some software first. You will need a computer for this step.
+In order for your Frog to be useful, you'll need to install some software first. 
+For this step you will need the following:
+
+- Computer
+
+- Cable to connect the esp32 board.  One end must be USBC for the esp32 board.
+
+### Notes on the cable 
+
+Make sure your cable does support data. many USB cable are for charging only. example of a cable you can use: https://www.amazon.com/dp/B0794M53HQ?ref=ppx_yo2ov_dt_b_product_details&th=1 -- one way to verify your cable is of the correct type: as soon as you plug in the ESP32 your computer (PC or Mac) should detect a new hardware and prompt you for installing drivers if missing. Another hint that you have the correct cable: the JTAG serial port should be listed when you hit the CONNECT button (see next step)
 
 ## Install the Software on your Frog
 
-Connect the esp32 board to your computer via a USB C Cable. 
+Connect the esp32 board to your computer using the USBC connection port on the esp32 and a cable that will connect to your computer.  
 
-Hold the "boot" button and press the "reset" button (shown below). This puts the esp32 into a flashing mode.
+Press and hold the "boot" button then press the "reset" button and release both at the same time (shown below). This puts the esp32 into a flashing mode.
+
+The lights on the board may stop blinking and turn off.
 
 <img width="604" alt="esp32_buttons" src="https://user-images.githubusercontent.com/2559382/211125493-80c9d8c8-10fd-491d-b279-cbd1278bbd04.jpg">
 
 Vist this page https://ribbit-network.github.io/ribbit-network-frog-software/ to install the latest software.
 
-Hit the "Connect Button" 
+Hit the "CONNECT" Button
 
 <img width="489" alt="image" src="https://user-images.githubusercontent.com/2559382/210677925-f321f429-7811-44c5-a263-5ad1e9addf4d.png">
 
-You will see a pop-up window like the one shown below. There should be an option labeled USB JTAG. Select that and hit connect.
+You will see a pop-up window like the one shown below. There should be an option labeled USB JTAG. Select that and hit connect.  
 
 <img width="468" alt="image" src="https://user-images.githubusercontent.com/2559382/211125557-afb00ccf-5dd1-42c9-a3e3-8014af955c51.png">
 
@@ -40,9 +51,11 @@ In order for your Frog Sensor to connect to the internet, you will need to tell 
 
 First, unplug and replug in your Frog. You should see lights start to flash on your board.
 
-Hit the connect button again and you should now see an option labeled "Ribbit Frog Sensor V4"
+Hit the "CONNECT" button again and you should now see an option labeled "Ribbit Frog Sensor V4" (if on a Mac) or "Expressif CDC Device" (if on windows).
 
 <img width="441" alt="image" src="https://user-images.githubusercontent.com/2559382/211125712-40ee53d2-5da5-40b7-b9af-daa34bd1697d.png">
+
+<img src="images/Windows_wifi_connect.jpg" width="600">
 
 Hit connect and then select the Connect to Wifi option. The Frog will now scan for wifi networks. Select the correct network and enter your password in the form. This password is stored securely on your Frog and will be remembered, so your Frog can always connect to the internet, receive updates, and transmit data.
 
@@ -91,7 +104,7 @@ Note for Windows you need to include the slashes in front of some of the quotati
 curl http://192.168.86.92/api/config -X PATCH -H "Content-Type: application/json" -d "{\"golioth.user\": \"123456789\", \"golioth.password\": \"top_secret\"}"
 ```
 
-Open a termainl program on your computer, paste the command that you edited above with your correct IP address and credentials into the terminal and hit enter. This will send the command to your Frog configuring the credentials. At this point, the Ribbit Network software team can verify your device connection. Message Keenan in discord.
+Open a termainl program on your computer ("Terminal" on Mac or "CMD" on windows), paste the command that you edited above with your correct IP address and credentials into the terminal and hit enter. This will send the command to your Frog configuring the credentials. At this point, the Ribbit Network software team can verify your device connection. Message Keenan in discord.
 
 Note: curl should be installed on most linux, mac, or windows computers.
 

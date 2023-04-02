@@ -15,7 +15,7 @@ Note that there are several 3D printed parts that you'll need to 3D print yourse
 Additionally, the assembly instructions call for these tools:
 * Custom Ribbit 5mm socket/driver, or standard.  Both options shown
 * Small phillips screwdriver
-* Super Glue
+* Cyanoacrylate adhesive
 
 <img src="images/tools3.jpg" width="300">
 
