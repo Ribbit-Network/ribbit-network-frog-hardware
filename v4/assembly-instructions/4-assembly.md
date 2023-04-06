@@ -11,16 +11,17 @@ First, we need to attach two cables (100mm and 50mm) to the SDC-30.
 As shown in the picture, the 100mm cable is plugged into the top port and the 50mm cable is plugged into the bottom port.  
 
 ## Install the SDC-30 sensor on the enclosure base
-Now the SDC-30 is ready to be mounted on the enclosure base.  You will need the SDC-30 with attached cables, the four long brass standoffs, enclosure base, and the 3/16" socket.
+Now the SDC-30 is ready to be mounted on the enclosure base.  You will need the SDC-30 with attached cables, the four long brass standoffs, enclosure base, and the 5mm socket.  You can also use the custom Ribbit 5mm driver.  
 
 First, route the 100mm cable through the hole in the top of the enclosure.
 
 <img src="images/cable_routing.jpg" width="600">
 
-Next, use the four long brass standoffs to mount the SDC-30 to the top of the enclosure.  The 3/16" socket should be used to screw in the brass standoffs.  Do not over tighten, just snug up.
+Next, use the four long brass standoffs to mount the SDC-30 to the top of the enclosure.  The 5mm socket should be used to screw in the brass standoffs.  Do not over tighten, just snug up.
 
-<img src="images/sdc30_install.jpg" width="600">
+<img src="images/SDC30_install.jpg" width="600">
 
+<img src="images/sdc30_install2.jpg" width="600">
 
 ## Install the Barometer
 To mount the barometer you will need two M2.5 screws and a small phillips screwdriver.
@@ -102,7 +103,7 @@ The Frog Sensor can be hung using the loop on top, or the nail hook on the back.
 <img src="images/nailhook.jpg" width="300">
 
 ## Additional Hanging Options
-We have also created dfferent hanging accessories to make hanging your sensor even easier.  These can be found in [3D Printing](2-3d-printing.md). There are currently two additional options that can be printed:
+We have also created different hanging accessories to make hanging your sensor even easier.  These can be found in [3D Printing](2-3d-printing.md). There are currently two additional options that can be printed:
 
 First is the S-hook:
 
