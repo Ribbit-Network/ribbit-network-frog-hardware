@@ -75,7 +75,9 @@ In order for your Frog to join the Ribbit Network "Fleet" we need to tell it a n
 First, reach out to the Ribbit Network Core team in Discord ([Join the Developer Discord](https://discord.gg/vq8PkDb2TC)) and send Keenan Johnson a message in the #build-a-sensor channel. He will get you a set of credentials you can use in the next step. The team is working hard to make this self service soon :).
 
 ### Find the IP address of your Frog
-From the install screen, click the "Visit Device" button
+Vist this page https://ribbit-network.github.io/ribbit-network-frog-software/ and reconnect to your frog.
+
+click the "Visit Device" button
 
 <img width="293" alt="image" src="https://user-images.githubusercontent.com/2559382/211126145-65b4f4e3-34df-45b0-9f72-fdb938d5b219.png">
 
@@ -85,7 +87,7 @@ This will take you to a website that is hosted on your esp32 board. Take note of
 
 ### Send the credentials to your Frog
 
-Copy the following command and update it with your IP address you noted above and the username and password given to you by the Ribbit Network team.
+Copy the following command below and paste it into a text editor (notepad or something similar).  Update it with your IP address you noted above and the username and password given to you by the Ribbit Network team.  Then copy the edited command.
 
 #### Linux / OSX
 
@@ -107,6 +109,14 @@ curl http://192.168.86.92/api/config -X PATCH -H "Content-Type: application/json
 Open a termainl program on your computer ("Terminal" on Mac or "CMD" on windows), paste the command that you edited above with your correct IP address and credentials into the terminal and hit enter. This will send the command to your Frog configuring the credentials. At this point, the Ribbit Network software team can verify your device connection. Message Keenan in discord.
 
 Note: curl should be installed on most linux, mac, or windows computers.
+
+Leave your frog connected and wait a few minutes.  When complete, a disconnected error will show up on the frog connection page.
+
+<img src="images/disconnected.jpg" width="200">
+
+Now unplug your frog, let it power down, then plug in again.  Open your browser and type in your frog IP address.  You should be able to see a connection status.  (note: the GPS will not connect if inside a building)
+
+<img src="images/connection_status.jpg" width="400">
 
 ## Complete
 
