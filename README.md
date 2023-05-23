@@ -46,6 +46,9 @@ The first prototype sensors are up and running! [Here is some real data from our
 ## Questions?
 [Check out the Frequently Asked Questions section.](https://github.com/Ribbit-Network/ribbit-network-faq) If you don't see your question, let us know either in a Github Discussion or via Discord.
 
+## Get Involved
+Are you interested in getting more involved or leading an effort in the Ribbit Network project? We are recruiting for additional members to join the Core Team. [See the Open Roles and descriptions here.](https://ribbitnetwork.notion.site/Core-Team-Role-Postings-105df298e0634f179f8f063c01708069).
+
 ## Contributing
 See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section of this project for the work that I've currently scoped out to be done. Reach out to me if you are interested in helping out! The [projects section](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/projects) helps detail the major efforts going on right now.
 
