@@ -1,0 +1,5 @@
+site_name: Frog Sensor Instructions
+theme:
+  name: material
+  palette:
+    primary: green
