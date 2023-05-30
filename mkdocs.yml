@@ -1,5 +1,26 @@
 site_name: Frog Sensor Instructions
+docs_dir: assembly-instructions
+
+repo_url: https://github.com/Ribbit-Network/ribbit-network-frog-hardware
+
 theme:
   name: material
   palette:
     primary: green
+  features:
+    - navigation.footer
+
+extra:
+  social:
+    - icon: fontawesome/brands/mastodon
+      link: testing.com
+
+nav:
+    - Start Here: 0-start-here.md
+    - Parts: 1-parts.md
+    - 3D Printed Parts: 2-3d-printing.md
+    - Software: 3-software.md
+    - Assembly: 4-assembly.md
+    - Sensor Placement: 5-sensor-placement.md
+    - Done - Next Steps: 6-done.md
+    - Debugging: 7-debugging.md
