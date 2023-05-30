@@ -7,15 +7,15 @@ http://www.adafruit.com/wishlists/574723
 
 Scroll to the bottom of the wish list and click the "Add All to Cart" button
 
-<img src="images/wishlist.jpg" width="300">
+![Wishlist](images/wishlist.jpg)
 
 The BOM document contains links to purchase the other components (excepts the 3D printed parts).
 
 Note that there are several 3D printed parts that you'll need to 3D print yourself. The next section will cover that in more detail.
 
-<img src="images/electric_components.jpg" width="300"> 
-<img src="images/hardware.jpg" width="300">
-<img src="images/enclosure_components.jpg" width="300">
+![Electronic Components](images/electric_components.jpg)
+![Hardware](images/hardware.jpg)
+![Enclosure Components](images/enclosure_components.jpg)
 
 ## Tools
 
