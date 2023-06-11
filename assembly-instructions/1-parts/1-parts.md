@@ -2,8 +2,7 @@
 
 The first step in building a Frog Sensor is to get all of the parts. You can find the complete parts list or [Bill of Materials (BOM) here.](../../ribbit_network_frog_sensor_bom.csv)
 
-All of the parts from Adafruit can be found in this wishlist:
-![Adafruit Wishlist](http://www.adafruit.com/wishlists/574723)
+All of the parts from Adafruit can be found in this wishlist: [Adafruit Wishlist](http://www.adafruit.com/wishlists/574723)
 
 Scroll to the bottom of the wish list and click the "Add All to Cart" button
 
