@@ -2,6 +2,8 @@
 
 We’re so excited for you to start your Ribbit journey! Ribbit Network inspires students, teachers, hackers, and scientists to take direct action by building a sensor and contributing to an open-source globally-distributed climate observation network.
 
+![Finished Frog](images/finished_frog.gif)
+
 ## Table of Contents
 
 1. [Parts List (Bill of Materials)](1-parts/1-parts.md)
