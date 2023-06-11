@@ -102,32 +102,6 @@ Use firm, but not excessive, pressure to snap the Frog Head into place.  This sn
 
 The assembly is complete! Now we just need to place our sensor outside!
 
-The power cable can be routed through the bottom:
-
-![Final Assembly](images/final_assembly.jpg)
-
-The Frog Sensor can be hung using the loop on top, or the nail hook on the back.  
-
-![Mounts](images/mounts.jpg)
-![Nailhook Bottom](images/nailhook_bottom.jpg)
-![Nailhook](images/nailhook.jpg)
-
-## Additional Hanging Options
-
-We have also created different hanging accessories to make hanging your sensor even easier.  These can be found in [3D Printing](../2-3d-printing/2-3d-printing.md). There are currently two additional options that can be printed:
-
-First is the S-hook:
-
-![S Hook](images/s_hook.jpg)
-
-Second is the post mount hanger:
-Use the zip ties to strap around a post and secure in place.
-
-![Postmount Side](images/postmount_side.jpg)
-![Postmount Back](images/postmount_back.jpg)
-![Postmount Bottom](images/postmount_bottom.jpg)
-![Polemount](images/polemount.jpg)
-
 ## Next Step
 
 [Sensor Placement](../5-sensor-placement/5-sensor-placement.md)
