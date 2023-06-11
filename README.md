@@ -20,7 +20,7 @@ Frogs are one of the species that are most affected by climate change!
 Just like our sensors, they ribbit to one another to create a powerful network 
 of data about the environment.
 
-<img src="images/frog_sensor_canyon.jpeg" width="600">
+![Frog Sensor](images/finished_frog.gif)
 
 ## Build a Frog!
 We encourage you to jump in and build your own Frog Sensor! It's reccomended
@@ -75,6 +75,8 @@ We have a [contributing guide](https://github.com/Ribbit-Network/ribbit-network-
 
 ## Background Information
 [See the Wiki for background research.](https://ribbitnetwork.notion.site/Learnings-Low-cost-sensors-for-the-measurement-of-atmospheric-composition-e3d41736c49e41ad81dcdf7e16a6573b) This project is inspired by some awesome research by incedible scientists in academia.
+
+<img src="images/frog_sensor_canyon.jpeg" width="600">
 
 ## Ribbit Network
 Ribbit Network is a non-profit (501c3) creating the world's largest Greenhouse Gas Emissions dataset that will empower anyone to join in the work on climate and provide informed data for climate action. We're an all volunteer team building everything we do in the open-source community.
