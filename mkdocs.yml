@@ -5,6 +5,8 @@ repo_url: https://github.com/Ribbit-Network/ribbit-network-frog-hardware
 
 theme:
   name: material
+  logo: images/ribbit_logo.png
+  favicon: images/favicon.ico
   palette:
     primary: green
   features:
@@ -12,15 +14,16 @@ theme:
 
 extra:
   social:
-    - icon: fontawesome/brands/mastodon
-      link: testing.com
+    - icon: fontawesome/brands/github
+      link: https://github.com/Ribbit-Network
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/vq8PkDb2TC
 
 nav:
-    - Start Here: 0-start-here.md
-    - Parts: 1-parts.md
-    - 3D Printed Parts: 2-3d-printing.md
-    - Software: 3-software.md
-    - Assembly: 4-assembly.md
-    - Sensor Placement: 5-sensor-placement.md
-    - Done - Next Steps: 6-done.md
-    - Debugging: 7-debugging.md
+    - Parts: 1-parts/1-parts.md
+    - 3D Printed Parts: 2-3d-printing/2-3d-printing.md
+    - Software: 3-software/3-software.md
+    - Assembly: 4-assembly/4-assembly.md
+    - Sensor Placement: 5-sensor-placement/5-sensor-placement.md
+    - Done - Next Steps: 6-done/6-done.md
+    - Debugging: 7-debugging/7-debugging.md
