@@ -23,8 +23,10 @@ of data about the environment.
 ![Frog Sensor](images/finished_frog.gif)
 
 ## Build a Frog!
-We encourage you to jump in and build your own Frog Sensor! It's reccomended
-to build a V4 Frog and the instructions can be found in the [V4 folder.](v4/assembly-instructions/0-start-here.md)
+We encourage you to jump in and build your own Frog Sensor! It's recommended
+to build a V4 Frog and the instructions from this repo are rendered into a nice webpage at the link below:
+
+[Build a Frog Sensor!](https://ribbit-network.github.io/ribbit-network-frog-hardware/)
 
 There have been four major versions of the Frog Sensor to date. We currently recommend building version 4 of the Frog and this repo contains the files and instructions relevant to V4.
 
