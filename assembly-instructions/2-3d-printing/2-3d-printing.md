@@ -1,6 +1,6 @@
 # 3D Printing
 
-There are several 3D printed parts you'll need to print in order to build a Frog Sensor. All parts can be found [in this folder](../mechanical).
+There are several 3D printed parts you'll need to print in order to build a Frog Sensor. All parts can be found [in this folder](../../mechanical).
 
 ![Parts](images/enclosure_components.jpg)
 
