@@ -26,12 +26,12 @@ of data about the environment.
 We encourage you to jump in and build your own Frog Sensor! It's reccomended
 to build a V4 Frog and the instructions can be found in the [V4 folder.](v4/assembly-instructions/0-start-here.md)
 
-There have been four major versions of the Frog Sensor to date. We currently reccomend building version 4 of the Frog.
+There have been four major versions of the Frog Sensor to date. We currently recommend building version 4 of the Frog and this repo contains the files and instructions relevant to V4.
 
-* [Frog Sensor Version 4](v4) - This version of the sensor is based on an esp32 microcontroller.
-* [Frog Sensor Version 3](v3) - This version is based on a Raspberry Pi CM4 and includes a fully 3D printed enclosure.
-* [Frog Sensor Version 2](v2) - This version is based on a Beaglebone black and includes a fully 3D printed enclosure.
-* [Frog Sensor Version 1](v1) - This version was based on the Raspberry Pi and included an off-the-shelf enclosure
+* Frog Sensor Version 4 - This version of the sensor is based on an esp32 microcontroller.
+* [Frog Sensor Version 3](https://github.com/Ribbit-Network/ribbit-network-frog-hardware/tree/hw_v3) - This version is based on a Raspberry Pi CM4 and includes a fully 3D printed enclosure.
+* [Frog Sensor Version 2](https://github.com/Ribbit-Network/ribbit-network-frog-hardware/tree/hw_v2) - This version is based on a Beaglebone black and includes a fully 3D printed enclosure.
+* [Frog Sensor Version 1](https://github.com/Ribbit-Network/ribbit-network-frog-hardware/tree/hw_v1) - This version was based on the Raspberry Pi and included an off-the-shelf enclosure
 
 See each folder linked above for the relevant design files, CAD, and assembly instructions!
 
