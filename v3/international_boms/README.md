@@ -1,1 +1,0 @@
-This location can be used to store all international BOMs

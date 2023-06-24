@@ -20,18 +20,20 @@ Frogs are one of the species that are most affected by climate change!
 Just like our sensors, they ribbit to one another to create a powerful network 
 of data about the environment.
 
-<img src="images/frog_sensor_canyon.jpeg" width="600">
+![Frog Sensor](images/finished_frog.gif)
 
 ## Build a Frog!
-We encourage you to jump in and build your own Frog Sensor! It's reccomended
-to build a V4 Frog and the instructions can be found in the [V4 folder.](v4/assembly-instructions/0-start-here.md)
+We encourage you to jump in and build your own Frog Sensor! It's recommended
+to build a V4 Frog and the instructions from this repo are rendered into a nice webpage at the link below:
 
-There have been four major versions of the Frog Sensor to date. We currently reccomend building version 4 of the Frog.
+[Build a Frog Sensor!](https://ribbit-network.github.io/ribbit-network-frog-hardware/)
 
-* [Frog Sensor Version 4](v4) - This version of the sensor is based on an esp32 microcontroller.
-* [Frog Sensor Version 3](v3) - This version is based on a Raspberry Pi CM4 and includes a fully 3D printed enclosure.
-* [Frog Sensor Version 2](v2) - This version is based on a Beaglebone black and includes a fully 3D printed enclosure.
-* [Frog Sensor Version 1](v1) - This version was based on the Raspberry Pi and included an off-the-shelf enclosure
+There have been four major versions of the Frog Sensor to date. We currently recommend building version 4 of the Frog and this repo contains the files and instructions relevant to V4.
+
+* Frog Sensor Version 4 - This version of the sensor is based on an esp32 microcontroller.
+* [Frog Sensor Version 3](https://github.com/Ribbit-Network/ribbit-network-frog-hardware/tree/hw_v3) - This version is based on a Raspberry Pi CM4 and includes a fully 3D printed enclosure.
+* [Frog Sensor Version 2](https://github.com/Ribbit-Network/ribbit-network-frog-hardware/tree/hw_v2) - This version is based on a Beaglebone black and includes a fully 3D printed enclosure.
+* [Frog Sensor Version 1](https://github.com/Ribbit-Network/ribbit-network-frog-hardware/tree/hw_v1) - This version was based on the Raspberry Pi and included an off-the-shelf enclosure
 
 See each folder linked above for the relevant design files, CAD, and assembly instructions!
 
@@ -46,6 +48,23 @@ The first prototype sensors are up and running! [Here is some real data from our
 ## Questions?
 [Check out the Frequently Asked Questions section.](https://github.com/Ribbit-Network/ribbit-network-faq) If you don't see your question, let us know either in a Github Discussion or via Discord.
 
+## Ribbit Frog V4
+This is the hardware respository that contains all the design files for the physical assembly of the Frog Sensor.
+
+## Bill of Materials (Parts List)
+The hardware [Bill of Materials is located here.](ribbit_network_frog_sensor_bom.csv)
+
+
+## Mechanical CAD Files
+The mechanical design files are hosted on Onshape. Onshape is available to use for free with public assemblies and you can create a copy of the assembly for any edits you would like to amek.
+
+[Link to Onshape Assembly](https://cad.onshape.com/documents/b3e6eeabf50d585d20f25fc6/w/2fa6bafe80aa9fa665cb25df/e/634db96a0c5d4c7b0ff00c45?renderMode=0&uiState=632b4e35ed490e04156b3ae7)
+
+## Electronics Block Diagram
+![Block Diagram](frog_sensor.drawio.svg)
+
+The diagram above can be edited with drawio or with the awesome [Draw.io Visual Studio Code Plugin](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
+
 ## Get Involved
 Are you interested in getting more involved or leading an effort in the Ribbit Network project? We are recruiting for additional members to join the Core Team. [See the Open Roles and descriptions here.](https://ribbitnetwork.notion.site/Core-Team-Role-Postings-105df298e0634f179f8f063c01708069).
 
@@ -57,7 +76,9 @@ We have a [contributing guide](https://github.com/Ribbit-Network/ribbit-network-
 [If you are not sure where to start or just want to chat join our developer discord here.](https://discord.gg/vq8PkDb2TC). You can also [start a discussion](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/discussions) right here in Github.
 
 ## Background Information
-[See the Wiki for background research.](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/wiki/Background-Research.md) This project is inspired by some awesome research by incedible scientists in academia.
+[See the Wiki for background research.](https://ribbitnetwork.notion.site/Learnings-Low-cost-sensors-for-the-measurement-of-atmospheric-composition-e3d41736c49e41ad81dcdf7e16a6573b) This project is inspired by some awesome research by incedible scientists in academia.
+
+<img src="images/frog_sensor_canyon.jpeg" width="600">
 
 ## Ribbit Network
 Ribbit Network is a non-profit (501c3) creating the world's largest Greenhouse Gas Emissions dataset that will empower anyone to join in the work on climate and provide informed data for climate action. We're an all volunteer team building everything we do in the open-source community.
