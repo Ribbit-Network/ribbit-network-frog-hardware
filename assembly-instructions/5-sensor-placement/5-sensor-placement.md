@@ -56,6 +56,30 @@ Great! The Frog is ready to go!
 
 ![Polemount](images/polemount.jpg)
 
+## Power the Frog
+The Frog sensor needs to be connected to power to function.
+
+### Outlet
+
+Connect the USB C Power supply to the wall outlet. 
+
+Remember that this outlet is outside, so ensure the outlet has a waterproof cover like this:
+
+![Outlet Cover](images/outlet_cover.png)
+
+Make sure that the outlet protector routes the cable out of the bottom, not the top to prevent it from filling with water.
+
+![Outlet Cord Routing](images/rain_outlet.png)
+
+If the USB-C power supply is connected to an extension cord, you may want to protect that connection from the weather in an enclosure.
+
+![Extension Cord Cover](images/extension_cord_cover.png)
+
+
+### Connect to Frog
+
+![Connect USB Power Supply to Frog](images/connect_power_supply.gif)
+
 ## Next Step
 
 [View the data!](../6-done/6-done.md)
