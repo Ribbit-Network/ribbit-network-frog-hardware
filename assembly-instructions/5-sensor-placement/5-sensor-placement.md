@@ -16,28 +16,44 @@ The power cable can be routed through the bottom:
 
 ![Final Assembly](images/final_assembly.jpg)
 
-## Hanging
+## Hanging / Mounting
 
-The Frog Sensor can be hung using the loop on top, or the nail hook on the back.  
+It’s time to place the sensor in its home outside so that it can collect data about the planet.
+
+There are several options for mounting the Frog shown below.
 
 ![Mounts](images/mounts.jpg)
-![Nailhook Bottom](images/nailhook_bottom.jpg)
-![Nailhook](images/nailhook.jpg)
 
-## Additional Hanging Options
+### S-Hook
 
-We have also created different hanging accessories to make hanging your sensor even easier.  These can be found in [3D Printing](../2-3d-printing/2-3d-printing.md). There are currently two additional options that can be printed:
-
-First is the S-hook:
+If you would like to mount your Frog to a railing or existing hook outdoors, the kit includes an “S” shaped hook for attaching to the top of the Frog head.
 
 ![S Hook](images/s_hook.jpg)
 
-Second is the post mount hanger:
-Use the zip ties to strap around a post and secure in place.
+### Nail Mounting
 
-![Postmount Side](images/postmount_side.jpg)
-![Postmount Back](images/postmount_back.jpg)
-![Postmount Bottom](images/postmount_bottom.jpg)
+![Nailhook Bottom](images/nailhook_bottom.jpg)
+![Nailhook](images/nailhook.jpg)
+
+### Post Mount
+
+The Frog Sensor can be mounted to a pole using the 3D printed pole mount.
+
+To attach the bracket to a pole, use a few zip ties slotted through the holes in the bracket.
+
+![Show Pole Mount Bracket](images/show_pole_mount.gif)
+![Attach Zip Ties](images/zip_tie_pole_mount.gif)
+
+The bracket clips onto the lower layer of the sensor shroud.
+
+![Pole Mount Attachment to Frog](images/attach_pole_mount.gif)
+
+Clip the Frog onto the bracket. Make sure it feels secure.
+
+![Attach Frog to Pole Mount](images/attach_frog_to_pole_mount.gif)
+
+Great! The Frog is ready to go!
+
 ![Polemount](images/polemount.jpg)
 
 ## Next Step
@@ -49,7 +65,9 @@ Use the zip ties to strap around a post and secure in place.
 [Return to the Beginning](../index.md)
 
 ## Need Help?
+
 No problem! The Ribbit Network team is here for you! We have lots of ways to connect. Jump in and ask your question or provide a suggestion!
+
 * [Start a discussion here](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/discussions/new)
 * [Join the Developer Discord](https://discord.gg/vq8PkDb2TC)
 * [Email](mailto:keenan.johnson@gmail.com)

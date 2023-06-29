@@ -1,15 +1,23 @@
 # Software
 
-In order for your Frog to be useful, you'll need to install some software first. 
+In order for your Frog to be useful, you'll need to install some software first.
+
+## Equipment
+
 For this step you will need the following:
 
 - Computer
-
 - Cable to connect the esp32 board.  One end must be USBC for the esp32 board.
 
-## Notes on the cable 
+### USB Cable Notes
 
-Make sure your cable does support data. many USB cable are for charging only. example of a cable you can use: https://www.amazon.com/dp/B0794M53HQ?ref=ppx_yo2ov_dt_b_product_details&th=1 -- one way to verify your cable is of the correct type: as soon as you plug in the ESP32 your computer (PC or Mac) should detect a new hardware and prompt you for installing drivers if missing. Another hint that you have the correct cable: the JTAG serial port should be listed when you hit the CONNECT button (see next step)
+Make sure your cable does support data. many USB cable are for charging only. [Example of a cable](https://www.amazon.com/dp/B0794M53HQ?ref=ppx_yo2ov_dt_b_product_details&th=1)
+
+One way to verify your cable is of the correct type: as soon as you plug in the ESP32 your computer (PC or Mac) should detect a new hardware and prompt you for installing drivers if missing. Another hint that you have the correct cable: the JTAG serial port should be listed when you hit the CONNECT button (see next step)
+
+## Connect Frog USB Cable
+
+![Connect USB Cable](images/connect_usb_cable.gif)
 
 ## Install the Software on your Frog
 
@@ -21,7 +29,7 @@ The lights on the board may stop blinking and turn off.
 
 ![esp32_buttons](https://user-images.githubusercontent.com/2559382/211125493-80c9d8c8-10fd-491d-b279-cbd1278bbd04.jpg)
 
-Vist this page https://ribbit-network.github.io/ribbit-network-frog-software/ to install the latest software.
+Vist this page [https://ribbit-network.github.io/ribbit-network-frog-software/](https://ribbit-network.github.io/ribbit-network-frog-software/) to install the latest software.
 
 Hit the "CONNECT" Button
 
@@ -69,12 +77,12 @@ Once the connection is successful, you see the success message.
 
 In order for your Frog to join the Ribbit Network "Fleet" we need to tell it a name and password so that it can securely connect. 
 
-
 ### Get Credentials
 
 First, reach out to the Ribbit Network Core team in Discord ([Join the Developer Discord](https://discord.gg/vq8PkDb2TC)) and send Keenan Johnson a message in the #build-a-sensor channel. He will get you a set of credentials you can use in the next step. The team is working hard to make this self service soon :).
 
 ### Find the IP address of your Frog
+
 Vist this page https://ribbit-network.github.io/ribbit-network-frog-software/ and reconnect to your frog.
 
 click the "Visit Device" button
@@ -135,5 +143,5 @@ Well done! Now you can disconnect your board from the computer and begin the phy
 
 No problem! The Ribbit Network team is here for you! We have lots of ways to connect. Jump in and ask your question or provide a suggestion!
 
-* [Start a discussion here](https://github.com/Ribbit-Network/ribbit-network-frog-software/discussions/new)
-* [Join the Developer Discord](https://discord.gg/vq8PkDb2TC)
+- [Start a discussion here](https://github.com/Ribbit-Network/ribbit-network-frog-software/discussions/new)
+- [Join the Developer Discord](https://discord.gg/vq8PkDb2TC)
