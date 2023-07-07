@@ -49,16 +49,16 @@ The first prototype sensors are up and running! [Here is some real data from our
 [Check out the Frequently Asked Questions section.](https://github.com/Ribbit-Network/ribbit-network-faq) If you don't see your question, let us know either in a Github Discussion or via Discord.
 
 ## Ribbit Frog V4
-This is the hardware respository that contains all the design files for the physical assembly of the Frog Sensor.
+This is the hardware repository that contains all the design files for the physical assembly of the Frog Sensor.
 
 ## Bill of Materials (Parts List)
 The hardware [Bill of Materials is located here.](ribbit_network_frog_sensor_bom.csv)
 
 
 ## Mechanical CAD Files
-The mechanical design files are hosted on Onshape. Onshape is available to use for free with public assemblies and you can create a copy of the assembly for any edits you would like to amek.
+The mechanical design files are hosted on Onshape. Onshape is available to use for free with public assemblies and you can create a copy of the assembly for any edits you would like to make.
 
-[Link to Onshape Assembly](https://cad.onshape.com/documents/b3e6eeabf50d585d20f25fc6/w/2fa6bafe80aa9fa665cb25df/e/634db96a0c5d4c7b0ff00c45?renderMode=0&uiState=632b4e35ed490e04156b3ae7)
+[Link to Onshape Assembly](https://cad.onshape.com/documents/b3e6eeabf50d585d20f25fc6/w/a4a82302d129f025f23b244a/e/c221edb50cd05a98d22970e2?renderMode=0&uiState=64a86ef7086f6a55cf1984e7)
 
 ## Electronics Block Diagram
 ![Block Diagram](frog_sensor.drawio.svg)
