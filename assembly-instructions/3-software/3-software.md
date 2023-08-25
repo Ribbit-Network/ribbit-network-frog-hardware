@@ -11,7 +11,7 @@ For this step you will need the following:
 
 ### USB Cable Notes
 
-Make sure your cable does support data. many USB cable are for charging only. [Example of a cable](https://www.amazon.com/dp/B0794M53HQ?ref=ppx_yo2ov_dt_b_product_details&th=1)
+Make sure your cable does support data. Many USB cables are for charging only. [Example of a cable](https://www.amazon.com/dp/B0794M53HQ?ref=ppx_yo2ov_dt_b_product_details&th=1)
 
 One way to verify your cable is of the correct type: as soon as you plug in the ESP32 your computer (PC or Mac) should detect a new hardware and prompt you for installing drivers if missing. Another hint that you have the correct cable: the JTAG serial port should be listed when you hit the CONNECT button (see next step)
 
@@ -43,7 +43,7 @@ Your screen should now show the following:
 
 <img width="604" alt="image" src="https://user-images.githubusercontent.com/2559382/211125585-281289fa-52fc-44ef-9745-a1ac9d7dacfb.png">
 
-Hit the install button and your Frog sensor will get it's software installed.
+Hit the install button and your Frog sensor will get its software installed.
 
 <img width="437" alt="image" src="https://user-images.githubusercontent.com/2559382/211125632-bc373ddc-92c2-47c8-a2a4-ecb458706f67.png">
 
@@ -83,7 +83,7 @@ First, reach out to the Ribbit Network Core team in Discord ([Join the Developer
 
 ### Find the IP address of your Frog
 
-Vist this page https://ribbit-network.github.io/ribbit-network-frog-software/ and reconnect to your frog.
+Visit this page https://ribbit-network.github.io/ribbit-network-frog-software/ and reconnect to your frog.
 
 click the "Visit Device" button
 
