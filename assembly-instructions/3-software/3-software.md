@@ -29,7 +29,7 @@ The lights on the board may stop blinking and turn off.
 
 ![esp32_buttons](https://user-images.githubusercontent.com/2559382/211125493-80c9d8c8-10fd-491d-b279-cbd1278bbd04.jpg)
 
-Vist this page [https://ribbit-network.github.io/ribbit-network-frog-software/](https://ribbit-network.github.io/ribbit-network-frog-software/) to install the latest software.
+Visit this page [https://ribbit-network.github.io/ribbit-network-frog-software/](https://ribbit-network.github.io/ribbit-network-frog-software/) to install the latest software.
 
 Hit the "CONNECT" Button
 
@@ -115,7 +115,7 @@ Note for Windows you need to include the slashes in front of some of the quotati
 curl http://192.168.86.92/api/config -X PATCH -H "Content-Type: application/json" -d "{\"golioth.user\": \"123456789\", \"golioth.password\": \"top_secret\"}"
 ```
 
-Open a termainl program on your computer ("Terminal" on Mac or "CMD" on windows), paste the command that you edited above with your correct IP address and credentials into the terminal and hit enter. This will send the command to your Frog configuring the credentials. At this point, the Ribbit Network software team can verify your device connection. Message Keenan in discord.
+Open a terminal program on your computer ("Terminal" on Mac or "CMD" on windows), paste the command that you edited above with your correct IP address and credentials into the terminal and hit enter. This will send the command to your Frog configuring the credentials. At this point, the Ribbit Network software team can verify your device connection. Message Keenan in discord.
 
 Note: curl should be installed on most linux, mac, or windows computers.
 
