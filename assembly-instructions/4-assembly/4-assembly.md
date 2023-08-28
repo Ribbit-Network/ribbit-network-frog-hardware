@@ -60,7 +60,7 @@ Note: you may need to remove the cap from the port in the center of the ESP32.
 
 ![ESP32 Connects](images/esp32_connect2.jpg)
 
-Now the ESP32 can be mounted in the enclosure base using the remaining two M2.5 screws and the small phillips screw driver.
+Now the ESP32 can be mounted in the enclosure base using the remaining two M2.5 screws and the small phillips screwdriver.
 
 ![ESP32 Install](images/esp32_install2.jpg)
 
