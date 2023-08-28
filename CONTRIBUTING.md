@@ -15,7 +15,7 @@ We want to make contributing to this project as easy and transparent as possible
 
 The information below helps to explain the mechanics of how to contribute to Ribbit Network, but don't be afraid or shy!
 
-If you are confused, need help, or want to dicuss an idea you can find our team here:
+If you are confused, need help, or want to discuss an idea you can find our team here:
 
 * [Developer Discord Channel](https://discord.gg/vq8PkDb2TC)
 * [Email Keenan Johnson (Maintainer)](mailto:keenan.johnson@gmail.com)
