@@ -1,6 +1,6 @@
 # Debugging
 
-If you are reading this page, something isn't work with your sensor.
+If you are reading this page, something isn't working with your sensor.
 
 The V4 Frog sensor is still new, so we aren't yet sure about the most common issues. Please reach out to the community in Discord or via a Github issue for help.
 
