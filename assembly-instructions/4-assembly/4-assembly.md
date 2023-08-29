@@ -58,9 +58,17 @@ Note: you may need to remove the cap from the port in the center of the ESP32.
 
 ![ESP32 WO Cap](images/esp32wocap.jpg)
 
+Place the Microcontroller and Connector inside the enclosure
+
+There are 2 alignment pins on the left-hand-side that will help place the Microcontroller in place. Click it in.
+
 ![ESP32 Connects](images/esp32_connect2.jpg)
 
 Now the ESP32 can be mounted in the enclosure base using the remaining two M2.5 screws and the small phillips screwdriver.
+
+Select 2 of the screws (the smaller of the two sizes) out of the bag of hardware. Lightly fasten the first screw on the right side of the Microcontroller (near the USB port). Make sure both screws are tight, but not too tight as that can destroy the plastic.
+
+Note that there are only two screws holding the Microcontroller in place. The other side of the microcontroller is just held via the alignment pins.
 
 ![ESP32 Install](images/esp32_install2.jpg)
 
