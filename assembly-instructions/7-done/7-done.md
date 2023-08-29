@@ -10,7 +10,7 @@ Thank you so much for being a part of the Ribbit Network. Stay in touch on our d
 
 ## Table of Contents
 
-[Return to the Beginning](../index.md)
+[Return to the Beginning](../index.md){ .md-button }
 
 ## Need Help?
 

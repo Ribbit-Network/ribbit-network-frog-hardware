@@ -13,4 +13,4 @@ No problem! The Ribbit Network team is here for you! We have lots of ways to con
 
 ## Table of Contents
 
-[Return to the Beginning](../index.md)
+[Return to the Beginning](../index.md){ .md-button }

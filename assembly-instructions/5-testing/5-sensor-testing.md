@@ -72,11 +72,11 @@ Great work! The testing is complete and the Frog is ready to be installed outsid
 
 ## Next Step
 
-[Sensor Testing](../6-sensor-placement/6-sensor-placement.md)
+[Sensor Testing](../6-sensor-placement/6-sensor-placement.md){ .md-button }
 
 ## Table of Contents
 
-[Return to the Beginning](../index.md)
+[Return to the Beginning](../index.md){ .md-button }
 
 ## Need Help?
 
