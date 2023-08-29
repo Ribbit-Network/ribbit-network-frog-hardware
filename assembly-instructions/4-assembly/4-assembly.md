@@ -88,6 +88,8 @@ The frog head snaps on top of the shroud.
 
 Use firm, but not excessive, pressure to snap the Frog Head into place.  This snap functions just like the shroud in the previous step.
 
+![Head Click](images/head_click.gif)
+
 ## Assembly Complete
 
 The assembly is complete! Now it is time to test if the Frog is working correctly.
