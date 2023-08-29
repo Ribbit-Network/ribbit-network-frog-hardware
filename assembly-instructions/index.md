@@ -6,6 +6,8 @@ We’re so excited for you to start your Ribbit journey! Ribbit Network inspires
 
 ## Table of Contents
 
+Note, if you are building your Frog sensor from a kit as part of a corporate workshop, [skip directly to the Assembly step!](4-assembly/4-assembly.md)
+
 1. [Parts List (Bill of Materials)](1-parts/1-parts.md)
 2. [3D Printing](2-3d-printing/2-3d-printing.md)
 3. [Software Installation](3-software/3-software.md)
