@@ -43,6 +43,16 @@ However, they are fun and cute, so we suggest including them if you can.
 
 Given that the sensors are designed to sit outside, a PETG 3D Printer Filament should be used for all the parts. This kind of filament is readily available and can be used on almost any 3D printer. It holds up well in moisture and is very UV resistant making it perfect for the sensor.
 
+## Assemble the Frog Head
+
+The eyes and mouth need to be glued in place (if printed separate from the head)
+
+![Face Componentscl](images/face_components.jpg)
+
+Use super glue and place the eyes and mouth just like in the picture:
+
+![Face Complete](images/face_complete.jpg)
+
 ## Next Step
 
 [Software](../3-software/3-software.md)

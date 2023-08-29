@@ -80,16 +80,6 @@ To snap in place, slide one side of the shroud into place on the clip.  Then pre
 ![Shroud Placement](images/shroud_placement.jpg)
 ![Shroud Install](images/shroud_install.jpg)
 
-## Assemble the Frog Head
-
-The eyes and mouth need to be glued in place (if printed separate from the head)
-
-![Face Componentscl](images/face_components.jpg)
-
-Use super glue and place the eyes and mouth just like in the picture:
-
-![Face Complete](images/face_complete.jpg)
-
 ## Install the Frog Head
 
 The frog head snaps on top of the shroud.
