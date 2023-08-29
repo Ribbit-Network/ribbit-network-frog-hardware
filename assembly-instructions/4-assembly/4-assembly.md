@@ -96,11 +96,11 @@ Note, if you are assembling this Frog as part of a workshop, the testing steps a
 
 ## Next Step
 
-[Sensor Testing](../5-testing/5-sensor-testing.md)
+[Sensor Testing](../5-testing/5-sensor-testing.md){ .md-button }
 
 ## Table of Contents
 
-[Return to the Beginning](../index.md)
+[Return to the Beginning](../index.md){ .md-button }
 
 ## Need Help?
 

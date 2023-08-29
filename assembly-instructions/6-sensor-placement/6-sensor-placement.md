@@ -83,11 +83,11 @@ If the USB-C power supply is connected to an extension cord, you may want to pro
 
 ## Next Step
 
-[View the data!](../7-done/7-done.md)
+[View the data!](../7-done/7-done.md){ .md-button }
 
 ## Table of Contents
 
-[Return to the Beginning](../index.md)
+[Return to the Beginning](../index.md){ .md-button }
 
 ## Need Help?
 

@@ -4,9 +4,9 @@ We’re so excited for you to start your Ribbit journey! Ribbit Network inspires
 
 ![Finished Frog](images/finished_frog.gif)
 
-## Table of Contents
+[Start Here](1-parts/1-parts.md){ .md-button }
 
-Note, if you are building your Frog sensor from a kit as part of a corporate workshop, [skip directly to the Assembly step!](4-assembly/4-assembly.md)
+## Table of Contents
 
 1. [Parts List (Bill of Materials)](1-parts/1-parts.md)
 2. [3D Printing](2-3d-printing/2-3d-printing.md)
@@ -16,6 +16,8 @@ Note, if you are building your Frog sensor from a kit as part of a corporate wor
 6. [Placement of Finished Sensor](6-sensor-placement/6-sensor-placement.md)
 7. [You did it!](7-done/7-done.md)
 8. [Something is Wrong](8-debugging/8-debugging.md)
+
+[Start Here](1-parts/1-parts.md){ .md-button }
 
 ![Open Source Hardware Logo](images/oshw-logo.svg)
 
@@ -32,4 +34,4 @@ This is an open-source project for citizen scientists like yourself! We are alwa
 
 ## Get started
 
-[Let's build!](1-parts/1-parts.md)
+[Let's build!](1-parts/1-parts.md){ .md-button }

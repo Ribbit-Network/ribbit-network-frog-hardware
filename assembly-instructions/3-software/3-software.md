@@ -133,11 +133,11 @@ Well done! Now you can disconnect your board from the computer and begin the phy
 
 ## Next Step
 
-[Assembly](../4-assembly/4-assembly.md)
+[Assembly](../4-assembly/4-assembly.md){ .md-button }
 
 ## Table of Contents
 
-[Return to the Beginning](../index.md)
+[Return to the Beginning](../index.md){ .md-button }
 
 ## Need Help?
 

@@ -55,11 +55,11 @@ Use super glue and place the eyes and mouth just like in the picture:
 
 ## Next Step
 
-[Software](../3-software/3-software.md)
+[Software](../3-software/3-software.md){ .md-button }
 
 ## Table of Contents
 
-[Return to the Beginning](../index.md)
+[Return to the Beginning](../index.md){ .md-button }
 
 ## Need Help?
 
