@@ -12,9 +12,10 @@ Note, if you are building your Frog sensor from a kit as part of a corporate wor
 2. [3D Printing](2-3d-printing/2-3d-printing.md)
 3. [Software Installation](3-software/3-software.md)
 4. [Assembly](4-assembly/4-assembly.md)
-5. [Placement of Finished Sensor](5-sensor-placement/5-sensor-placement.md)
-6. [You did it!](6-done/6-done.md)
-7. [Something is Wrong](7-debugging/7-debugging.md)
+5. [Testing](5-testing/5-sensor-testing.md)
+6. [Placement of Finished Sensor](6-sensor-placement/6-sensor-placement.md)
+7. [You did it!](7-done/7-done.md)
+8. [Something is Wrong](8-debugging/8-debugging.md)
 
 ![Open Source Hardware Logo](images/oshw-logo.svg)
 
