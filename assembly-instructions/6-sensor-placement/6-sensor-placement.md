@@ -57,6 +57,7 @@ Great! The Frog is ready to go!
 ![Polemount](images/polemount.jpg)
 
 ## Power the Frog
+
 The Frog sensor needs to be connected to power to function.
 
 ### Outlet
@@ -73,7 +74,7 @@ Make sure that the outlet protector routes the cable out of the bottom, not the 
 
 If the USB-C power supply is connected to an extension cord, you may want to protect that connection from the weather in an enclosure.
 
-![Extension Cord Cover](images/extension_cord_cover.png)
+![Extension Cord Cover](images/extension_cord_box.png)
 
 
 ### Connect to Frog
@@ -82,7 +83,7 @@ If the USB-C power supply is connected to an extension cord, you may want to pro
 
 ## Next Step
 
-[View the data!](../6-done/6-done.md)
+[View the data!](../7-done/7-done.md)
 
 ## Table of Contents
 

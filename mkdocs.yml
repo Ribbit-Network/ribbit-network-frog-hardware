@@ -24,6 +24,10 @@ nav:
     - 3D Printed Parts: 2-3d-printing/2-3d-printing.md
     - Software: 3-software/3-software.md
     - Assembly: 4-assembly/4-assembly.md
-    - Sensor Placement: 5-sensor-placement/5-sensor-placement.md
-    - Done - Next Steps: 6-done/6-done.md
-    - Debugging: 7-debugging/7-debugging.md
+    - Testing: 5-testing/5-sensor-testing.md
+    - Sensor Placement: 6-sensor-placement/6-sensor-placement.md
+    - Done - Next Steps: 7-done/7-done.md
+    - Debugging: 8-debugging/8-debugging.md
+
+markdown_extensions:
+  - attr_list

@@ -4,7 +4,7 @@ Congrats, you're done! The Frog Sensor is complete and collecting data for our p
 
 [You can view the live data from your sensor here.](https://dashboard.ribbitnetwork.org/)
 
-If you don't see your sensor on the map linked above, [see the debugging steps here.](../7-debugging/7-debugging.md)
+If you don't see your sensor on the map linked above, [see the debugging steps here.](../8-debugging/8-debugging.md)
 
 Thank you so much for being a part of the Ribbit Network. Stay in touch on our developer chat or in our discussion forum for more updates on the project.
 

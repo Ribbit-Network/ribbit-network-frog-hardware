@@ -100,11 +100,13 @@ Use firm, but not excessive, pressure to snap the Frog Head into place.  This sn
 
 ## Assembly Complete
 
-The assembly is complete! Now we just need to place our sensor outside!
+The assembly is complete! Now it is time to test if the Frog is working correctly.
+
+Note, if you are assembling this Frog as part of a workshop, the testing steps are optional, but encouraged!
 
 ## Next Step
 
-[Sensor Placement](../5-sensor-placement/5-sensor-placement.md)
+[Sensor Testing](../5-testing/5-sensor-testing.md)
 
 ## Table of Contents
 
