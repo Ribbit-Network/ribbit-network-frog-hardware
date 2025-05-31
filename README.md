@@ -1,5 +1,4 @@
 # Ribbit Network Frog Sensor
-[![Chat](https://img.shields.io/discord/870113194289532969.svg?style=flat-square&colorB=758ED3)](https://discord.gg/vq8PkDb2TC)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -38,7 +37,7 @@ There have been four major versions of the Frog Sensor to date. We currently rec
 See each folder linked above for the relevant design files, CAD, and assembly instructions!
 
 ## Need Help?
-[If you are not sure where to start or just want to chat join our developer discord here.](https://discord.gg/vq8PkDb2TC). You can also [start a discussion](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/discussions) right here in Github.
+[If you are not sure where to start or just want to chat join our developer slack here.](https://join.slack.com/t/ribbitnetworkgroup/shared_invite/zt-2vxvbo7ld-S36SgfDiev~ZQ2zvp03FOg). You can also [start a discussion](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/discussions) right here in Github.
 
 # View the Data!
 The first prototype sensors are up and running! [Here is some real data from our sensor network!](https://dashboard.ribbitnetwork.org/) (Note this dashboard is still experimental and may be down occasionally).
@@ -46,7 +45,7 @@ The first prototype sensors are up and running! [Here is some real data from our
 [See more about the cloud database here.](https://github.com/Ribbit-Network/ribbit-network-dashboard)
 
 ## Questions?
-[Check out the Frequently Asked Questions section.](https://github.com/Ribbit-Network/ribbit-network-faq) If you don't see your question, let us know either in a Github Discussion or via Discord.
+[Check out the Frequently Asked Questions section.](https://github.com/Ribbit-Network/ribbit-network-faq) If you don't see your question, let us know either in a Github Discussion or via chat.
 
 ## Ribbit Frog V4
 This is the hardware repository that contains all the design files for the physical assembly of the Frog Sensor.
@@ -73,7 +72,7 @@ See the [Issues](https://github.com/keenanjohnson/ghg-gas-cloud/issues) section 
 
 We have a [contributing guide](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/blob/main/CONTRIBUTING.md) that details the process for making a contribution.
 
-[If you are not sure where to start or just want to chat join our developer discord here.](https://discord.gg/vq8PkDb2TC). You can also [start a discussion](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/discussions) right here in Github.
+[If you are not sure where to start or just want to chat join our developer slack here.](https://join.slack.com/t/ribbitnetworkgroup/shared_invite/zt-2vxvbo7ld-S36SgfDiev~ZQ2zvp03FOg). You can also [start a discussion](https://github.com/Ribbit-Network/ribbit-network-frog-sensor/discussions) right here in Github.
 
 ## Background Information
 [See the Wiki for background research.](https://ribbitnetwork.notion.site/Learnings-Low-cost-sensors-for-the-measurement-of-atmospheric-composition-e3d41736c49e41ad81dcdf7e16a6573b) This project is inspired by some awesome research by incredible scientists in academia.

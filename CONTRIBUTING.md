@@ -17,7 +17,7 @@ The information below helps to explain the mechanics of how to contribute to Rib
 
 If you are confused, need help, or want to discuss an idea you can find our team here:
 
-* [Developer Discord Channel](https://discord.gg/vq8PkDb2TC)
+* [Developer Slack Channel](https://join.slack.com/t/ribbitnetworkgroup/shared_invite/zt-2vxvbo7ld-S36SgfDiev~ZQ2zvp03FOg)
 * [Email Keenan Johnson (Maintainer)](mailto:keenan.johnson@gmail.com)
 
 Remember to be nice and polite. We're all on this planet together and we're working to change it for the better :)

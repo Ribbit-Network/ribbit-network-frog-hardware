@@ -79,7 +79,7 @@ In order for your Frog to join the Ribbit Network "Fleet" we need to tell it a n
 
 ### Get Credentials
 
-First, reach out to the Ribbit Network Core team in Discord ([Join the Developer Discord](https://discord.gg/vq8PkDb2TC)) and send Keenan Johnson a message in the #build-a-sensor channel. He will get you a set of credentials you can use in the next step. The team is working hard to make this self service soon :).
+First, reach out to the Ribbit Network Core team in Slack ([Join the Developer Slack](https://join.slack.com/t/ribbitnetworkgroup/shared_invite/zt-2vxvbo7ld-S36SgfDiev~ZQ2zvp03FOg)) and send Keenan Johnson a message in the #build-a-sensor channel. He will get you a set of credentials you can use in the next step. The team is working hard to make this self service soon :).
 
 ### Find the IP address of your Frog
 
@@ -115,7 +115,7 @@ Note for Windows you need to include the slashes in front of some of the quotati
 curl http://192.168.86.92/api/config -X PATCH -H "Content-Type: application/json" -d "{\"golioth.user\": \"123456789\", \"golioth.password\": \"top_secret\"}"
 ```
 
-Open a terminal program on your computer ("Terminal" on Mac or "CMD" on windows), paste the command that you edited above with your correct IP address and credentials into the terminal and hit enter. This will send the command to your Frog configuring the credentials. At this point, the Ribbit Network software team can verify your device connection. Message Keenan in discord.
+Open a terminal program on your computer ("Terminal" on Mac or "CMD" on windows), paste the command that you edited above with your correct IP address and credentials into the terminal and hit enter. This will send the command to your Frog configuring the credentials. At this point, the Ribbit Network software team can verify your device connection. Message Keenan in slack.
 
 Note: curl should be installed on most linux, mac, or windows computers.
 
@@ -144,4 +144,4 @@ Well done! Now you can disconnect your board from the computer and begin the phy
 No problem! The Ribbit Network team is here for you! We have lots of ways to connect. Jump in and ask your question or provide a suggestion!
 
 - [Start a discussion here](https://github.com/Ribbit-Network/ribbit-network-frog-software/discussions/new)
-- [Join the Developer Discord](https://discord.gg/vq8PkDb2TC)
+- [Join the Developer Slack](https://join.slack.com/t/ribbitnetworkgroup/shared_invite/zt-2vxvbo7ld-S36SgfDiev~ZQ2zvp03FOg)
