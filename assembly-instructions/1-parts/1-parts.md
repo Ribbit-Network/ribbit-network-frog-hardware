@@ -127,9 +127,9 @@ Note that there are several 3D printed parts that you'll need to 3D print yourse
 
 ## Next Step
 
-If you have received a Frog Sensor kit or are building the kit as part of a workshop, skip to the Assembly step!
+If you have received a Frog Sensor kit or are building the kit as part of a workshop, skip to the software step, since you don't need to print the parts!
 
-[Assembly Step](../4-assembly/4-assembly.md){ .md-button }
+[Software](../3-software/3-software.md){ .md-button }
 
 Otherwise, it's time to 3D print the enclosure parts.
 
