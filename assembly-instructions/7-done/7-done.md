@@ -8,6 +8,9 @@ If you don't see your sensor on the map linked above, [see the debugging steps h
 
 Thank you so much for being a part of the Ribbit Network. Stay in touch on our developer chat or in our discussion forum for more updates on the project.
 
+If you are intereted in contributing to the software, you can follow the instructions
+for building and modifying the software on [our Github](https://github.com/Ribbit-Network/ribbit-network-frog-software)
+
 ## Table of Contents
 
 [Return to the Beginning](../index.md){ .md-button }
