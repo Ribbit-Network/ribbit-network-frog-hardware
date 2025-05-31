@@ -8,9 +8,9 @@ Connect the included USB cable to the Frog and then to your computer.
 
 ![Plug in the USB Cable](images/plug_in.gif)
 
-Once the Frog is connected, visit [this website](https://keenanjohnson.github.io/ribbit-network-frog-software-trial-kit/) to test your Frog. Once there, hit the Connect button.
+Once the Frog is connected, visit [this website](https://ribbit-network.github.io/ribbit-network-frog-software/) to test your Frog. Once there, hit the Connect button.
 
-[Connect Website Link](https://keenanjohnson.github.io/ribbit-network-frog-software-trial-kit/){ .md-button }
+[Connect Website Link](https://ribbit-network.github.io/ribbit-network-frog-software/){ .md-button }
 
 ![Connect Page](images/connect_page.png)
 
