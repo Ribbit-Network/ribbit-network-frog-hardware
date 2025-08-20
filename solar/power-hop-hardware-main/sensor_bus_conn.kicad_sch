@@ -1,0 +1,35 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "ed8c5efd-9bb8-4002-b6c0-a3f7cf0fb23b")
+	(paper "A4")
+	(title_block
+		(date "2025-01-04")
+	)
+	(lib_symbols)
+	(hierarchical_label "I2C_SBUS"
+		(shape input)
+		(at 66.04 73.66 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b0bfdf30-df68-4bf7-93d4-584a2cfb5455")
+	)
+	(hierarchical_label "PWR_3V3"
+		(shape input)
+		(at 55.88 45.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f15bad47-5ee5-4a67-bd19-fb06cb858197")
+	)
+)

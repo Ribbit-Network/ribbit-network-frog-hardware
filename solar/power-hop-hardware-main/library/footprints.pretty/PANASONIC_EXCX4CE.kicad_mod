@@ -1,0 +1,231 @@
+(footprint "PANASONIC_EXCX4CE"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -1.975 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "e789d72f-f54f-4910-ad6d-ef5f00291d3e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "PANASONIC_EXCX4CE"
+		(at 0 2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "56a7ae72-927d-493c-9677-824cb7b64abb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ba20dac3-d7c2-4e96-ba34-36dcf8724a3b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ce80e757-f498-4cef-bfa5-947cd1aa46b2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -0.23 -0.625)
+		(end 0.23 -0.625)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "04eaa2f5-02a2-42ef-ad59-86ffbd7aef03")
+	)
+	(fp_line
+		(start -0.23 0.625)
+		(end 0.23 0.625)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cbad9fb2-702e-47f0-b5dd-cf727eb55909")
+	)
+	(fp_circle
+		(center -1.85 -0.45)
+		(end -1.75 -0.45)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "0f6ffdad-aefb-4266-855f-836a1f64380d")
+	)
+	(fp_line
+		(start -1.55 -0.875)
+		(end 1.55 -0.875)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d87ff667-eaa0-4bd7-82a9-1aaa4a3ff1d0")
+	)
+	(fp_line
+		(start -1.55 0.875)
+		(end -1.55 -0.875)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "df2eefb1-2278-4e95-8ff5-46909811e644")
+	)
+	(fp_line
+		(start 1.55 -0.875)
+		(end 1.55 0.875)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c5e81ad6-d6bf-49f0-84c5-cc0b00e84169")
+	)
+	(fp_line
+		(start 1.55 0.875)
+		(end -1.55 0.875)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0f08a4e1-4945-407a-95e4-74e070af44cd")
+	)
+	(fp_line
+		(start -1 -0.625)
+		(end 1 -0.625)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fccb434e-15d1-4ac4-97c2-e677abcb3366")
+	)
+	(fp_line
+		(start -1 0.625)
+		(end -1 -0.625)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8c1a10f9-7796-4bf6-95b0-a053c7262a73")
+	)
+	(fp_line
+		(start 1 -0.625)
+		(end 1 0.625)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b5e0bce7-c6ef-4b23-9786-70f445a120f5")
+	)
+	(fp_line
+		(start 1 0.625)
+		(end -1 0.625)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3013dd74-7383-4847-86e1-df0fb45bc172")
+	)
+	(fp_circle
+		(center -1.85 -0.45)
+		(end -1.75 -0.45)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "a91a26e4-e87d-4343-baf2-327dd0b566b5")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 3.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "752a792c-7df9-41f8-8b23-3c02bc436533")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.925 -0.4)
+		(size 0.75 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "607823aa-8223-469e-9951-73735b0fcd73")
+	)
+	(pad "2" smd rect
+		(at -0.925 0.4)
+		(size 0.75 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "66843c39-b01c-490c-a30d-4328ac3c8e55")
+	)
+	(pad "3" smd rect
+		(at 0.925 0.4)
+		(size 0.75 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "b469d0ff-6342-44e7-8f80-3a92f8a87216")
+	)
+	(pad "4" smd rect
+		(at 0.925 -0.4)
+		(size 0.75 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "66d3ac1f-f9f4-4610-aa45-3afd92957f49")
+	)
+	(embedded_fonts no)
+	(model "${HTTP_LIBRARY_3D_DIR}/PANASONIC_EXCX4CE.STEP"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)

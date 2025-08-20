@@ -1,0 +1,278 @@
+(footprint "TI_DSBGA-8"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Texas Instruments, DSBGA, area grid, NSMD, YBJ0008 pad definition, 0.705x1.468mm, 8 Ball, 2x4 Layout, 0.4mm Pitch, https://www.ti.com/lit/gpn/ina234")
+	(tags "BGA 8 0.4")
+	(property "Reference" "REF**"
+		(at 0 -2.25 0)
+		(layer "F.SilkS")
+		(uuid "fceb3714-c394-4f78-8de7-29a3ee673ebf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TI_DSBGA-8"
+		(at 0 1.734 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3c07dc77-6eb8-492c-b83f-5322b92e454e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a51085b1-5beb-432b-a5da-23119902f5f9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d7a71529-87d8-4270-bc29-d872aefc5b8b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(solder_mask_margin 0.05)
+	(attr smd)
+	(fp_line
+		(start -0.56 0.96)
+		(end -0.56 -0.735)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4e3b4fd2-d0e6-4db9-ab9c-630d61406042")
+	)
+	(fp_line
+		(start -0.335 -0.96)
+		(end 0.56 -0.96)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "96746584-8ce5-46d9-9cc9-acdfb8fa40a7")
+	)
+	(fp_line
+		(start 0.56 -0.96)
+		(end 0.56 0.96)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a76645b0-1f6e-49e4-b8ad-ef8de19f4409")
+	)
+	(fp_line
+		(start 0.56 0.96)
+		(end -0.56 0.96)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9264e50c-7d79-46ba-b82d-079777c4f8e6")
+	)
+	(fp_poly
+		(pts
+			(xy -0.56 -0.96) (xy -0.8 -0.96) (xy -0.56 -1.2) (xy -0.56 -0.96)
+		)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "1d6fba9c-9fc4-4502-aee3-96a2d7187c08")
+	)
+	(fp_line
+		(start -0.61 -0.99)
+		(end -0.61 0.99)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "771ffd47-3e22-4ae2-8a6d-ad5fe0ec5a9b")
+	)
+	(fp_line
+		(start -0.61 0.99)
+		(end 0.61 0.99)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ccb3c29b-ce95-4758-89ec-ab47bf97b5ab")
+	)
+	(fp_line
+		(start 0.61 -0.99)
+		(end -0.61 -0.99)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e46e693c-0589-46d9-bc9d-d51a961b5151")
+	)
+	(fp_line
+		(start 0.61 0.99)
+		(end 0.61 -0.99)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c737902d-f7bc-4d05-9e59-e98a4f8c4ab8")
+	)
+	(fp_line
+		(start -0.3525 -0.55775)
+		(end -0.17625 -0.734)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c51fa4bf-ac1a-4ba1-ad08-37a41afbb798")
+	)
+	(fp_line
+		(start -0.3525 0.734)
+		(end -0.3525 -0.55775)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d187c2a4-d456-4fe6-9daa-4acbaec94e19")
+	)
+	(fp_line
+		(start -0.17625 -0.734)
+		(end 0.3525 -0.734)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ffaca74e-21af-4d02-938a-ce1657389700")
+	)
+	(fp_line
+		(start 0.3525 -0.734)
+		(end 0.3525 0.734)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "bca30cae-f63d-482e-b66b-30f8535ad9c9")
+	)
+	(fp_line
+		(start 0.3525 0.734)
+		(end -0.3525 0.734)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "eabe183c-f8ea-45bc-8251-28db75250a15")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 270)
+		(layer "F.Fab")
+		(uuid "06336be1-4107-476b-a7b5-b3e47196dc13")
+		(effects
+			(font
+				(size 0.34 0.34)
+				(thickness 0.051)
+			)
+		)
+	)
+	(pad "A1" smd circle
+		(at -0.2 -0.6)
+		(size 0.23 0.23)
+		(property pad_prop_bga)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bc3b8192-5d5e-45a1-b3e3-01cdb2f2ccec")
+	)
+	(pad "A2" smd circle
+		(at 0.2 -0.6)
+		(size 0.23 0.23)
+		(property pad_prop_bga)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "414b0141-bd38-4949-b5a4-bbfbe2acbf4e")
+	)
+	(pad "B1" smd circle
+		(at -0.2 -0.2)
+		(size 0.23 0.23)
+		(property pad_prop_bga)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a6a6794a-9e18-4b75-9863-7febabcdabe9")
+	)
+	(pad "B2" smd circle
+		(at 0.2 -0.2)
+		(size 0.23 0.23)
+		(property pad_prop_bga)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "5a36f8fd-72f9-4721-b58a-9c0829b4ae7d")
+	)
+	(pad "C1" smd circle
+		(at -0.2 0.2)
+		(size 0.23 0.23)
+		(property pad_prop_bga)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8cab28fa-c90c-46e4-ae5e-780740bbdfba")
+	)
+	(pad "C2" smd circle
+		(at 0.2 0.2)
+		(size 0.23 0.23)
+		(property pad_prop_bga)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c0ccd297-e32e-47e7-a14e-1a0b0e2afc30")
+	)
+	(pad "D1" smd circle
+		(at -0.2 0.6)
+		(size 0.23 0.23)
+		(property pad_prop_bga)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a49ce9c7-b635-4c44-b738-777eb77abaa9")
+	)
+	(pad "D2" smd circle
+		(at 0.2 0.6)
+		(size 0.23 0.23)
+		(property pad_prop_bga)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0055b0d2-e4b9-4e3f-8842-bcc1678c6f57")
+	)
+	(embedded_fonts no)
+	(model "${KICAD8_3DMODEL_DIR}/Package_BGA.3dshapes/Texas_DSBGA-8_0.705x1.468mm_Layout2x4_P0.4mm.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

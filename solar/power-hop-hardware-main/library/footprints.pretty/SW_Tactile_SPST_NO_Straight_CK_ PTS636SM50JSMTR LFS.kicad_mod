@@ -1,0 +1,297 @@
+(footprint "SW_Tactile_SPST_NO_Straight_CK_ PTS636SM50JSMTR LFS"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Tactile switch, SPST, 6.0x3.5 mm, H2.5 mm, straight, NO, gull wing leads: https://www.ckswitches.com/media/2779/pts636.pdf")
+	(tags "switch tactile SPST 1P1T straight NO SMTR C&K")
+	(property "Reference" "REF**"
+		(at 0 -3 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "d87b77ec-0e56-49fa-b2b0-50973369570f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW_Tactile_SPST_NO_Straight_CK_ PTS636SM50JSMTR LFS"
+		(at 0 3 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "e21760d7-b315-4edb-a8ca-14d03d47b7ad")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8cd782e6-2c75-417d-895e-ae131b5f949b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "89b4caa9-0568-41f3-b216-aaa21b78a8ea")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -3.2 -2)
+		(end -3.2 -0.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f87f9e7b-cd3f-4b60-9df2-b23445e65789")
+	)
+	(fp_line
+		(start -3.2 0.8)
+		(end -3.2 2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e1d0759e-78b9-4c9f-bbe9-5ced09335673")
+	)
+	(fp_line
+		(start -3.2 2)
+		(end 3.2 2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "13017f66-01cf-492f-9ecf-063069f072e2")
+	)
+	(fp_line
+		(start 3.2 -2)
+		(end -3.2 -2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5d61d098-a03c-471d-9139-fda44e946f68")
+	)
+	(fp_line
+		(start 3.2 -0.8)
+		(end 3.2 -2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2d7ee3c6-ad04-4732-aa7d-8594937fdebd")
+	)
+	(fp_line
+		(start 3.2 2)
+		(end 3.2 0.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "52439508-49ae-4985-9718-b5e47a762f17")
+	)
+	(fp_rect
+		(start -1.35 -0.65)
+		(end 1.35 0.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "Dwgs.User")
+		(uuid "6224ab09-dcf0-4d32-bc03-16ad5768a8eb")
+	)
+	(fp_line
+		(start -3.8 -0.75)
+		(end -3.3 -0.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d584f263-cb42-4c90-a092-35a9e74319b8")
+	)
+	(fp_line
+		(start -3.8 0.75)
+		(end -3.8 -0.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "748d4110-a2d5-4644-aca1-19e538cfdab8")
+	)
+	(fp_line
+		(start -3.3 -2.1)
+		(end 3.3 -2.1)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e57b386c-a16c-4e99-bcfc-ac0c3f4dda7d")
+	)
+	(fp_line
+		(start -3.3 -0.75)
+		(end -3.3 -2.1)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0e8f16e7-76cb-4994-9718-8ffce1dbff7d")
+	)
+	(fp_line
+		(start -3.3 0.75)
+		(end -3.8 0.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ffcd904f-85e5-4fb5-a9f3-e22233068dbd")
+	)
+	(fp_line
+		(start -3.3 2.1)
+		(end -3.3 0.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "28a1d475-45fa-4c2f-bae5-e9cbfed65a7d")
+	)
+	(fp_line
+		(start 3.3 -2.1)
+		(end 3.3 -0.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a1f53956-53cb-4c32-8ed5-beaef6c01b2c")
+	)
+	(fp_line
+		(start 3.3 -0.75)
+		(end 3.8 -0.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4c93cf99-4998-41cf-b6f1-15d5a2c67ca6")
+	)
+	(fp_line
+		(start 3.3 0.75)
+		(end 3.3 2.1)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0543dfe6-4daf-4abb-b59b-871d8513bea8")
+	)
+	(fp_line
+		(start 3.3 2.1)
+		(end -3.3 2.1)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5dee5a90-7fae-48d2-a8cb-37b60cb80892")
+	)
+	(fp_line
+		(start 3.8 -0.75)
+		(end 3.8 0.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "49e7c005-2328-4384-9072-e26554722c7f")
+	)
+	(fp_line
+		(start 3.8 0.75)
+		(end 3.3 0.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "36bf5f08-e566-465c-aab2-f5c8471c510f")
+	)
+	(fp_rect
+		(start -3 -1.75)
+		(end 3 1.75)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "475a8495-6a4c-4587-99a9-578bb102197b")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "5606e1c6-21df-42db-9bdb-17b5495a9bce")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -3.25 0)
+		(size 0.9 1.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "93f69d31-c77b-4b4a-96a9-b86f33324ba8")
+	)
+	(pad "2" smd rect
+		(at 3.25 0)
+		(size 0.9 1.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a7e7595c-6531-41ea-9d33-4e4aee1665d1")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_Tactile_SPST_NO_Straight_CK_PTS636Sx25SMTRLFS.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
