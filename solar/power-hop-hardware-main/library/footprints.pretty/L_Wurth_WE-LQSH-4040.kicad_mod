@@ -1,0 +1,189 @@
+(footprint "L_Wurth_WE-LQSH-4040"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Semi-Shielded High Saturation Power Inductor, body 4x4mm, https://www.we-online.com/catalog/en/WE-LQSH#/articles/WE-LQSH-4020")
+	(tags "SMT")
+	(property "Reference" "REF**"
+		(at 0 -3.4 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "72f04c79-3482-4b2f-9c2e-55d56c0ad165")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "L_Wurth_WE-LQS-4040"
+		(at 0 3.4 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e08f566d-cff8-45c7-9079-1320768f6f16")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e0dc5503-177c-4a31-b810-3b96d0598966")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e1539276-b8dc-4967-8980-59b8b69682ec")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6b0e3bf4-b5d0-440d-a828-3c0c9cabc15c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -0.5 -2.1)
+		(end 0.5 -2.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "813a1fe8-394a-41a8-a2e2-13a5eeb0c8f0")
+	)
+	(fp_line
+		(start -0.5 2.1)
+		(end 0.5 2.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "db8e694c-b8d5-4576-940a-8653119813e1")
+	)
+	(fp_rect
+		(start -2.525 -2.45)
+		(end 2.525 2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "b675406b-b2ff-43e2-9def-aa1d03f7320a")
+	)
+	(fp_line
+		(start -2 -1)
+		(end -2 2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e0bb0d8f-70a7-47f5-8aac-0fda9ca4dd54")
+	)
+	(fp_line
+		(start -2 2)
+		(end 2 2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "98d9016d-1c99-4bc4-b71b-1eafcd481d98")
+	)
+	(fp_line
+		(start -1 -2)
+		(end -2 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "42309218-c635-4d9f-be03-c69cc5fe9ec7")
+	)
+	(fp_line
+		(start -1 -2)
+		(end 2 -2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4d4fecdd-be4a-47e9-9085-2268d5852d8f")
+	)
+	(fp_line
+		(start 2 -2)
+		(end 2 2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f73b5500-6337-4860-a114-6e307f65ec9f")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "1b0584c7-33fa-4426-8b5f-687217ccbef4")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.08)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.525 0)
+		(size 1.5 4.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "b0651a18-f829-4954-8869-32bff50db4c5")
+	)
+	(pad "2" smd rect
+		(at 1.525 0)
+		(size 1.5 4.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "ef536099-a2bc-4645-b7fd-fb6c3e07f94f")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/Inductor_SMD_Wurth.3dshapes/L_Wurth_WE-LQSH-4020.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
